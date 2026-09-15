@@ -405,7 +405,21 @@ h1 {
   .nav-links a {
     font-size: 11px;
   }
+.nav-links a:hover {
+  color: #b48a62;
+}
 
+.nav-links a:hover::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+  background: #b48a62;
+}
   .logo {
     width: 210px;
   }
