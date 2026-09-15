@@ -24,95 +24,105 @@
     }
 
     body {
-      background: #07090d;
-      color: #e8dfd1;
-      font-family: "Montserrat", Arial, sans-serif;
+      background: #07101a;
+      color: #ded6ca;
       overflow-x: hidden;
+      font-family: "Montserrat", Arial, sans-serif;
     }
 
 
-    /* =========================
+    /* ==============================
        HERO
-       ========================= */
+       ============================== */
 
     .hero {
       position: relative;
+
       min-height: 100vh;
+      min-height: 100svh;
+
       overflow: hidden;
 
       background-image:
         linear-gradient(
           90deg,
-          rgba(4, 7, 12, 0.90) 0%,
-          rgba(4, 7, 12, 0.68) 34%,
-          rgba(4, 7, 12, 0.20) 72%,
-          rgba(4, 7, 12, 0.15) 100%
+          rgba(3, 8, 14, 0.88) 0%,
+          rgba(3, 8, 14, 0.58) 33%,
+          rgba(3, 8, 14, 0.15) 70%,
+          rgba(3, 8, 14, 0.20) 100%
         ),
+
         linear-gradient(
           0deg,
-          rgba(4, 7, 12, 0.80) 0%,
-          rgba(4, 7, 12, 0.05) 60%
+          rgba(3, 8, 14, 0.88) 0%,
+          rgba(3, 8, 14, 0.12) 62%
         ),
+
         url("GOT.jpg");
 
       background-size: cover;
+
       background-position: center 15%;
+
       background-repeat: no-repeat;
     }
 
 
-    /* =========================
+    /* ==============================
        LOGO
-       ========================= */
+       ============================== */
 
     .logo {
       position: absolute;
 
-      top: 34px;
-      left: 5.5%;
+      top: 37px;
+      left: 5.2%;
 
-      width: 250px;
+      width: 245px;
+
       height: auto;
 
       z-index: 20;
     }
 
 
-    /* =========================
+    /* ==============================
        NAVIGATION
-       ========================= */
+       ============================== */
 
     .navigation {
       position: absolute;
 
-      top: 34px;
-      right: 5.5%;
+      top: 66px;
+      left: 34.5%;
 
       z-index: 20;
     }
 
     .nav-links {
       display: flex;
+
       align-items: center;
 
-      gap: 52px;
+      gap: 48px;
     }
 
     .nav-links a {
       position: relative;
 
-      color: #d7cfc2;
+      color: #d8d2c8;
 
       text-decoration: none;
 
-      font-family: "Montserrat", Arial, sans-serif;
+      font-family: "Cormorant Garamond", Georgia, serif;
 
-      font-size: 12px;
+      font-size: 15px;
+
       font-weight: 400;
 
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
 
-      padding: 10px 0 9px;
+      padding: 5px 2px 12px;
 
       white-space: nowrap;
 
@@ -120,11 +130,11 @@
     }
 
     .nav-links a:hover {
-      color: #b89d72;
+      color: #b7946c;
     }
 
     .nav-links a.active {
-      color: #b89d72;
+      color: #b7946c;
     }
 
     .nav-links a.active::after {
@@ -139,22 +149,27 @@
 
       height: 1px;
 
-      background: #b89d72;
+      background: #b7946c;
     }
 
 
-    /* =========================
+    /* ==============================
        SOCIAL RAIL
-       ========================= */
+       ============================== */
 
     .social-rail {
       position: absolute;
 
-      left: 6.2%;
-      top: 22%;
+      left: 5.5%;
+
+      top: 26.5%;
+
+      width: 20px;
 
       display: flex;
+
       flex-direction: column;
+
       align-items: center;
 
       z-index: 15;
@@ -163,33 +178,37 @@
     .social-line-top {
       width: 1px;
 
-      height: 250px;
+      height: 355px;
 
-      background: #b89d72;
+      background: #b7946c;
 
-      opacity: 0.9;
+      opacity: 0.75;
 
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
     .social-icons {
       display: flex;
 
       flex-direction: column;
+
       align-items: center;
 
-      gap: 20px;
+      gap: 18px;
     }
 
     .social-icons a {
-      width: 19px;
-      height: 19px;
+      width: 18px;
+
+      height: 18px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
-      color: #b89d72;
+      color: #b7946c;
 
       text-decoration: none;
 
@@ -197,11 +216,12 @@
     }
 
     .social-icons a:hover {
-      color: #e8dfd1;
+      color: #ded6ca;
     }
 
     .social-icons svg {
       width: 16px;
+
       height: 16px;
 
       fill: none;
@@ -211,51 +231,57 @@
       stroke-width: 1.5;
 
       stroke-linecap: round;
+
       stroke-linejoin: round;
     }
 
     .social-line-bottom {
       width: 1px;
 
-      height: 95px;
+      height: 260px;
 
-      background: #b89d72;
+      background: #b7946c;
 
-      opacity: 0.9;
+      opacity: 0.72;
 
-      margin-top: 18px;
+      margin-top: 17px;
 
-      transform: scaleX(0.65);
+      transform: scaleX(0.55);
+
       transform-origin: top center;
     }
 
 
-    /* =========================
+    /* ==============================
        HERO CONTENT
-       ========================= */
+       ============================== */
 
     .hero-content {
       position: absolute;
 
-      left: 15%;
-      bottom: 19%;
+      left: 10.8%;
 
-      width: 500px;
+      top: 30.5%;
+
+      width: 430px;
+
+      text-align: left;
 
       z-index: 10;
     }
 
     .eyebrow {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
 
-      color: #b89d72;
+      color: #b7946c;
 
-      font-family: "Montserrat", Arial, sans-serif;
+      font-family: "Cormorant Garamond", Georgia, serif;
 
-      font-size: 13px;
-      font-weight: 400;
+      font-size: 14px;
 
-      letter-spacing: 4px;
+      font-weight: 500;
+
+      letter-spacing: 3.5px;
 
       text-transform: uppercase;
     }
@@ -263,76 +289,79 @@
     h1 {
       font-family: "Cormorant Garamond", Georgia, serif;
 
-      font-size: 64px;
+      font-size: 52px;
 
       font-weight: 400;
 
-      line-height: 0.88;
+      line-height: 0.93;
 
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
 
       text-transform: uppercase;
     }
 
     h1 .cream {
-      color: #e8dfd1;
-    }
-
-    h1 .gold {
-      color: #b89d72;
+      color: #ddd5ca;
     }
 
     h1 .red {
-      color: #8c292d;
+      color: #8d292d;
     }
 
 
-    /* =========================
-       INTRO
-       ========================= */
+    /* ==============================
+       DESCRIPTION
+       ============================== */
 
     .intro {
-      width: 390px;
+      width: 365px;
 
-      margin-top: 28px;
+      margin-top: 27px;
 
-      color: #c9c2b8;
+      color: #c7c2ba;
+
+      font-family: "Montserrat", Arial, sans-serif;
 
       font-size: 11px;
 
       font-weight: 300;
 
-      line-height: 1.8;
+      line-height: 1.85;
 
-      letter-spacing: 0.2px;
+      letter-spacing: 0.1px;
     }
 
 
-    /* =========================
+    /* ==============================
        VIEW MY WORK
-       ========================= */
+       ============================== */
 
     .button {
-      display: inline-flex;
+      display: flex;
 
       align-items: center;
+
       justify-content: space-between;
 
-      width: 172px;
+      width: 162px;
+
+      height: 40px;
 
       margin-top: 27px;
 
-      padding: 13px 16px;
+      padding: 0 15px;
 
-      border: 1px solid #b89d72;
+      border: 1px solid #b7946c;
 
-      color: #b89d72;
+      color: #b7946c;
 
       text-decoration: none;
 
-      font-size: 9px;
+      font-family: "Cormorant Garamond", Georgia, serif;
 
-      letter-spacing: 2px;
+      font-size: 11px;
+
+      letter-spacing: 1.6px;
 
       transition: 0.3s ease;
     }
@@ -346,36 +375,38 @@
     }
 
     .button:hover {
-      background: #b89d72;
+      background: #b7946c;
 
-      color: #07090d;
+      color: #07101a;
     }
 
 
-    /* =========================
+    /* ==============================
        FEATURED WORK
-       ========================= */
+       ============================== */
 
     .featured {
-      position: relative;
+      position: absolute;
 
-      background: #07090d;
+      left: 10.8%;
 
-      padding: 55px 8% 70px;
+      bottom: 7%;
+
+      z-index: 10;
     }
 
     .featured-title {
       margin-bottom: 24px;
 
-      color: #b89d72;
+      color: #b7946c;
 
       font-family: "Cormorant Garamond", Georgia, serif;
 
-      font-size: 17px;
+      font-size: 15px;
 
       font-weight: 500;
 
-      letter-spacing: 4px;
+      letter-spacing: 3px;
 
       text-transform: uppercase;
     }
@@ -385,87 +416,118 @@
 
       align-items: center;
 
-      gap: 12px;
+      gap: 17px;
     }
 
     .work-card {
       position: relative;
 
-      width: 160px;
-      height: 135px;
+      width: 145px;
 
-      flex-shrink: 0;
+      height: 130px;
 
       overflow: hidden;
 
-      background: #10141b;
+      background: rgba(10, 16, 23, 0.65);
 
-      border: 1px solid rgba(184, 157, 114, 0.22);
+      border: 1px solid rgba(183, 148, 108, 0.12);
+
+      flex-shrink: 0;
+    }
+
+    .work-card::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          rgba(7, 12, 18, 0.15),
+          rgba(7, 12, 18, 0.55)
+        );
     }
 
     .work-card::after {
-      content: "+";
+      content: "";
 
       position: absolute;
 
       left: 50%;
+
       top: 50%;
 
-      transform: translate(-50%, -50%);
+      width: 1px;
 
-      color: rgba(184, 157, 114, 0.5);
+      height: 1px;
 
-      font-family: Georgia, serif;
-
-      font-size: 25px;
+      background: transparent;
     }
+
+
+    /* ==============================
+       FEATURED ARROW
+       ============================== */
 
     .featured-arrow {
-      width: 55px;
-      height: 55px;
+      width: 45px;
+
+      height: 60px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
-      color: #b89d72;
+      color: #8f7658;
 
       font-family: Georgia, serif;
 
-      font-size: 30px;
+      font-size: 34px;
+
+      font-weight: 300;
     }
 
 
-    /* =========================
+    /* ==============================
        MOBILE
-       ========================= */
+       ============================== */
 
     @media (max-width: 900px) {
 
       .logo {
-        width: 200px;
+        width: 205px;
       }
 
       .navigation {
-        right: 4%;
+        left: auto;
+
+        right: 5%;
       }
 
       .nav-links {
-        gap: 25px;
+        gap: 24px;
       }
 
       .nav-links a {
-        font-size: 9px;
+        font-size: 11px;
       }
 
       .hero-content {
-        left: 13%;
+        left: 12%;
       }
 
-      .social-rail {
-        left: 4%;
+      .featured {
+        left: 12%;
       }
 
+      .work-card {
+        width: 125px;
+
+        height: 110px;
+      }
     }
 
 
@@ -474,18 +536,20 @@
       .hero {
         min-height: 100svh;
 
-        background-position: 62% center;
+        background-position: 63% center;
       }
 
       .logo {
         top: 25px;
-        left: 23px;
 
-        width: 160px;
+        left: 22px;
+
+        width: 165px;
       }
 
       .navigation {
-        top: 25px;
+        top: 27px;
+
         right: 23px;
       }
 
@@ -496,9 +560,11 @@
       .navigation::after {
         content: "☰";
 
-        color: #b89d72;
+        color: #b7946c;
 
-        font-size: 25px;
+        font-size: 26px;
+
+        font-weight: 300;
       }
 
       .social-rail {
@@ -507,47 +573,69 @@
 
       .hero-content {
         left: 25px;
-        bottom: 9%;
+
+        top: auto;
+
+        bottom: 22%;
 
         width: calc(100% - 50px);
       }
 
       .eyebrow {
-        font-size: 9px;
-        letter-spacing: 3px;
+        font-size: 10px;
+
+        letter-spacing: 2.8px;
+
+        margin-bottom: 13px;
       }
 
       h1 {
-        font-size: 46px;
+        font-size: 45px;
+
+        line-height: 0.92;
       }
 
       .intro {
         width: 90%;
 
         font-size: 10px;
+
+        line-height: 1.7;
       }
 
       .featured {
-        padding: 50px 25px 65px;
+        position: absolute;
+
+        left: 25px;
+
+        right: 25px;
+
+        bottom: 4%;
+      }
+
+      .featured-title {
+        font-size: 12px;
+
+        margin-bottom: 14px;
       }
 
       .featured-row {
-        display: grid;
+        gap: 6px;
 
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 8px;
+        overflow: hidden;
       }
 
       .work-card {
-        width: 100%;
-        height: 150px;
+        width: 90px;
+
+        height: 75px;
       }
 
       .featured-arrow {
-        display: none;
-      }
+        width: 30px;
 
+        font-size: 25px;
+      }
     }
 
   </style>
@@ -557,7 +645,9 @@
 <body>
 
 
-  <!-- HERO -->
+  <!-- ==================================
+       HERO
+       ================================== -->
 
   <section class="hero">
 
@@ -602,11 +692,14 @@
     </nav>
 
 
-    <!-- SOCIAL ICONS + LINES -->
+    <!-- ==================================
+         SOCIAL RAIL
+         ================================== -->
 
     <aside class="social-rail">
 
       <div class="social-line-top"></div>
+
 
       <div class="social-icons">
 
@@ -663,9 +756,11 @@
         </a>
 
 
-        <!-- MAIL -->
+        <!-- EMAIL -->
 
-        <a href="mailto:" aria-label="Email">
+        <a
+          href="mailto:"
+          aria-label="Email">
 
           <svg viewBox="0 0 24 24">
 
@@ -694,9 +789,12 @@
     </aside>
 
 
-    <!-- HERO TEXT -->
+    <!-- ==================================
+         HERO TEXT
+         ================================== -->
 
     <div class="hero-content">
+
 
       <p class="eyebrow">
         SFX MAKEUP ARTIST
@@ -711,7 +809,7 @@
 
         <br>
 
-        <span class="gold">
+        <span class="red">
           CHARACTERS
         </span>
 
@@ -726,13 +824,14 @@
 
       <p class="intro">
 
-        Special effects makeup, prosthetics &amp;
-        character design. Creating unforgettable
-        characters through makeup, sculpture
-        and prosthetics.
+        Specializing in SFX Makeup, Prosthetics
+        and Character Creation for Film, TV,
+        Cosplay and more.
 
       </p>
 
+
+      <!-- STANDALONE BUTTON -->
 
       <a
         href="#portfolio"
@@ -748,43 +847,58 @@
 
       </a>
 
+
     </div>
 
 
-  </section>
+    <!-- ==================================
+         FEATURED WORK
+         ================================== -->
+
+    <section
+      class="featured"
+      id="portfolio">
 
 
-  <!-- FEATURED WORK -->
-
-  <section
-    class="featured"
-    id="portfolio">
-
-    <h2 class="featured-title">
-      FEATURED WORK
-    </h2>
+      <h2 class="featured-title">
+        FEATURED WORK
+      </h2>
 
 
-    <div class="featured-row">
+      <div class="featured-row">
 
 
-      <div class="work-card"></div>
+        <!-- ALBUM 1 -->
 
-      <div class="work-card"></div>
-
-      <div class="work-card"></div>
-
-      <div class="work-card"></div>
-
-      <div class="work-card"></div>
+        <div class="work-card"></div>
 
 
-      <div class="featured-arrow">
-        →
+        <!-- ALBUM 2 -->
+
+        <div class="work-card"></div>
+
+
+        <!-- ALBUM 3 -->
+
+        <div class="work-card"></div>
+
+
+        <!-- ALBUM 4 -->
+
+        <div class="work-card"></div>
+
+
+        <!-- NEXT -->
+
+        <div class="featured-arrow">
+          →
+        </div>
+
+
       </div>
 
+    </section>
 
-    </div>
 
   </section>
 
