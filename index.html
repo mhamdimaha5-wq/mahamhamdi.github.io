@@ -1,296 +1,631 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Maha Mhamdi | SFX Makeup Artist</title>
 
   <style>
-  * {
 
-  margin: 0;
+    * {
 
-  padding: 0;
+      margin: 0;
 
-  box-sizing: border-box;
+      padding: 0;
 
-}
+      box-sizing: border-box;
 
-body {
+    }
 
-  background: #080808;
+    html {
 
-  color: #e8e1d5;
+      scroll-behavior: smooth;
 
-  font-family: Arial, sans-serif;
+    }
 
-}
-/* NAVIGATION */
+    body {
 
-nav {
+      background: #080706;
 
-  position: absolute;
+      color: #e8e1d5;
 
-  top: 0;
+      font-family: Arial, Helvetica, sans-serif;
 
-  left: 0;
+      overflow-x: hidden;
 
-  width: 100%;
+    }
 
-  padding: 30px 5%;
+    /* =========================
 
-  display: flex;
+       NAVIGATION
 
-  justify-content: space-between;
+       ========================= */
 
-  align-items: center;
+    nav {
 
-  z-index: 10;
+      position: absolute;
 
-}
+      top: 0;
 
-.nav-logo {
+      left: 0;
 
-  font-size: 15px;
+      width: 100%;
 
-  letter-spacing: 4px;
+      height: 100px;
 
-  font-weight: bold;
+      padding: 0 5%;
 
-}
+      display: flex;
 
-.nav-links {
+      justify-content: space-between;
 
-  display: flex;
+      align-items: center;
 
-  gap: 30px;
+      z-index: 20;
 
-}
+    }
 
-.nav-links a {
+    .nav-logo {
 
-  color: #e8e1d5;
+      font-family: Georgia, "Times New Roman", serif;
 
-  text-decoration: none;
+      font-size: 17px;
 
-  font-size: 11px;
+      letter-spacing: 5px;
 
-  letter-spacing: 2px;
+      color: #e8e1d5;
 
-  transition: 0.3s;
+      white-space: nowrap;
 
-}
+    }
 
-.nav-links a:hover {
+    .nav-links {
 
-  color: #b8aa94;
+      display: flex;
 
-}
-/* HERO */
+      align-items: center;
 
-header {
+      gap: 35px;
 
-  min-height: 100vh;
+    }
 
-  display: flex;
+    .nav-links a {
 
-  align-items: flex-end;
+      position: relative;
 
-  position: relative;
+      color: #d8d0c3;
 
-  padding: 80px 8%;
+      text-decoration: none;
 
-  background-image:
+      font-size: 10px;
 
-    linear-gradient(
+      letter-spacing: 2.5px;
 
-      90deg,
+      transition: color 0.3s ease;
 
-      rgba(0, 0, 0, 0.85) 0%,
+    }
 
-      rgba(0, 0, 0, 0.45) 45%,
+    .nav-links a::after {
 
-      rgba(0, 0, 0, 0.25) 100%
+      content: "";
 
-    ),
+      position: absolute;
 
-    linear-gradient(
+      left: 0;
 
-      rgba(0, 0, 0, 0.15),
+      bottom: -8px;
 
-      rgba(0, 0, 0, 0.65)
+      width: 0;
 
-    ),
+      height: 1px;
 
-    url("GOT.jpg");
+      background: #8a2424;
 
-  background-size: cover;
+      transition: width 0.3s ease;
 
-  background-position: center 15%;
+    }
 
-  background-repeat: no-repeat;
+    .nav-links a:hover {
 
-}
+      color: #e8e1d5;
 
-/* HERO CONTENT */
+    }
 
-header > div {
+    .nav-links a:hover::after {
 
-  max-width: 700px;
+      width: 100%;
 
-  text-align: left;
+    }
 
-}
+    /* =========================
 
-/* LOGO */
+       RED DECORATIVE LINES
 
-.lst {
+       ========================= */
 
-  width: 220px;
+    .red-line {
 
-  height: auto;
+      position: absolute;
 
-  margin-bottom: 35px;
+      background: #7f1d1d;
 
-}
+      z-index: 5;
 
-/* MAIN TITLE */
+    }
 
-h1 {
+    .red-line-horizontal {
 
-  font-size: 70px;
+      width: 75px;
 
-  line-height: 0.95;
+      height: 1px;
 
-  letter-spacing: 5px;
+      left: 5%;
 
-  text-transform: uppercase;
+      top: 125px;
 
-}
+    }
 
-/* SUBTITLE */
+    .red-line-vertical {
 
-.subtitle {
+      width: 1px;
 
-  margin-top: 20px;
+      height: 95px;
 
-  font-size: 18px;
+      left: 5%;
 
-  letter-spacing: 5px;
+      bottom: 9vh;
 
-  text-transform: uppercase;
+    }
 
-  color: #a69f94;
+    /* =========================
 
-}
+       HERO
 
-/* DESCRIPTION */
+       ========================= */
 
-.intro {
+    header {
 
-  margin-top: 25px;
+      position: relative;
 
-  max-width: 500px;
+      width: 100%;
 
-  color: #c5bfb5;
+      min-height: 100vh;
 
-  font-size: 16px;
+      display: flex;
 
-  line-height: 1.7;
+      align-items: flex-end;
 
-}
+      padding: 0 8% 9vh;
 
-/* BUTTON */
+      background-image:
 
-.button {
+        linear-gradient(
 
-  display: inline-block;
+          90deg,
 
-  margin-top: 35px;
+          rgba(0, 0, 0, 0.88) 0%,
 
-  padding: 15px 32px;
+          rgba(0, 0, 0, 0.52) 43%,
 
-  border: 1px solid #b8aa94;
+          rgba(0, 0, 0, 0.12) 100%
 
-  color: #e8e1d15;
+        ),
 
-  text-decoration: none;
+        linear-gradient(
 
-  letter-spacing: 2px;
+          0deg,
 
-  font-size: 12px;
+          rgba(0, 0, 0, 0.82) 0%,
 
-  transition: 0.3s;
+          rgba(0, 0, 0, 0.05) 60%
 
-}
+        ),
 
-.button:hover {
+        url("GOT.jpg");
 
-  background: #b8aa94;
+      background-size: cover;
 
-  color: #080808;
+      background-position: center 15%;
 
-}
+      background-repeat: no-repeat;
 
-/* MOBILE */
+    }
 
-@media (max-width: 700px) {
+    /* =========================
 
-  header {
+       HERO CONTENT
 
-    padding: 50px 25px;
+       ========================= */
 
-    align-items: flex-end;
+    header > div {
 
-    background-position: 60% center;
+      position: relative;
 
-  }
+      z-index: 10;
 
-  header > div {
+      max-width: 850px;
 
-    max-width: 100%;
+      text-align: left;
 
-  }
+    }
 
-  .lst {
+    /* LOGO */
 
-    width: 170px;
+    .lst {
 
-    margin-bottom: 25px;
+      width: 190px;
 
-  }
+      height: auto;
 
-  h1 {
+      margin-bottom: 28px;
 
-    font-size: 42px;
+    }
 
-    letter-spacing: 3px;
+    /* SMALL CATEGORY */
 
-  }
+    .subtitle {
 
-  .subtitle {
+      margin-bottom: 20px;
 
-    font-size: 13px;
+      color: #b8aa94;
 
-    letter-spacing: 3px;
+      font-size: 11px;
 
-  }
+      letter-spacing: 5px;
 
-  .intro {
+      text-transform: uppercase;
 
-    font-size: 14px;
+    }
 
-  }
+    /* MAIN TITLE */
 
-}
+    h1 {
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: clamp(60px, 7.5vw, 105px);
+
+      font-weight: 400;
+
+      line-height: 0.88;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      color: #e8e1d5;
+
+      max-width: 900px;
+
+    }
+
+    /* DESCRIPTION */
+
+    .intro {
+
+      margin-top: 30px;
+
+      max-width: 470px;
+
+      color: #c5bfb5;
+
+      font-size: 13px;
+
+      line-height: 1.8;
+
+      letter-spacing: 0.3px;
+
+    }
+
+    /* BUTTON */
+
+    .button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      margin-top: 32px;
+
+      padding: 15px 30px;
+
+      border: 1px solid #b8aa94;
+
+      color: #e8e1d5;
+
+      text-decoration: none;
+
+      font-size: 10px;
+
+      letter-spacing: 2.5px;
+
+      transition: all 0.35s ease;
+
+    }
+
+    .button::after {
+
+      content: "→";
+
+      font-size: 15px;
+
+      transition: transform 0.35s ease;
+
+    }
+
+    .button:hover {
+
+      background: #b8aa94;
+
+      color: #080706;
+
+    }
+
+    .button:hover::after {
+
+      transform: translateX(5px);
+
+    }
+
+    /* =========================
+
+       SOCIAL LINKS
+
+       ========================= */
+
+    .socials {
+
+      position: absolute;
+
+      left: 3%;
+
+      bottom: 9vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 18px;
+
+      z-index: 10;
+
+    }
+
+    .socials a {
+
+      color: #c5bfb5;
+
+      text-decoration: none;
+
+      font-size: 10px;
+
+      letter-spacing: 1px;
+
+      writing-mode: vertical-rl;
+
+      transition: color 0.3s ease;
+
+    }
+
+    .socials a:hover {
+
+      color: #8a2424;
+
+    }
+
+    /* =========================
+
+       SCROLL INDICATOR
+
+       ========================= */
+
+    .scroll {
+
+      position: absolute;
+
+      right: 5%;
+
+      bottom: 6vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 12px;
+
+      color: #a69f94;
+
+      font-size: 9px;
+
+      letter-spacing: 3px;
+
+      text-transform: uppercase;
+
+      z-index: 10;
+
+    }
+
+    .scroll-line {
+
+      width: 1px;
+
+      height: 55px;
+
+      background: #7f1d1d;
+
+    }
+
+    /* =========================
+
+       MOBILE
+
+       ========================= */
+
+    @media (max-width: 700px) {
+
+      nav {
+
+        height: 80px;
+
+        padding: 0 25px;
+
+      }
+
+      .nav-logo {
+
+        font-size: 13px;
+
+        letter-spacing: 3px;
+
+      }
+
+      .nav-links {
+
+        gap: 13px;
+
+      }
+
+      .nav-links a {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+      }
+
+      .nav-links a:nth-child(4) {
+
+        display: none;
+
+      }
+
+      header {
+
+        min-height: 100svh;
+
+        padding: 0 25px 55px;
+
+        align-items: flex-end;
+
+        background-position: 60% center;
+
+      }
+
+      header > div {
+
+        width: 100%;
+
+        max-width: 100%;
+
+      }
+
+      .lst {
+
+        width: 155px;
+
+        margin-bottom: 20px;
+
+      }
+
+      .subtitle {
+
+        font-size: 8px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 14px;
+
+      }
+
+      h1 {
+
+        font-size: clamp(43px, 13vw, 65px);
+
+        line-height: 0.9;
+
+        letter-spacing: 0;
+
+      }
+
+      .intro {
+
+        max-width: 90%;
+
+        margin-top: 20px;
+
+        font-size: 11px;
+
+        line-height: 1.7;
+
+      }
+
+      .button {
+
+        margin-top: 25px;
+
+        padding: 13px 23px;
+
+        font-size: 8px;
+
+      }
+
+      .socials {
+
+        display: none;
+
+      }
+
+      .scroll {
+
+        display: none;
+
+      }
+
+      .red-line-horizontal {
+
+        width: 45px;
+
+        left: 25px;
+
+        top: 100px;
+
+      }
+
+      .red-line-vertical {
+
+        display: none;
+
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
+  <!-- NAVIGATION -->
+
   <nav>
 
-    <div class="nav-logo">MAHA MHAMDI</div>
+    <div class="nav-logo">
+
+      MAHA MHAMDI
+
+    </div>
 
     <div class="nav-links">
 
@@ -308,37 +643,102 @@ h1 {
 
   </nav>
 
+  <!-- RED DECORATION -->
+
+  <div class="red-line red-line-horizontal"></div>
+
+  <div class="red-line red-line-vertical"></div>
+
+  <!-- HERO -->
+
   <header>
 
-  <div>
+    <div>
 
-    <img src="lst.png" alt="Maha Mhamdi" class="lst">
+      <img
 
-    <p class="subtitle">SFX Makeup Artist</p>
+        src="lst.png"
 
-    <h1>
+        alt="Maha Mhamdi"
 
-      Bringing<br>
+        class="lst"
 
-      Characters<br>
+      >
 
-      To Life
+      <p class="subtitle">
 
-    </h1>
+        SFX Makeup Artist
 
-    <p class="intro">
+      </p>
 
-      Special effects makeup, prosthetics & character design.
+      <h1>
 
-      Creating unforgettable characters through makeup, sculpture and prosthetics.
+        Bringing<br>
 
-    </p>
+        Characters<br>
 
-    <a href="#portfolio" class="button">VIEW MY WORK</a>
+        To Life
 
-  </div>
+      </h1>
 
-</header>
+      <p class="intro">
+
+        Special effects makeup, prosthetics & character design.
+
+        Creating unforgettable characters through makeup, sculpture and prosthetics.
+
+      </p>
+
+      <a
+
+        href="#portfolio"
+
+        class="button"
+
+      >
+
+        VIEW MY WORK
+
+      </a>
+
+    </div>
+
+    <!-- SOCIALS -->
+
+    <div class="socials">
+
+      <a href="#" aria-label="Instagram">
+
+        IG
+
+      </a>
+
+      <a href="#" aria-label="YouTube">
+
+        YT
+
+      </a>
+
+      <a href="#" aria-label="Email">
+
+        MAIL
+
+      </a>
+
+    </div>
+
+    <!-- SCROLL -->
+
+    <div class="scroll">
+
+      <span>Scroll</span>
+
+      <div class="scroll-line"></div>
+
+    </div>
+
+  </header>
 
 </body>
+
 </html>
