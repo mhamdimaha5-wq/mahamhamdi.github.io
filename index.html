@@ -1,849 +1,734 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Maha Mhamdi | SFX Makeup Artist</title>
+<title>Maha Mhamdi | SFX Makeup Artist</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
 
-    body {
-      background: #07101a;
-      color: #ded6ca;
-      overflow-x: hidden;
-      font-family: "Montserrat", Arial, sans-serif;
-    }
+body {
+  background: #03070c;
+  color: #ded5c9;
+  font-family: "Montserrat", Arial, sans-serif;
+  overflow-x: hidden;
+}
 
 
-    /* ==============================
-       HERO
-       ============================== */
+/* =========================================
+   HERO
+   ========================================= */
 
-    .hero {
-      position: relative;
+.hero {
+  position: relative;
 
-      min-height: 100vh;
-      min-height: 100svh;
+  width: calc(100% - 28px);
+  min-height: calc(100vh - 36px);
 
-      overflow: hidden;
+  margin: 18px 14px;
 
-      background-image:
-        linear-gradient(
-          90deg,
-          rgba(3, 8, 14, 0.88) 0%,
-          rgba(3, 8, 14, 0.58) 33%,
-          rgba(3, 8, 14, 0.15) 70%,
-          rgba(3, 8, 14, 0.20) 100%
-        ),
+  overflow: hidden;
 
-        linear-gradient(
-          0deg,
-          rgba(3, 8, 14, 0.88) 0%,
-          rgba(3, 8, 14, 0.12) 62%
-        ),
+  border-radius: 13px;
 
-        url("GOT.jpg");
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 14, 0.90) 0%,
+      rgba(3, 8, 14, 0.68) 27%,
+      rgba(3, 8, 14, 0.18) 60%,
+      rgba(3, 8, 14, 0.28) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(3, 8, 14, 0.88) 0%,
+      rgba(3, 8, 14, 0.08) 60%
+    ),
+    url("GOT.jpg");
 
-      background-size: cover;
+  background-size: cover;
+  background-position: center 15%;
+  background-repeat: no-repeat;
+}
 
-      background-position: center 15%;
 
-      background-repeat: no-repeat;
-    }
+/* =========================================
+   LOGO
+   ========================================= */
 
+.logo {
+  position: absolute;
 
-    /* ==============================
-       LOGO
-       ============================== */
+  top: 28px;
+  left: 4.3%;
 
-    .logo {
-      position: absolute;
+  width: 230px;
+  height: auto;
 
-      top: 37px;
-      left: 5.2%;
+  z-index: 20;
+}
 
-      width: 245px;
 
-      height: auto;
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
-      z-index: 20;
-    }
+.navigation {
+  position: absolute;
 
+  top: 45px;
+  left: 35%;
 
-    /* ==============================
-       NAVIGATION
-       ============================== */
+  z-index: 20;
+}
 
-    .navigation {
-      position: absolute;
+.nav-links {
+  display: flex;
 
-      top: 66px;
-      left: 34.5%;
+  align-items: center;
 
-      z-index: 20;
-    }
+  gap: 52px;
+}
 
-    .nav-links {
-      display: flex;
+.nav-links a {
+  position: relative;
 
-      align-items: center;
+  color: #d7d0c6;
 
-      gap: 48px;
-    }
+  text-decoration: none;
 
-    .nav-links a {
-      position: relative;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-      color: #d8d2c8;
+  font-size: 14px;
 
-      text-decoration: none;
+  font-weight: 400;
 
-      font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 1.7px;
 
-      font-size: 15px;
+  padding: 7px 0 12px;
 
-      font-weight: 400;
+  white-space: nowrap;
 
-      letter-spacing: 1.8px;
+  transition: 0.3s ease;
+}
 
-      padding: 5px 2px 12px;
+.nav-links a:hover {
+  color: #b68b62;
+}
 
-      white-space: nowrap;
+.nav-links a.active {
+  color: #b68b62;
+}
 
-      transition: 0.3s ease;
-    }
+.nav-links a.active::after {
+  content: "";
 
-    .nav-links a:hover {
-      color: #b7946c;
-    }
+  position: absolute;
 
-    .nav-links a.active {
-      color: #b7946c;
-    }
+  left: 0;
+  right: 0;
 
-    .nav-links a.active::after {
-      content: "";
+  bottom: 0;
 
-      position: absolute;
+  height: 1px;
 
-      left: 0;
-      right: 0;
+  background: #b68b62;
+}
 
-      bottom: 0;
 
-      height: 1px;
+/* =========================================
+   LEFT VERTICAL LINE + SOCIAL ICONS
+   ========================================= */
 
-      background: #b7946c;
-    }
+.social-rail {
+  position: absolute;
 
+  left: 4.7%;
+  top: 26.5%;
 
-    /* ==============================
-       SOCIAL RAIL
-       ============================== */
+  width: 18px;
 
-    .social-rail {
-      position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-      left: 5.5%;
+  z-index: 15;
+}
 
-      top: 26.5%;
 
-      width: 20px;
+/* long line ABOVE icons */
 
-      display: flex;
+.social-line-top {
+  width: 1px;
 
-      flex-direction: column;
+  height: 355px;
 
-      align-items: center;
+  background: #8b7969;
 
-      z-index: 15;
-    }
+  opacity: 0.72;
 
-    .social-line-top {
-      width: 1px;
+  margin-bottom: 18px;
+}
 
-      height: 355px;
 
-      background: #b7946c;
+/* icons */
 
-      opacity: 0.75;
+.social-icons {
+  display: flex;
 
-      margin-bottom: 17px;
-    }
+  flex-direction: column;
 
-    .social-icons {
-      display: flex;
+  align-items: center;
 
-      flex-direction: column;
+  gap: 19px;
+}
 
-      align-items: center;
+.social-icons a {
+  width: 18px;
+  height: 18px;
 
-      gap: 18px;
-    }
+  display: flex;
 
-    .social-icons a {
-      width: 18px;
+  align-items: center;
+  justify-content: center;
 
-      height: 18px;
+  color: #b68b62;
 
-      display: flex;
+  text-decoration: none;
+}
 
-      align-items: center;
+.social-icons svg {
+  width: 16px;
+  height: 16px;
 
-      justify-content: center;
+  fill: none;
 
-      color: #b7946c;
+  stroke: currentColor;
 
-      text-decoration: none;
+  stroke-width: 1.45;
 
-      transition: 0.3s ease;
-    }
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
-    .social-icons a:hover {
-      color: #ded6ca;
-    }
 
-    .social-icons svg {
-      width: 16px;
+/* thinner line BELOW mail */
 
-      height: 16px;
+.social-line-bottom {
+  width: 1px;
 
-      fill: none;
+  height: 275px;
 
-      stroke: currentColor;
+  background: #8b7969;
 
-      stroke-width: 1.5;
+  opacity: 0.55;
 
-      stroke-linecap: round;
+  margin-top: 18px;
 
-      stroke-linejoin: round;
-    }
+  transform: scaleX(0.55);
 
-    .social-line-bottom {
-      width: 1px;
+  transform-origin: top center;
+}
 
-      height: 260px;
 
-      background: #b7946c;
+/* =========================================
+   HERO TEXT
+   ========================================= */
 
-      opacity: 0.72;
+.hero-content {
+  position: absolute;
 
-      margin-top: 17px;
+  left: 10.8%;
+  top: 31%;
 
-      transform: scaleX(0.55);
+  width: 400px;
 
-      transform-origin: top center;
-    }
+  z-index: 10;
+}
 
 
-    /* ==============================
-       HERO CONTENT
-       ============================== */
+/* SFX MAKEUP ARTIST */
 
-    .hero-content {
-      position: absolute;
+.eyebrow {
+  margin-bottom: 18px;
 
-      left: 10.8%;
+  color: #b68b62;
 
-      top: 30.5%;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-      width: 430px;
+  font-size: 13px;
 
-      text-align: left;
+  font-weight: 500;
 
-      z-index: 10;
-    }
+  letter-spacing: 3.7px;
 
-    .eyebrow {
-      margin-bottom: 20px;
+  text-transform: uppercase;
+}
 
-      color: #b7946c;
 
-      font-family: "Cormorant Garamond", Georgia, serif;
+/* MAIN TITLE */
 
-      font-size: 14px;
+h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-      font-weight: 500;
+  font-size: 51px;
 
-      letter-spacing: 3.5px;
+  font-weight: 400;
 
-      text-transform: uppercase;
-    }
+  line-height: 0.91;
 
-    h1 {
-      font-family: "Cormorant Garamond", Georgia, serif;
+  letter-spacing: 0.5px;
 
-      font-size: 52px;
+  text-transform: uppercase;
+}
 
-      font-weight: 400;
+.cream {
+  color: #ded5c9;
+}
 
-      line-height: 0.93;
+.red {
+  color: #8d2b2d;
+}
 
-      letter-spacing: 0.8px;
 
-      text-transform: uppercase;
-    }
+/* =========================================
+   DESCRIPTION
+   ========================================= */
 
-    h1 .cream {
-      color: #ddd5ca;
-    }
+.intro {
+  width: 320px;
 
-    h1 .red {
-      color: #8d292d;
-    }
+  margin-top: 27px;
 
+  color: #c5c0ba;
 
-    /* ==============================
-       DESCRIPTION
-       ============================== */
+  font-size: 11px;
 
-    .intro {
-      width: 365px;
+  font-weight: 300;
 
-      margin-top: 27px;
+  line-height: 1.85;
 
-      color: #c7c2ba;
+  letter-spacing: 0;
+}
 
-      font-family: "Montserrat", Arial, sans-serif;
 
-      font-size: 11px;
+/* =========================================
+   BUTTON
+   ========================================= */
 
-      font-weight: 300;
+.button {
+  display: flex;
 
-      line-height: 1.85;
+  align-items: center;
 
-      letter-spacing: 0.1px;
-    }
+  justify-content: space-between;
 
+  width: 162px;
+  height: 40px;
 
-    /* ==============================
-       VIEW MY WORK
-       ============================== */
+  margin-top: 26px;
 
-    .button {
-      display: flex;
+  padding: 0 15px;
 
-      align-items: center;
+  border: 1px solid #a9784f;
 
-      justify-content: space-between;
+  color: #b68b62;
 
-      width: 162px;
+  text-decoration: none;
 
-      height: 40px;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-      margin-top: 27px;
+  font-size: 10px;
 
-      padding: 0 15px;
+  letter-spacing: 1.5px;
 
-      border: 1px solid #b7946c;
+  transition: 0.3s ease;
+}
 
-      color: #b7946c;
+.button:hover {
+  background: #b68b62;
 
-      text-decoration: none;
+  color: #03070c;
+}
 
-      font-family: "Cormorant Garamond", Georgia, serif;
+.button-arrow {
+  font-size: 17px;
+}
 
-      font-size: 11px;
 
-      letter-spacing: 1.6px;
+/* =========================================
+   FEATURED WORK
+   ========================================= */
 
-      transition: 0.3s ease;
-    }
+.featured {
+  position: absolute;
 
-    .button-arrow {
-      font-family: Georgia, serif;
+  left: 10.8%;
+  bottom: 7.3%;
 
-      font-size: 18px;
+  z-index: 12;
+}
 
-      line-height: 1;
-    }
+.featured-title {
+  margin-bottom: 22px;
 
-    .button:hover {
-      background: #b7946c;
+  color: #b68b62;
 
-      color: #07101a;
-    }
+  font-family: "Cormorant Garamond", Georgia, serif;
 
+  font-size: 14px;
 
-    /* ==============================
-       FEATURED WORK
-       ============================== */
+  font-weight: 500;
 
-    .featured {
-      position: absolute;
+  letter-spacing: 3.2px;
 
-      left: 10.8%;
+  text-transform: uppercase;
+}
 
-      bottom: 7%;
+.featured-row {
+  display: flex;
 
-      z-index: 10;
-    }
+  align-items: center;
 
-    .featured-title {
-      margin-bottom: 24px;
+  gap: 16px;
+}
 
-      color: #b7946c;
 
-      font-family: "Cormorant Garamond", Georgia, serif;
+/* EMPTY ALBUM SPACES */
 
-      font-size: 15px;
+.work-card {
+  width: 146px;
+  height: 130px;
 
-      font-weight: 500;
+  flex-shrink: 0;
 
-      letter-spacing: 3px;
+  position: relative;
 
-      text-transform: uppercase;
-    }
+  background: rgba(8, 13, 19, 0.62);
 
-    .featured-row {
-      display: flex;
+  border: 1px solid rgba(182, 139, 98, 0.10);
 
-      align-items: center;
+  overflow: hidden;
+}
 
-      gap: 17px;
-    }
 
-    .work-card {
-      position: relative;
+/* subtle placeholder */
 
-      width: 145px;
+.work-card::after {
+  content: "";
 
-      height: 130px;
+  position: absolute;
 
-      overflow: hidden;
+  inset: 0;
 
-      background: rgba(10, 16, 23, 0.65);
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.025),
+    transparent 55%
+  );
+}
 
-      border: 1px solid rgba(183, 148, 108, 0.12);
 
-      flex-shrink: 0;
-    }
+/* arrow */
 
-    .work-card::before {
-      content: "";
+.featured-arrow {
+  width: 42px;
+  height: 50px;
 
-      position: absolute;
+  display: flex;
 
-      inset: 0;
+  align-items: center;
+  justify-content: center;
 
-      background:
-        linear-gradient(
-          rgba(7, 12, 18, 0.15),
-          rgba(7, 12, 18, 0.55)
-        );
-    }
+  color: #8e6d50;
 
-    .work-card::after {
-      content: "";
+  font-family: Georgia, serif;
 
-      position: absolute;
+  font-size: 32px;
 
-      left: 50%;
+  font-weight: 300;
+}
 
-      top: 50%;
 
-      width: 1px;
+/* =========================================
+   MOBILE
+   ========================================= */
 
-      height: 1px;
+@media (max-width: 900px) {
 
-      background: transparent;
-    }
+  .logo {
+    width: 190px;
+  }
 
+  .navigation {
+    left: auto;
+    right: 5%;
+  }
 
-    /* ==============================
-       FEATURED ARROW
-       ============================== */
+  .nav-links {
+    gap: 25px;
+  }
 
-    .featured-arrow {
-      width: 45px;
+  .nav-links a {
+    font-size: 11px;
+  }
 
-      height: 60px;
+  .hero-content {
+    left: 12%;
+  }
 
-      display: flex;
+  .featured {
+    left: 12%;
+  }
+}
 
-      align-items: center;
 
-      justify-content: center;
+@media (max-width: 700px) {
 
-      color: #8f7658;
+  .hero {
+    width: calc(100% - 20px);
 
-      font-family: Georgia, serif;
+    min-height: calc(100svh - 20px);
 
-      font-size: 34px;
+    margin: 10px;
 
-      font-weight: 300;
-    }
+    border-radius: 11px;
 
+    background-position: 62% center;
+  }
 
-    /* ==============================
-       MOBILE
-       ============================== */
+  .logo {
+    top: 24px;
+    left: 22px;
 
-    @media (max-width: 900px) {
+    width: 165px;
+  }
 
-      .logo {
-        width: 205px;
-      }
+  .navigation {
+    top: 28px;
+    right: 23px;
+    left: auto;
+  }
 
-      .navigation {
-        left: auto;
+  .nav-links {
+    display: none;
+  }
 
-        right: 5%;
-      }
+  .navigation::after {
+    content: "☰";
 
-      .nav-links {
-        gap: 24px;
-      }
+    color: #b68b62;
 
-      .nav-links a {
-        font-size: 11px;
-      }
+    font-size: 25px;
 
-      .hero-content {
-        left: 12%;
-      }
+    font-weight: 300;
+  }
 
-      .featured {
-        left: 12%;
-      }
+  .social-rail {
+    display: none;
+  }
 
-      .work-card {
-        width: 125px;
+  .hero-content {
+    left: 25px;
+    top: auto;
+    bottom: 25%;
 
-        height: 110px;
-      }
-    }
+    width: calc(100% - 50px);
+  }
 
+  .eyebrow {
+    font-size: 10px;
 
-    @media (max-width: 700px) {
+    letter-spacing: 2.8px;
 
-      .hero {
-        min-height: 100svh;
+    margin-bottom: 13px;
+  }
 
-        background-position: 63% center;
-      }
+  h1 {
+    font-size: 44px;
+  }
 
-      .logo {
-        top: 25px;
+  .intro {
+    width: 90%;
 
-        left: 22px;
+    font-size: 10px;
 
-        width: 165px;
-      }
+    line-height: 1.75;
+  }
 
-      .navigation {
-        top: 27px;
+  .button {
+    width: 155px;
+  }
 
-        right: 23px;
-      }
+  .featured {
+    left: 25px;
+    right: 25px;
+    bottom: 4.5%;
+  }
 
-      .nav-links {
-        display: none;
-      }
+  .featured-title {
+    font-size: 11px;
 
-      .navigation::after {
-        content: "☰";
+    margin-bottom: 13px;
+  }
 
-        color: #b7946c;
+  .featured-row {
+    gap: 6px;
 
-        font-size: 26px;
+    overflow: hidden;
+  }
 
-        font-weight: 300;
-      }
+  .work-card {
+    width: 74px;
+    height: 68px;
+  }
 
-      .social-rail {
-        display: none;
-      }
+  .featured-arrow {
+    width: 30px;
 
-      .hero-content {
-        left: 25px;
+    font-size: 25px;
+  }
 
-        top: auto;
+}
 
-        bottom: 22%;
-
-        width: calc(100% - 50px);
-      }
-
-      .eyebrow {
-        font-size: 10px;
-
-        letter-spacing: 2.8px;
-
-        margin-bottom: 13px;
-      }
-
-      h1 {
-        font-size: 45px;
-
-        line-height: 0.92;
-      }
-
-      .intro {
-        width: 90%;
-
-        font-size: 10px;
-
-        line-height: 1.7;
-      }
-
-      .featured {
-        position: absolute;
-
-        left: 25px;
-
-        right: 25px;
-
-        bottom: 4%;
-      }
-
-      .featured-title {
-        font-size: 12px;
-
-        margin-bottom: 14px;
-      }
-
-      .featured-row {
-        gap: 6px;
-
-        overflow: hidden;
-      }
-
-      .work-card {
-        width: 90px;
-
-        height: 75px;
-      }
-
-      .featured-arrow {
-        width: 30px;
-
-        font-size: 25px;
-      }
-    }
-
-  </style>
+</style>
 </head>
 
 
 <body>
 
+<section class="hero">
 
-  <!-- ==================================
-       HERO
-       ================================== -->
 
-  <section class="hero">
+  <!-- LOGO -->
 
+  <img
+    src="lst.png"
+    alt="Maha Mhamdi"
+    class="logo"
+  >
 
-    <!-- LOGO -->
 
-    <img
-      src="lst.png"
-      alt="Maha Mhamdi"
-      class="logo"
-    >
+  <!-- NAVIGATION -->
 
+  <nav class="navigation">
 
-    <!-- NAVIGATION -->
+    <div class="nav-links">
 
-    <nav class="navigation">
+      <a href="#" class="active">HOME</a>
 
-      <div class="nav-links">
+      <a href="#about">ABOUT</a>
 
-        <a href="#" class="active">
-          HOME
-        </a>
+      <a href="#portfolio">WORK</a>
 
-        <a href="#about">
-          ABOUT
-        </a>
+      <a href="#behind">BEHIND THE SCENES</a>
 
-        <a href="#portfolio">
-          WORK
-        </a>
+      <a href="#contact">CONTACT</a>
 
-        <a href="#behind">
-          BEHIND THE SCENES
-        </a>
+    </div>
 
-        <a href="#contact">
-          CONTACT
-        </a>
+  </nav>
 
-      </div>
 
-    </nav>
+  <!-- SOCIAL RAIL -->
 
+  <aside class="social-rail">
 
-    <!-- ==================================
-         SOCIAL RAIL
-         ================================== -->
+    <div class="social-line-top"></div>
 
-    <aside class="social-rail">
 
-      <div class="social-line-top"></div>
+    <div class="social-icons">
 
 
-      <div class="social-icons">
+      <!-- INSTAGRAM -->
 
+      <a href="#" aria-label="Instagram">
 
-        <!-- INSTAGRAM -->
+        <svg viewBox="0 0 24 24">
 
-        <a href="#" aria-label="Instagram">
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5">
+          </rect>
 
-          <svg viewBox="0 0 24 24">
+          <circle
+            cx="12"
+            cy="12"
+            r="4">
+          </circle>
 
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5">
-            </rect>
+          <circle
+            cx="17.5"
+            cy="6.5"
+            r="0.8"
+            fill="currentColor"
+            stroke="none">
+          </circle>
 
-            <circle
-              cx="12"
-              cy="12"
-              r="4">
-            </circle>
+        </svg>
 
-            <circle
-              cx="17.5"
-              cy="6.5"
-              r="0.8"
-              fill="currentColor"
-              stroke="none">
-            </circle>
+      </a>
 
-          </svg>
 
-        </a>
+      <!-- YOUTUBE -->
 
+      <a href="#" aria-label="YouTube">
 
-        <!-- YOUTUBE -->
+        <svg viewBox="0 0 24 24">
 
-        <a href="#" aria-label="YouTube">
+          <path
+            d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z">
+          </path>
 
-          <svg viewBox="0 0 24 24">
+          <path
+            d="M10 9l5 3-5 3z">
+          </path>
 
-            <path
-              d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z">
-            </path>
+        </svg>
 
-            <path
-              d="M10 9l5 3-5 3z">
-            </path>
+      </a>
 
-          </svg>
 
-        </a>
+      <!-- EMAIL -->
 
+      <a href="mailto:" aria-label="Email">
 
-        <!-- EMAIL -->
+        <svg viewBox="0 0 24 24">
 
-        <a
-          href="mailto:"
-          aria-label="Email">
-
-          <svg viewBox="0 0 24 24">
-
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="1">
-            </rect>
-
-            <path
-              d="M3 7l9 7 9-7">
-            </path>
-
-          </svg>
-
-        </a>
-
-
-      </div>
-
-
-      <div class="social-line-bottom"></div>
-
-    </aside>
-
-
-    <!-- ==================================
-         HERO TEXT
-         ================================== -->
-
-    <div class="hero-content">
-
-
-      <p class="eyebrow">
-        SFX MAKEUP ARTIST
-      </p>
-
-
-      <h1>
-
-        <span class="cream">
-          BRINGING
-        </span>
-
-        <br>
-
-        <span class="red">
-          CHARACTERS
-        </span>
-
-        <br>
-
-        <span class="cream">
-          TO LIFE
-        </span>
-
-      </h1>
-
-
-      <p class="intro">
-
-        Specializing in SFX Makeup, Prosthetics
-        and Character Creation for Film, TV,
-        Cosplay and more.
-
-      </p>
-
-
-      <!-- STANDALONE BUTTON -->
-
-      <a
-        href="#portfolio"
-        class="button">
-
-        <span>
-          VIEW MY WORK
-        </span>
-
-        <span class="button-arrow">
-          →
-        </span>
+          <rect
+            x="3"
+            y="5"
+            width="18"
+            height="14"
+            rx="1">
+          </rect>
+
+          <path
+            d="M3 7l9 7 9-7">
+          </path>
+
+        </svg>
 
       </a>
 
@@ -851,57 +736,99 @@
     </div>
 
 
-    <!-- ==================================
-         FEATURED WORK
-         ================================== -->
+    <div class="social-line-bottom"></div>
 
-    <section
-      class="featured"
-      id="portfolio">
+  </aside>
 
 
-      <h2 class="featured-title">
-        FEATURED WORK
-      </h2>
+  <!-- HERO TEXT -->
+
+  <div class="hero-content">
 
 
-      <div class="featured-row">
+    <p class="eyebrow">
+      SFX MAKEUP ARTIST
+    </p>
 
 
-        <!-- ALBUM 1 -->
+    <h1>
 
-        <div class="work-card"></div>
+      <span class="cream">
+        BRINGING
+      </span>
 
+      <br>
 
-        <!-- ALBUM 2 -->
+      <span class="red">
+        CHARACTERS
+      </span>
 
-        <div class="work-card"></div>
+      <br>
 
+      <span class="cream">
+        TO LIFE
+      </span>
 
-        <!-- ALBUM 3 -->
-
-        <div class="work-card"></div>
-
-
-        <!-- ALBUM 4 -->
-
-        <div class="work-card"></div>
-
-
-        <!-- NEXT -->
-
-        <div class="featured-arrow">
-          →
-        </div>
+    </h1>
 
 
+    <p class="intro">
+
+      Specializing in SFX Makeup, Prosthetics
+      and Character Creation for Film, TV,
+      Cosplay and more.
+
+    </p>
+
+
+    <a
+      href="#portfolio"
+      class="button">
+
+      <span>
+        VIEW MY WORK
+      </span>
+
+      <span class="button-arrow">
+        →
+      </span>
+
+    </a>
+
+  </div>
+
+
+  <!-- FEATURED WORK -->
+
+  <section
+    class="featured"
+    id="portfolio">
+
+    <h2 class="featured-title">
+      FEATURED WORK
+    </h2>
+
+
+    <div class="featured-row">
+
+      <div class="work-card"></div>
+
+      <div class="work-card"></div>
+
+      <div class="work-card"></div>
+
+      <div class="work-card"></div>
+
+      <div class="featured-arrow">
+        →
       </div>
 
-    </section>
-
+    </div>
 
   </section>
 
+
+</section>
 
 </body>
 </html>
