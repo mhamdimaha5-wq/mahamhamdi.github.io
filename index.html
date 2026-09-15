@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[14:45, 15/09/2026] Maha: <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -27,85 +27,42 @@
       color: #eee8dc;
       font-family: "Montserrat", Arial, sans-serif;
       overflow-x: hidden;
+    }…
+[14:49, 15/09/2026] Maha: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maha Mhamdi | SFX Makeup Artist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #05090f;
+      color: #e7dfd2;
+      font-family: "Montserrat", Arial, sans-serif;
+      overflow-x: hidden;
     }
 
 
     /* =========================
-       NAVIGATION
-       ========================= */
-
-    .top-nav {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-
-      padding: 30px 5%;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      z-index: 20;
-    }
-
-    /* YOUR LOGO IS THE ONLY BRAND */
-
-    .nav-logo {
-      width: 180px;
-      height: auto;
-      display: block;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      position: relative;
-
-      color: #d9d2c5;
-
-      text-decoration: none;
-
-      font-size: 9px;
-      letter-spacing: 2px;
-
-      padding-bottom: 8px;
-
-      transition: 0.3s ease;
-    }
-
-    /* ACTIVE HOME */
-
-    .nav-links a.active {
-      color: #b59b72;
-    }
-
-    .nav-links a.active::after {
-      content: "";
-
-      position: absolute;
-
-      left: 0;
-      right: 0;
-      bottom: 0;
-
-      height: 1px;
-
-      background: #b59b72;
-    }
-
-    .nav-links a:hover {
-      color: #b59b72;
-    }
-
-
-    /* =========================
-       HERO
+       MAIN HERO
        ========================= */
 
     .hero {
@@ -113,28 +70,21 @@
 
       min-height: 100vh;
 
-      display: flex;
-      align-items: flex-end;
-
-      padding: 0 8% 13vh;
-
       overflow: hidden;
 
-      background-image:
-
+      background:
         linear-gradient(
           90deg,
-          rgba(5, 7, 11, 0.88) 0%,
-          rgba(5, 7, 11, 0.57) 43%,
-          rgba(5, 7, 11, 0.18) 100%
+          rgba(4, 9, 15, 0.95) 0%,
+          rgba(4, 9, 15, 0.72) 32%,
+          rgba(4, 9, 15, 0.20) 70%,
+          rgba(4, 9, 15, 0.15) 100%
         ),
-
         linear-gradient(
           0deg,
-          rgba(5, 7, 11, 0.9) 0%,
-          rgba(5, 7, 11, 0.05) 65%
+          rgba(3, 7, 12, 0.95) 0%,
+          rgba(3, 7, 12, 0.05) 55%
         ),
-
         url("GOT.jpg");
 
       background-size: cover;
@@ -146,77 +96,188 @@
 
 
     /* =========================
+       NAVIGATION
+       ========================= */
+
+    .navigation {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+
+      height: 115px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      z-index: 20;
+    }
+
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 67px;
+    }
+
+
+    .nav-links a {
+      position: relative;
+
+      color: #d7d0c5;
+
+      text-decoration: none;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: 14px;
+
+      letter-spacing: 2px;
+
+      padding: 10px 0;
+
+      transition: 0.3s ease;
+    }
+
+
+    .nav-links a.active {
+      color: #b69b76;
+    }
+
+
+    .nav-links a.active::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+
+      bottom: 0;
+
+      height: 1px;
+
+      background: #b69b76;
+    }
+
+
+    .nav-links a:hover {
+      color: #b69b76;
+    }
+
+
+    /* =========================
+       LOGO
+       ========================= */
+
+    .main-logo {
+      position: absolute;
+
+      top: 35px;
+
+      left: 5%;
+
+      width: 235px;
+
+      height: auto;
+
+      z-index: 25;
+    }
+
+
+    /* =========================
        HERO CONTENT
        ========================= */
 
     .hero-content {
-      position: relative;
+      position: absolute;
+
+      left: 10.9%;
+
+      bottom: 31%;
+
+      width: 360px;
 
       z-index: 10;
-
-      max-width: 850px;
     }
 
 
-    /* SMALL TITLE */
+    /* SMALL GOLD TITLE */
 
     .eyebrow {
-      margin-bottom: 16px;
+      margin-bottom: 20px;
 
-      color: #b59b72;
+      color: #b69b76;
 
-      font-size: 11px;
+      font-family: "Cormorant Garamond", Georgia, serif;
 
-      letter-spacing: 5px;
+      font-size: 14px;
+
+      letter-spacing: 4px;
 
       text-transform: uppercase;
     }
 
 
-    /* MAIN TITLE */
+    /* =========================
+       MAIN HEADING
+       ========================= */
 
     h1 {
       font-family: "Cormorant Garamond", Georgia, serif;
 
-      font-size: clamp(65px, 8vw, 115px);
+      font-size: 50px;
 
       font-weight: 400;
 
-      line-height: 0.82;
+      line-height: 0.95;
 
       letter-spacing: 1px;
 
       text-transform: uppercase;
     }
 
-    h1 .light {
-      color: #eee8dc;
+
+    h1 .cream {
+      color: #e7dfd2;
     }
+
 
     h1 .red {
-      color: #8e2527;
-    }
-
-
-    /* DESCRIPTION */
-
-    .intro {
-      max-width: 470px;
-
-      margin-top: 28px;
-
-      color: #c7c2ba;
-
-      font-size: 11px;
-
-      line-height: 1.9;
-
-      letter-spacing: 0.4px;
+      color: #8b2427;
     }
 
 
     /* =========================
-       VIEW MY WORK
+       DESCRIPTION
+       ========================= */
+
+    .intro {
+      margin-top: 28px;
+
+      width: 310px;
+
+      color: #c9c4bc;
+
+      font-family: "Montserrat", Arial, sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 300;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       BUTTON
        ========================= */
 
     .button {
@@ -224,52 +285,52 @@
 
       align-items: center;
 
-      gap: 20px;
+      justify-content: space-between;
 
-      margin-top: 29px;
+      width: 162px;
 
-      padding: 14px 25px;
+      margin-top: 27px;
 
-      border: 1px solid #b59b72;
+      padding: 12px 15px;
 
-      color: #b59b72;
+      border: 1px solid #a98f6c;
+
+      color: #c0a47b;
 
       text-decoration: none;
 
       font-size: 9px;
 
-      letter-spacing: 2.5px;
+      letter-spacing: 1.7px;
 
       transition: 0.3s ease;
     }
+
 
     .button-arrow {
-      font-size: 15px;
+      font-size: 17px;
 
-      transition: 0.3s ease;
+      line-height: 1;
     }
+
 
     .button:hover {
-      background: #b59b72;
+      background: #a98f6c;
 
-      color: #07090d;
-    }
-
-    .button:hover .button-arrow {
-      transform: translateX(5px);
+      color: #05090f;
     }
 
 
     /* =========================
-       SOCIAL ICONS
+       LEFT VERTICAL LINE
        ========================= */
 
-    .social-bar {
+    .side-rail {
       position: absolute;
 
-      left: 3.2%;
+      left: 5.5%;
 
-      bottom: 13vh;
+      bottom: 27%;
 
       display: flex;
 
@@ -277,55 +338,76 @@
 
       align-items: center;
 
-      gap: 18px;
-
       z-index: 20;
     }
 
-    .social-bar::after {
-      content: "";
 
+    .side-line {
       width: 1px;
 
-      height: 75px;
+      height: 355px;
 
-      background: #8d806d;
+      background: #8f887e;
 
-      opacity: 0.7;
+      opacity: 0.55;
 
-      margin-top: 3px;
+      margin-bottom: 18px;
     }
 
-    .social-bar a {
-      color: #b59b72;
 
+    /* =========================
+       SOCIAL ICONS
+       ========================= */
+
+    .socials {
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 18px;
+    }
+
+
+    .socials a {
       display: flex;
 
       align-items: center;
+
       justify-content: center;
+
+      width: 18px;
+
+      height: 18px;
+
+      color: #b8afa3;
 
       text-decoration: none;
 
       transition: 0.3s ease;
     }
 
-    .social-bar svg {
-      width: 17px;
-      height: 17px;
+
+    .socials svg {
+      width: 15px;
+
+      height: 15px;
 
       fill: none;
 
       stroke: currentColor;
 
-      stroke-width: 1.3;
+      stroke-width: 1.5;
 
       stroke-linecap: round;
 
       stroke-linejoin: round;
     }
 
-    .social-bar a:hover {
-      color: #8e2527;
+
+    .socials a:hover {
+      color: #b69b76;
     }
 
 
@@ -334,107 +416,112 @@
        ========================= */
 
     .featured {
-      position: relative;
+      position: absolute;
 
-      background: #07090d;
+      left: 10.9%;
 
-      padding: 75px 7% 90px;
+      bottom: 7.2%;
+
+      width: 710px;
+
+      z-index: 15;
     }
 
-    .featured-heading {
+
+    .featured-title {
+      margin-bottom: 24px;
+
+      color: #b69b76;
+
+      font-family: "Cormorant Garamond", Georgia, serif;
+
+      font-size: 13px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+
+    .featured-row {
       display: flex;
 
       align-items: center;
 
-      justify-content: space-between;
-
-      margin-bottom: 30px;
-    }
-
-    .featured-title {
-      color: #b59b72;
-
-      font-family: "Montserrat", Arial, sans-serif;
-
-      font-size: 12px;
-
-      letter-spacing: 5px;
-
-      text-transform: uppercase;
-    }
-
-    .featured-line {
-      height: 1px;
-
-      flex: 1;
-
-      margin-left: 30px;
-
-      background: #514b42;
+      gap: 18px;
     }
 
 
-    /* ALBUM PLACEHOLDERS */
-
-    .work-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(5, 1fr);
-
-      gap: 12px;
-    }
+    /* =========================
+       FUTURE ALBUM SPACES
+       ========================= */
 
     .work-card {
       position: relative;
 
-      height: 230px;
+      width: 148px;
+
+      height: 132px;
+
+      flex-shrink: 0;
 
       overflow: hidden;
 
-      background: #101217;
+      background: rgba(12, 16, 22, 0.85);
 
-      border: 1px solid #292a2d;
+      border: 1px solid rgba(157, 143, 124, 0.12);
     }
 
-    .work-card::before {
-      content: "+";
+
+    .work-card img {
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+
+    .work-card.empty::after {
+      content: "";
 
       position: absolute;
 
-      top: 50%;
-      left: 50%;
+      inset: 0;
 
-      transform: translate(-50%, -50%);
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0)
+        );
+    }
 
-      color: #655b4e;
+
+    /* FEATURED ARROW */
+
+    .featured-arrow {
+      width: 65px;
+
+      height: 65px;
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #8e8374;
 
       font-family: Georgia, serif;
 
-      font-size: 28px;
+      font-size: 35px;
 
       font-weight: 300;
-
-      z-index: 2;
-    }
-
-    .work-card span {
-      position: absolute;
-
-      left: 15px;
-      bottom: 13px;
-
-      color: #766d60;
-
-      font-size: 8px;
-
-      letter-spacing: 2px;
-
-      text-transform: uppercase;
-    }
-
-    .work-card:hover {
-      border-color: #b59b72;
     }
 
 
@@ -444,106 +531,137 @@
 
     @media (max-width: 700px) {
 
-      .top-nav {
-        padding: 22px 24px;
+      .hero {
+        min-height: 100svh;
+
+        background-position: 62% center;
       }
 
-      .nav-logo {
-        width: 135px;
+
+      .navigation {
+        height: 95px;
+
+        justify-content: flex-end;
+
+        padding-right: 25px;
       }
+
+
+      .main-logo {
+        top: 25px;
+
+        left: 22px;
+
+        width: 145px;
+      }
+
 
       .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a {
-        font-size: 7px;
-
-        letter-spacing: 1px;
-      }
-
-      .nav-links a:nth-child(4) {
         display: none;
       }
 
 
-      .hero {
-        min-height: 100svh;
+      .navigation::after {
+        content: "☰";
 
-        padding: 0 25px 55px;
+        color: #c8bfb2;
 
-        background-position: 60% center;
+        font-size: 27px;
+
+        font-weight: 300;
+      }
+
+
+      .hero-content {
+        left: 25px;
+
+        bottom: 10%;
+
+        width: calc(100% - 50px);
       }
 
 
       .eyebrow {
-        font-size: 8px;
+        font-size: 10px;
 
         letter-spacing: 3px;
 
-        margin-bottom: 13px;
+        margin-bottom: 15px;
       }
 
 
       h1 {
-        font-size: clamp(48px, 14vw, 72px);
+        font-size: 45px;
 
-        line-height: 0.85;
+        line-height: 0.9;
       }
 
 
       .intro {
-        max-width: 92%;
+        width: 90%;
 
-        font-size: 9px;
+        font-size: 10px;
 
-        line-height: 1.8;
+        line-height: 1.75;
 
         margin-top: 20px;
       }
 
 
       .button {
-        margin-top: 23px;
+        margin-top: 22px;
 
-        padding: 12px 20px;
+        width: 155px;
 
-        font-size: 7px;
+        padding: 12px 14px;
       }
 
 
-      .social-bar {
+      .side-rail {
         display: none;
       }
 
 
       .featured {
-        padding: 55px 25px 65px;
+        position: relative;
+
+        left: auto;
+
+        bottom: auto;
+
+        width: 100%;
+
+        padding: 55px 25px 70px;
+
+        background: #05090f;
       }
 
 
       .featured-title {
-        font-size: 9px;
+        font-size: 10px;
 
-        letter-spacing: 3px;
+        margin-bottom: 18px;
       }
 
 
-      .featured-line {
-        margin-left: 15px;
-      }
+      .featured-row {
+        display: grid;
 
-
-      .work-grid {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         gap: 8px;
       }
 
 
       .work-card {
-        height: 170px;
+        width: 100%;
+
+        height: 145px;
+      }
+
+
+      .featured-arrow {
+        display: none;
       }
 
     }
@@ -556,71 +674,73 @@
 
 
   <!-- =========================
-       NAVIGATION
+       HERO
        ========================= -->
 
-  <nav class="top-nav">
+  <section class="hero">
+
+
+    <!-- LOGO -->
 
     <img
       src="lst.png"
       alt="Maha Mhamdi"
-      class="nav-logo"
+      class="main-logo"
     >
 
-    <div class="nav-links">
 
-      <a href="#" class="active">
-        HOME
-      </a>
+    <!-- NAVIGATION -->
 
-      <a href="#about">
-        ABOUT
-      </a>
+    <nav class="navigation">
 
-      <a href="#portfolio">
-        WORK
-      </a>
+      <div class="nav-links">
 
-      <a href="#behind">
-        BEHIND THE SCENES
-      </a>
+        <a href="#" class="active">
+          HOME
+        </a>
 
-      <a href="#contact">
-        CONTACT
-      </a>
+        <a href="#about">
+          ABOUT
+        </a>
 
-    </div>
+        <a href="#portfolio">
+          WORK
+        </a>
 
-  </nav>
+        <a href="#behind">
+          BEHIND THE SCENES
+        </a>
+
+        <a href="#contact">
+          CONTACT
+        </a>
+
+      </div>
+
+    </nav>
 
 
-  <!-- =========================
-       HERO
-       ========================= -->
-
-  <header class="hero">
-
+    <!-- HERO TEXT -->
 
     <div class="hero-content">
 
-
       <p class="eyebrow">
-        SFX Makeup Artist
+        SFX MAKEUP ARTIST
       </p>
 
 
       <h1>
 
-        <span class="light">
-          Bringing
+        <span class="cream">
+          BRINGING
         </span>
 
         <span class="red">
-          Characters
+          CHARACTERS
         </span>
 
-        <span class="light">
-          To Life
+        <span class="cream">
+          TO LIFE
         </span>
 
       </h1>
@@ -628,9 +748,9 @@
 
       <p class="intro">
 
-        Special effects makeup, prosthetics & character design.
-        Creating unforgettable characters through makeup,
-        sculpture and prosthetics.
+        Specializing in SFX Makeup, Prosthetics
+        and Character Creation for Film, TV,
+        Cosplay and more.
 
       </p>
 
@@ -640,7 +760,9 @@
         class="button"
       >
 
-        VIEW MY WORK
+        <span>
+          VIEW MY WORK
+        </span>
 
         <span class="button-arrow">
           →
@@ -648,152 +770,155 @@
 
       </a>
 
-
     </div>
 
 
-    <!-- SOCIAL ICONS -->
+    <!-- SIDE LINE + SOCIAL ICONS -->
 
-    <div class="social-bar">
+    <aside class="side-rail">
 
-
-      <!-- INSTAGRAM -->
-
-      <a href="#" aria-label="Instagram">
-
-        <svg viewBox="0 0 24 24">
-
-          <rect
-            x="3"
-            y="3"
-            width="18"
-            height="18"
-            rx="5"
-          ></rect>
-
-          <circle
-            cx="12"
-            cy="12"
-            r="4"
-          ></circle>
-
-          <circle
-            cx="17.5"
-            cy="6.5"
-            r="0.8"
-            fill="currentColor"
-            stroke="none"
-          ></circle>
-
-        </svg>
-
-      </a>
+      <div class="side-line"></div>
 
 
-      <!-- YOUTUBE -->
-
-      <a href="#" aria-label="YouTube">
-
-        <svg viewBox="0 0 24 24">
-
-          <path
-            d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z"
-          ></path>
-
-          <path
-            d="M10 9l5 3-5 3z"
-          ></path>
-
-        </svg>
-
-      </a>
+      <div class="socials">
 
 
-      <!-- EMAIL -->
+        <!-- INSTAGRAM -->
 
-      <a
-        href="mailto:"
-        aria-label="Email"
-      >
+        <a href="#" aria-label="Instagram">
 
-        <svg viewBox="0 0 24 24">
+          <svg viewBox="0 0 24 24">
 
-          <rect
-            x="3"
-            y="5"
-            width="18"
-            height="14"
-            rx="1"
-          ></rect>
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5"
+            ></rect>
 
-          <path
-            d="M3 7l9 7 9-7"
-          ></path>
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            ></circle>
 
-        </svg>
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="0.8"
+              fill="currentColor"
+              stroke="none"
+            ></circle>
 
-      </a>
+          </svg>
+
+        </a>
 
 
-    </div>
+        <!-- YOUTUBE -->
 
-  </header>
+        <a href="#" aria-label="YouTube">
+
+          <svg viewBox="0 0 24 24">
+
+            <path
+              d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z"
+            ></path>
+
+            <path
+              d="M10 9l5 3-5 3z"
+            ></path>
+
+          </svg>
+
+        </a>
 
 
-  <!-- =========================
-       FEATURED WORK
-       ========================= -->
+        <!-- EMAIL -->
 
-  <section
-    class="featured"
-    id="portfolio"
-  >
+        <a href="mailto:" aria-label="Email">
 
-    <div class="featured-heading">
+          <svg viewBox="0 0 24 24">
+
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="1"
+            ></rect>
+
+            <path
+              d="M3 7l9 7 9-7"
+            ></path>
+
+          </svg>
+
+        </a>
+
+
+      </div>
+
+    </aside>
+
+
+    <!-- FEATURED WORK -->
+
+    <section
+      class="featured"
+      id="portfolio"
+    >
 
       <h2 class="featured-title">
-        Featured Work
+        FEATURED WORK
       </h2>
 
-      <div class="featured-line"></div>
 
-    </div>
-
-
-    <!--
-      THESE ARE EMPTY SPACES
-      FOR YOUR FUTURE SFX ALBUMS.
-    -->
-
-    <div class="work-grid">
+      <div class="featured-row">
 
 
-      <div class="work-card">
-        <span>SFX / 01</span>
+        <!-- ALBUM 1 -->
+
+        <div class="work-card empty">
+        </div>
+
+
+        <!-- ALBUM 2 -->
+
+        <div class="work-card empty">
+        </div>
+
+
+        <!-- ALBUM 3 -->
+
+        <div class="work-card empty">
+        </div>
+
+
+        <!-- ALBUM 4 -->
+
+        <div class="work-card empty">
+        </div>
+
+
+        <!-- ALBUM 5 -->
+
+        <div class="work-card empty">
+        </div>
+
+
+        <!-- ARROW -->
+
+        <div class="featured-arrow">
+          →
+        </div>
+
+
       </div>
 
+    </section>
 
-      <div class="work-card">
-        <span>PROSTHETICS / 02</span>
-      </div>
-
-
-      <div class="work-card">
-        <span>CHARACTER / 03</span>
-      </div>
-
-
-      <div class="work-card">
-        <span>ON SET / 04</span>
-      </div>
-
-
-      <div class="work-card">
-        <span>CREATURE / 05</span>
-      </div>
-
-
-    </div>
 
   </section>
 
