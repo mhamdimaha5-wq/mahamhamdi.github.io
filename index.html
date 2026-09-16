@@ -613,6 +613,70 @@ margin-top: 100px;
   line-height: 1.8;
   margin: 0;
 }
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact {
+  min-height: 100vh;
+  padding: 140px 8%;
+  background: #050b12;
+  color: #ded5c8;
+  display: flex;
+  align-items: center;
+}
+
+.contact-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-label {
+  color: #b48a62;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.contact-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 58px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.contact-text {
+  max-width: 500px;
+  color: #c5beb5;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-links a {
+  width: fit-content;
+  color: #ded5c8;
+  text-decoration: none;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid rgba(180,138,98,.45);
+  padding-bottom: 7px;
+}
+
+.contact-links a:hover {
+  color: #b48a62;
+}
 </style>
 </head>
 
@@ -834,7 +898,40 @@ margin-top: 100px;
   </section>
 
 </section>
+<!-- CONTACT -->
 
+<section class="contact" id="contact">
+
+  <div class="contact-content">
+
+    <p class="contact-label">GET IN TOUCH</p>
+
+    <h2>LET'S CREATE<br>TOGETHER</h2>
+
+    <p class="contact-text">
+      For collaborations, productions, creative projects or professional inquiries,
+      feel free to get in touch.
+    </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:YOUR-EMAIL-HERE">
+        Email
+      </a>
+
+      <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank">
+        Instagram
+      </a>
+
+      <a href="https://www.youtube.com/YOUR-YOUTUBE" target="_blank">
+        YouTube
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
   <script>
     const navLinks = document.querySelectorAll(".nav-links a");
 
