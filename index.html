@@ -12,28 +12,109 @@
 
 <style>
 
+/* =========================
+   GENERAL
+   ========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  width: 100%;
-  min-height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   background: #050b12;
   color: #ded5c8;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
 
 /* =========================
-   HERO
+   NAVIGATION
+   ========================= */
+
+nav {
+  position: fixed;
+  top: 45px;
+  right: 5%;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+
+.nav-links a {
+  position: relative;
+
+  padding-bottom: 10px;
+
+  color: #d8d0c5;
+  text-decoration: none;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  letter-spacing: 1.7px;
+  white-space: nowrap;
+
+  transition: color .3s ease;
+}
+
+.nav-links a:hover {
+  color: #b48a62;
+}
+
+.nav-links a.active {
+  color: #b48a62;
+}
+
+.nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: #b48a62;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+  position: fixed;
+
+  top: 3px;
+  left: 4px;
+
+  width: 265px;
+  height: auto;
+
+  z-index: 101;
+}
+
+
+/* =========================
+   HOME
    ========================= */
 
 .hero {
@@ -61,94 +142,9 @@ body {
   background-repeat: no-repeat;
 }
 
-/* =========================
-   LOGO
-   ========================= */
-
-.logo {
-  position: absolute;
-
-  top: 3px;
-  left: 4px;
-
-  width: 265px;
-  height: auto;
-
-  z-index: 10;
-}
 
 /* =========================
-   NAVIGATION
-   ========================= */
-
-nav {
-  position: absolute;
-
-  top: 45px;
-  right: 5%;
-
-  z-index: 20;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 52px;
-}
-
-.nav-links a {
-  position: relative;
-
-  padding-bottom: 10px;
-
-  color: #d8d0c5;
-
-  text-decoration: none;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 15px;
-  font-weight: 600;
-
-  letter-spacing: 1.7px;
-
-  white-space: nowrap;
-}
-
-.nav-links a.active {
-  color: #b48a62;
-}
-
-.nav-links a.active::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 1px;
-
-  background: #b48a62;
-}
-
-.nav-links a:hover {
-  color: #b48a62;
-}
-
-.nav-links a:hover::after {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  height: 1px;
-  background: #b48a62;
-}
-/* =========================
-   LEFT LINE
+   LEFT DECORATION
    ========================= */
 
 .side-decoration {
@@ -169,14 +165,8 @@ nav {
   height: 120px;
 
   background: #b48a62;
-
   opacity: .75;
 }
-
-
-/* =========================
-   SOCIAL ICONS
-   ========================= */
 
 .social-icons {
   display: flex;
@@ -210,7 +200,6 @@ nav {
   fill: none;
 
   stroke: currentColor;
-
   stroke-width: 1.4;
 
   stroke-linecap: round;
@@ -222,17 +211,15 @@ nav {
   height: 225px;
 
   background: #b48a62;
-
   opacity: .62;
 
   transform: scaleX(.55);
-
   transform-origin: top;
 }
 
 
 /* =========================
-   HERO TEXT
+   HOME TEXT
    ========================= */
 
 .hero-content {
@@ -261,7 +248,7 @@ nav {
   text-transform: uppercase;
 }
 
-h1 {
+.hero h1 {
   font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: 57px;
@@ -282,11 +269,6 @@ h1 {
   color: #8c292d;
 }
 
-
-/* =========================
-   DESCRIPTION
-   ========================= */
-
 .intro {
   width: 330px;
 
@@ -300,11 +282,6 @@ h1 {
 
   line-height: 1.8;
 }
-
-
-/* =========================
-   VIEW MY WORK
-   ========================= */
 
 .button {
   width: 160px;
@@ -333,69 +310,521 @@ h1 {
   text-transform: uppercase;
 }
 
+.button:hover {
+  background: rgba(180,138,98,.08);
+}
+
 .button-arrow {
   font-size: 17px;
 }
 
 
 /* =========================
-   FEATURED WORK
+   ABOUT
    ========================= */
 
-.featured {
-  position: relative;
+.about {
+  min-height: 100vh;
 
-  left: 12%;
+  padding: 140px 8%;
 
-margin-top: 100px;
-  z-index: 10;
+  background: #050b12;
+
+  display: flex;
+  align-items: center;
+  gap: 80px;
 }
 
-.featured-title {
-  margin-bottom: 17px;
+.about-photo {
+  width: 45%;
+  max-width: 500px;
+}
 
+.about-photo img {
+  width: 100%;
+  height: 600px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.about-content {
+  width: 45%;
+  max-width: 550px;
+}
+
+.about-label {
   color: #b48a62;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: 14px;
-  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.about-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 25px;
+}
+
+.about-content .artist-title {
+  color: #ded5c8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 21px;
+
+  letter-spacing: 2px;
+
+  line-height: 1.6;
+
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  color: #bdb7ae;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================
+   WORK
+   ========================= */
+
+.work {
+  min-height: 100vh;
+
+  padding: 150px 8% 120px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050b12 0%,
+      #080808 100%
+    );
+}
+
+.work-header {
+  max-width: 1100px;
+
+  margin: 0 auto 75px;
+}
+
+.section-label {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.work-header h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 68px;
+
+  font-weight: 400;
+
+  line-height: .95;
 
   letter-spacing: 3px;
 
   text-transform: uppercase;
 }
 
-.featured-row {
+.work-header h2 span {
+  color: #8c292d;
+}
+
+.work-intro {
+  max-width: 580px;
+
+  margin-top: 25px;
+
+  color: #bdb7ae;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* WORK CATEGORIES */
+
+.work-category {
+  max-width: 1100px;
+
+  margin: 0 auto 90px;
+}
+
+.category-heading {
   display: flex;
+
   align-items: center;
 
-  gap: 13px;
+  gap: 25px;
+
+  margin-bottom: 25px;
 }
 
+.category-heading h3 {
+  color: #ded5c8;
 
-/* ALBUM PLACEHOLDERS */
-
-.album {
-  width: 118px;
-  height: 78px;
-
-  border: 1px solid rgba(180,138,98,.25);
-
-  background: rgba(4,9,14,.38);
-}
-
-
-/* ARROW */
-
-.featured-arrow {
-  margin-left: 7px;
-
-  color: #b48a62;
-
-  font-family: Georgia, serif;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: 28px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.category-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(180,138,98,.35);
+}
+
+
+/* WORK GRID */
+
+.work-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.work-image {
+  position: relative;
+
+  height: 370px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(180,138,98,.22);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(180,138,98,.08),
+      rgba(3,8,14,.8)
+    );
+}
+
+.work-image.large {
+  grid-column: span 2;
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform .6s ease;
+}
+
+.work-image:hover img {
+  transform: scale(1.04);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(180,138,98,.60);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.category-description {
+  max-width: 600px;
+
+  margin-top: 18px;
+
+  color: #918d87;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BEHIND THE SCENES
+   ========================= */
+
+.behind {
+  min-height: 100vh;
+
+  padding: 150px 8% 120px;
+
+  background: #080808;
+}
+
+.behind-header {
+  max-width: 1100px;
+
+  margin: 0 auto 75px;
+}
+
+.behind-header h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 68px;
+
+  font-weight: 400;
+
+  line-height: .95;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.behind-header h2 span {
+  color: #8c292d;
+}
+
+.behind-intro {
+  max-width: 580px;
+
+  margin-top: 25px;
+
+  color: #bdb7ae;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* BTS GRID */
+
+.behind-grid {
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.behind-item {
+  position: relative;
+
+  height: 440px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(180,138,98,.22);
+
+  background: #0b0b0b;
+}
+
+.behind-item.tall {
+  height: 560px;
+}
+
+.behind-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform .6s ease;
+}
+
+.behind-item:hover img {
+  transform: scale(1.03);
+}
+
+.behind-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(180,138,98,.07),
+      rgba(3,8,14,.85)
+    );
+
+  color: rgba(180,138,98,.60);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.behind-caption {
+  position: absolute;
+
+  left: 25px;
+  bottom: 22px;
+
+  color: #ded5c8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 17px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 2px 12px #000;
+}
+
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact {
+  min-height: 100vh;
+
+  padding: 140px 8%;
+
+  background: #050b12;
+
+  display: flex;
+  align-items: center;
+}
+
+.contact-content {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+.contact-label {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.contact-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  line-height: .95;
+
+  margin-bottom: 25px;
+}
+
+.contact-text {
+  max-width: 500px;
+
+  color: #c5beb5;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  margin-bottom: 40px;
+}
+
+.contact-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.contact-links a {
+  width: fit-content;
+
+  color: #ded5c8;
+
+  text-decoration: none;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 18px;
+
+  letter-spacing: 1px;
+
+  border-bottom: 1px solid rgba(180,138,98,.45);
+
+  padding-bottom: 7px;
+}
+
+.contact-links a:hover {
+  color: #b48a62;
 }
 
 
@@ -406,7 +835,6 @@ margin-top: 100px;
 @media (max-width: 900px) {
 
   nav {
-    left: auto;
     right: 5%;
   }
 
@@ -422,23 +850,48 @@ margin-top: 100px;
     width: 210px;
   }
 
-  .hero-content {
-    left: 12%;
+  .about {
+    padding-left: 7%;
+    padding-right: 7%;
+    gap: 45px;
   }
 
-  .featured {
-    left: 12%;
+  .about-photo {
+    width: 45%;
+  }
+
+  .about-content {
+    width: 50%;
+  }
+
+  .about-content h2 {
+    font-size: 45px;
+  }
+
+  .work,
+  .behind {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .work-header h2,
+  .behind-header h2 {
+    font-size: 55px;
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-image.large {
+    grid-column: span 2;
   }
 }
 
 
 @media (max-width: 700px) {
 
-  .hero {
-    min-height: 100svh;
-
-    background-position: 62% center;
-  }
+  /* MOBILE LOGO */
 
   .logo {
     top: 25px;
@@ -446,6 +899,9 @@ margin-top: 100px;
 
     width: 175px;
   }
+
+
+  /* MOBILE NAV */
 
   nav {
     top: 28px;
@@ -462,6 +918,15 @@ margin-top: 100px;
     color: #b48a62;
 
     font-size: 24px;
+  }
+
+
+  /* HOME */
+
+  .hero {
+    min-height: 100svh;
+
+    background-position: 62% center;
   }
 
   .side-decoration {
@@ -481,248 +946,196 @@ margin-top: 100px;
     letter-spacing: 2.5px;
   }
 
-  h1 {
+  .hero h1 {
     font-size: 44px;
   }
 
   .intro {
     width: 90%;
+
     font-size: 10px;
   }
 
-  .featured {
-    left: 25px;
-    bottom: 4%;
 
-    width: calc(100% - 50px);
-  }
+  /* ABOUT */
 
-  .featured-row {
-    gap: 6px;
-  }
+  .about {
+    min-height: auto;
 
-  .album {
-    width: 70px;
-    height: 55px;
-  }
+    padding: 110px 25px;
 
-}
-/* ABOUT PAGE */
-
-.about-page {
-    min-height: 100vh;
-    padding: 150px 8% 100px;
-    background: #080808;
-    color: #f2f0eb;
-}
-
-.about-intro {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    align-items: center;
-    gap: 80px;
-}
 
-.about-photo {
-    width: 45%;
-}
+    flex-direction: column;
 
-.about-photo img {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    display: block;
-}
+    align-items: flex-start;
 
-.about-content {
-    flex: 1;
-}
+    gap: 40px;
+  }
 
-.about-label {
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: #b59a6a;
-    margin-bottom: 20px;
-}
-
-.about-content h1 {
-    font-size: 50px;
-    letter-spacing: 5px;
-    font-weight: 400;
-    margin: 0 0 20px;
-}
-
-.about-content h2 {
-    font-size: 17px;
-    letter-spacing: 3px;
-    line-height: 1.7;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-.about-content p {
-    max-width: 520px;
-    color: #bdbab4;
-    font-size: 15px;
-    line-height: 1.9;
-    margin-bottom: 20px;
-}
- .about {
-  min-height: 100vh;
-  padding: 120px 8%;
-  background: #050b12;
-
-  display: flex;
-  align-items: center;
-  gap: 80px;
-}
-
-.about img {
-  width: 420px;
-  height: 560px;
-  object-fit: cover;
-  display: block;
-}
   .about-photo {
-  width: 45%;
-  max-width: 500px;
-}
+    width: 100%;
+
+    max-width: none;
+  }
+
   .about-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    height: 500px;
+  }
+
   .about-content {
-  width: 45%;
-  max-width: 550px;
-}
-  .about-label {
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
+    width: 100%;
+
+    max-width: none;
+  }
+
   .about-content h2 {
-  font-size: 42px;
-  margin: 0 0 25px;
-  line-height: 1.1;
-}
-  .about-content p {
-  font-size: 16px;
-  line-height: 1.8;
-  margin: 0;
-}
-/* =========================
-   CONTACT
-   ========================= */
+    font-size: 46px;
+  }
 
-.contact {
-  min-height: 100vh;
-  padding: 140px 8%;
-  background: #050b12;
-  color: #ded5c8;
-  display: flex;
-  align-items: center;
-}
-.contact-content {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
+
+  /* WORK */
+
+  .work {
+    padding: 110px 25px 90px;
+  }
+
+  .work-header {
+    margin-bottom: 60px;
+  }
+
+  .work-header h2 {
+    font-size: 46px;
+  }
+
+  .work-intro {
+    font-size: 11px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .work-image,
+  .work-image.large {
+    grid-column: span 1;
+
+    height: 360px;
+  }
+
+  .category-heading h3 {
+    font-size: 21px;
+  }
+
+
+  /* BEHIND */
+
+  .behind {
+    padding: 110px 25px 90px;
+  }
+
+  .behind-header {
+    margin-bottom: 60px;
+  }
+
+  .behind-header h2 {
+    font-size: 46px;
+  }
+
+  .behind-intro {
+    font-size: 11px;
+  }
+
+  .behind-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .behind-item,
+  .behind-item.tall {
+    height: 420px;
+  }
+
+
+  /* CONTACT */
+
+  .contact {
+    min-height: 100svh;
+
+    padding: 110px 25px;
+  }
+
+  .contact-content h2 {
+    font-size: 45px;
+  }
+
+  .contact-text {
+    font-size: 11px;
+  }
+
 }
 
-.contact-label {
-  color: #b48a62;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-}
-
-.contact-content h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 58px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  margin-bottom: 25px;
-}
-
-.contact-text {
-  max-width: 500px;
-  color: #c5beb5;
-  font-size: 13px;
-  line-height: 1.9;
-  margin-bottom: 40px;
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.contact-links a {
-  width: fit-content;
-  color: #ded5c8;
-  text-decoration: none;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 18px;
-  letter-spacing: 1px;
-  border-bottom: 1px solid rgba(180,138,98,.45);
-  padding-bottom: 7px;
-}
-
-.contact-links a:hover {
-  color: #b48a62;
-}
 </style>
 </head>
 
 
 <body>
 
-<section class="hero">
+
+<!-- =========================
+     LOGO
+     ========================= -->
+
+<img
+  src="logo.png.png"
+  alt="Maha Mhamdi"
+  class="logo"
+>
 
 
-  <!-- YOUR LOGO -->
-  <img
-    src="logo.png.png"
-    alt="Maha Mhamdi"
-    class="logo"
-  >
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
+<nav>
+
+  <div class="nav-links">
+
+    <a href="#home" class="active">HOME</a>
+
+    <a href="#about">ABOUT</a>
+
+    <a href="#work">WORK</a>
+
+    <a href="#behind">BEHIND THE SCENES</a>
+
+    <a href="#contact">CONTACT</a>
+
+  </div>
+
+</nav>
 
 
-  <!-- NAVIGATION -->
-  <nav>
+<!-- =========================
+     HOME
+     ========================= -->
 
-    <div class="nav-links">
-
-      <a href="#" class="active">HOME</a>
-
-     <a href="#about" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'}); return false;">ABOUT</a>
-
-      <a href="#portfolio">WORK</a>
-
-      <a href="#behind">BEHIND THE SCENES</a>
-
-      <a href="#contact">CONTACT</a>
-
-    </div>
-
-  </nav>
+<section class="hero" id="home">
 
 
-  <!-- LEFT DECORATION + SOCIAL ICONS -->
+  <!-- LEFT DECORATION -->
 
   <div class="side-decoration">
 
     <div class="top-line"></div>
 
-
     <div class="social-icons">
 
       <!-- Instagram -->
+
       <a href="#" aria-label="Instagram">
 
         <svg viewBox="0 0 24 24">
@@ -755,6 +1168,7 @@ margin-top: 100px;
 
 
       <!-- YouTube -->
+
       <a href="#" aria-label="YouTube">
 
         <svg viewBox="0 0 24 24">
@@ -773,6 +1187,7 @@ margin-top: 100px;
 
 
       <!-- Email -->
+
       <a href="mailto:" aria-label="Email">
 
         <svg viewBox="0 0 24 24">
@@ -795,7 +1210,6 @@ margin-top: 100px;
 
     </div>
 
-
     <div class="bottom-line"></div>
 
   </div>
@@ -808,7 +1222,6 @@ margin-top: 100px;
     <p class="eyebrow">
       SFX MAKEUP ARTIST
     </p>
-
 
     <h1>
 
@@ -824,17 +1237,13 @@ margin-top: 100px;
 
     </h1>
 
-
     <p class="intro">
       Specializing in SFX Makeup, Prosthetics<br>
       and Character Creation for Film, TV,<br>
       Cosplay and more.
     </p>
 
-
-    <a
-      href="#portfolio"
-      class="button">
+    <a href="#work" class="button">
 
       <span>VIEW MY WORK</span>
 
@@ -843,61 +1252,395 @@ margin-top: 100px;
     </a>
 
   </div>
-</div> <!-- hero content -->
-
-</section> <!-- HERO ENDS -->
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
- <div class="about-photo">
-  <img src="maha.png" alt="Maha Mhamdi">
-</div>
-
-<div class="about-content">
-
-  <p class="about-label">ABOUT THE ARTIST</p>
-
-  <h2>MAHA MHAMDI</h2>
-
-  <p>
-    SFX Makeup Artist, Prosthetics and Character Creator.
-  </p>
-
-</div>
 
 </section>
 
-  <!-- FEATURED WORK -->
 
-  <section
-    class="featured"
-    id="portfolio">
+<!-- =========================
+     ABOUT
+     ========================= -->
 
-    <h2 class="featured-title">
-      FEATURED WORK
+<section class="about" id="about">
+
+  <div class="about-photo">
+
+    <img
+      src="maha.png"
+      alt="Maha Mhamdi"
+    >
+
+  </div>
+
+
+  <div class="about-content">
+
+    <p class="about-label">
+      ABOUT THE ARTIST
+    </p>
+
+    <h2>
+      MAHA MHAMDI
     </h2>
 
+    <p class="artist-title">
+      SFX Makeup Artist, Prosthetics<br>
+      & Character Creator.
+    </p>
 
-    <div class="featured-row">
+    <p>
+      I transform faces, bodies and ideas into characters
+      through special effects makeup, prosthetics and
+      sculptural artistry.
+    </p>
 
-      <div class="album"></div>
+    <p>
+      My work combines fine art, sculpting and practical
+      effects to create detailed transformations for
+      film, television, cosplay and creative productions.
+    </p>
 
-      <div class="album"></div>
+  </div>
 
-      <div class="album"></div>
+</section>
 
-      <div class="album"></div>
 
-      <div class="featured-arrow">→</div>
+<!-- =========================
+     WORK
+     ========================= -->
+
+<section class="work" id="work">
+
+
+  <header class="work-header">
+
+    <p class="section-label">
+      SELECTED WORK
+    </p>
+
+    <h2>
+      THE ART OF<br>
+      <span>TRANSFORMATION</span>
+    </h2>
+
+    <p class="work-intro">
+      A selection of special effects makeup, prosthetics
+      and character creations developed through
+      sculpting, makeup and practical effects.
+    </p>
+
+  </header>
+
+
+  <!-- SFX MAKEUP -->
+
+  <section class="work-category">
+
+    <div class="category-heading">
+
+      <h3>
+        SFX Makeup
+      </h3>
+
+      <div class="category-line"></div>
 
     </div>
+
+
+    <div class="work-grid">
+
+      <div class="work-image large">
+
+        <div class="image-placeholder">
+          SFX IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image">
+
+        <div class="image-placeholder">
+          SFX IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image">
+
+        <div class="image-placeholder">
+          SFX IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image large">
+
+        <div class="image-placeholder">
+          SFX IMAGE
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <p class="category-description">
+      Character transformations, injuries, aging,
+      creature work and practical special effects makeup.
+    </p>
+
+  </section>
+
+
+  <!-- PROSTHETICS -->
+
+  <section class="work-category">
+
+    <div class="category-heading">
+
+      <h3>
+        Prosthetics
+      </h3>
+
+      <div class="category-line"></div>
+
+    </div>
+
+
+    <div class="work-grid">
+
+      <div class="work-image">
+
+        <div class="image-placeholder">
+          PROSTHETIC IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image large">
+
+        <div class="image-placeholder">
+          PROSTHETIC IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image large">
+
+        <div class="image-placeholder">
+          PROSTHETIC IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image">
+
+        <div class="image-placeholder">
+          PROSTHETIC IMAGE
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <p class="category-description">
+      Sculpting, molding, casting, application and
+      painting of prosthetic pieces and practical effects.
+    </p>
+
+  </section>
+
+
+  <!-- CHARACTER CREATION -->
+
+  <section class="work-category">
+
+    <div class="category-heading">
+
+      <h3>
+        Character Creation
+      </h3>
+
+      <div class="category-line"></div>
+
+    </div>
+
+
+    <div class="work-grid">
+
+      <div class="work-image large">
+
+        <div class="image-placeholder">
+          CHARACTER IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image">
+
+        <div class="image-placeholder">
+          CHARACTER IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image">
+
+        <div class="image-placeholder">
+          CHARACTER IMAGE
+        </div>
+
+      </div>
+
+      <div class="work-image large">
+
+        <div class="image-placeholder">
+          CHARACTER IMAGE
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <p class="category-description">
+      Complete character creation through makeup,
+      prosthetics, sculptural elements and transformation.
+    </p>
 
   </section>
 
 </section>
-<!-- CONTACT -->
+
+
+<!-- =========================
+     BEHIND THE SCENES
+     ========================= -->
+
+<section class="behind" id="behind">
+
+
+  <header class="behind-header">
+
+    <p class="section-label">
+      THE PROCESS
+    </p>
+
+    <h2>
+      BEHIND THE<br>
+      <span>SCENES</span>
+    </h2>
+
+    <p class="behind-intro">
+      The work doesn't begin when the final makeup is
+      revealed. From sculpting and preparation to
+      application and finishing, this is where the
+      transformation takes shape.
+    </p>
+
+  </header>
+
+
+  <div class="behind-grid">
+
+
+    <!-- SCULPTING -->
+
+    <div class="behind-item tall">
+
+      <div class="behind-placeholder">
+        BTS IMAGE
+      </div>
+
+      <div class="behind-caption">
+        Sculpting
+      </div>
+
+    </div>
+
+
+    <!-- PROSTHETIC PROCESS -->
+
+    <div class="behind-item">
+
+      <div class="behind-placeholder">
+        BTS IMAGE
+      </div>
+
+      <div class="behind-caption">
+        Prosthetic Process
+      </div>
+
+    </div>
+
+
+    <!-- MAKEUP APPLICATION -->
+
+    <div class="behind-item">
+
+      <div class="behind-placeholder">
+        BTS IMAGE
+      </div>
+
+      <div class="behind-caption">
+        Makeup Application
+      </div>
+
+    </div>
+
+
+    <!-- ON SET -->
+
+    <div class="behind-item tall">
+
+      <div class="behind-placeholder">
+        BTS IMAGE
+      </div>
+
+      <div class="behind-caption">
+        On Set
+      </div>
+
+    </div>
+
+
+    <!-- DETAILS -->
+
+    <div class="behind-item">
+
+      <div class="behind-placeholder">
+        BTS IMAGE
+      </div>
+
+      <div class="behind-caption">
+        Details
+      </div>
+
+    </div>
+
+
+    <!-- CREATION -->
+
+    <div class="behind-item">
+
+      <div class="behind-placeholder">
+        BTS IMAGE
+      </div>
+
+      <div class="behind-caption">
+        The Creation
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+     ========================= -->
 
 <section class="contact" id="contact">
 
@@ -913,9 +1656,9 @@ margin-top: 100px;
     </h2>
 
     <p class="contact-text">
-      Available for international productions, collaborations
-      and creative projects across film, television, fashion,
-      events and more.
+      Available for international productions,
+      collaborations and creative projects across
+      film, television, fashion, events and more.
     </p>
 
     <div class="contact-links">
@@ -924,11 +1667,15 @@ margin-top: 100px;
         EMAIL
       </a>
 
-      <a href="https://www.instagram.com/YOUR-INSTAGRAM" target="_blank">
+      <a
+        href="https://www.instagram.com/YOUR-INSTAGRAM"
+        target="_blank">
         INSTAGRAM
       </a>
 
-      <a href="https://www.youtube.com/YOUR-YOUTUBE" target="_blank">
+      <a
+        href="https://www.youtube.com/YOUR-YOUTUBE"
+        target="_blank">
         YOUTUBE
       </a>
 
@@ -937,20 +1684,67 @@ margin-top: 100px;
   </div>
 
 </section>
-  <script>
-    const navLinks = document.querySelectorAll(".nav-links a");
 
-    navLinks.forEach(link => {
-      link.addEventListener("click", function() {
-        navLinks.forEach(item => {
-          item.classList.remove("active");
-        });
 
-        this.classList.add("active");
-      });
+<!-- =========================
+     NAVIGATION SCRIPT
+     ========================= -->
+
+<script>
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+  let current = "";
+
+  sections.forEach(section => {
+
+    const sectionTop = section.offsetTop - 180;
+    const sectionHeight = section.offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionTop + sectionHeight
+    ) {
+      current = section.getAttribute("id");
+    }
+
+  });
+
+
+  navLinks.forEach(link => {
+
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+
+  });
+
+});
+
+
+/* Smooth navigation */
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", function() {
+
+    navLinks.forEach(item => {
+      item.classList.remove("active");
     });
-  </script>
+
+    this.classList.add("active");
+
+  });
+
+});
+
+</script>
+
 
 </body>
 </html>
-
