@@ -733,183 +733,473 @@ nav {
   text-shadow: 0 2px 12px #000;
 }
 
-<!-- =========================
-     CONTACT
-     ========================= -->
 
-<!-- =========================
-     CONTACT
-     ========================= -->
+/* =========================
+   CONTACT
+   ========================= */
 
-<section class="contact" id="contact">
+.contact {
+  position: relative;
+  min-height: 180vh;
+  overflow: hidden;
 
-  <div class="contact-content">
+  padding: 170px 8% 0;
 
-    <p class="contact-label">
-      LET'S CREATE SOMETHING
-    </p>
+  background:
+    radial-gradient(
+      ellipse at 75% 20%,
+      rgba(180,138,98,.10) 0%,
+      rgba(180,138,98,0) 38%
+    ),
+    radial-gradient(
+      ellipse at 20% 65%,
+      rgba(35,52,62,.20) 0%,
+      rgba(35,52,62,0) 40%
+    ),
+    linear-gradient(
+      180deg,
+      #050b12 0%,
+      #05080c 45%,
+      #030507 100%
+    );
+}
 
-    <h2>
-      UNFORGETTABLE.
-    </h2>
+.contact::before {
+  content: "";
 
-    <div class="contact-divider"></div>
+  position: absolute;
 
-    <p class="contact-text">
-      Have a project in mind?
-      Let's bring your character, story, or creative vision to life.
-      Available for film, television, commercial, editorial and
-      creative productions.
-    </p>
+  width: 750px;
+  height: 750px;
 
+  right: -280px;
+  top: 100px;
 
-    <div class="contact-links">
+  background: rgba(180,138,98,.045);
 
-      <div class="contact-link">
+  filter: blur(120px);
 
-        <div class="contact-link-label">
-          EMAIL
-        </div>
+  border-radius: 50%;
 
-        <a href="mailto:YOUR-EMAIL-HERE">
-          YOUR-EMAIL-HERE
-        </a>
+  pointer-events: none;
+}
 
-      </div>
+.contact-content {
+  position: relative;
 
+  width: 100%;
+  max-width: 1200px;
 
-      <div class="contact-link">
+  min-height: 100%;
 
-        <div class="contact-link-label">
-          INSTAGRAM
-        </div>
+  margin: 0 auto;
 
-        <a href="#" target="_blank">
-          @YOUR-INSTAGRAM
-        </a>
+  z-index: 2;
+}
 
-      </div>
 
+/* =========================
+   HERO
+   ========================= */
 
-      <div class="contact-link">
+.contact-hero {
+  min-height: 620px;
 
-        <div class="contact-link-label">
-          YOUTUBE
-        </div>
+  display: flex;
+  align-items: center;
 
-        <a href="#" target="_blank">
-          MAHA MHAMDI
-        </a>
+  padding: 40px 0 100px;
+}
 
-      </div>
+.contact-hero-inner {
+  width: 100%;
+}
 
-    </div>
 
+/* small gold heading */
 
-    <div class="contact-work">
+.contact-label {
+  color: #b48a62;
 
-      <div class="contact-work-heading">
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-        <h3>
-          LET'S WORK TOGETHER
-        </h3>
+  font-size: 15px;
 
-        <div class="contact-work-line"></div>
+  font-weight: 500;
 
-      </div>
+  letter-spacing: 6px;
 
+  text-transform: uppercase;
 
-      <p class="project-types">
-        FILM · TELEVISION · COMMERCIAL · EDITORIAL · CREATIVE PROJECTS
-      </p>
+  margin-bottom: 28px;
+}
 
 
-      <form class="contact-form">
+/* huge title */
 
-        <div class="contact-form-row">
+.contact-content h2 {
+  color: #ded5c8;
 
-          <input
-            type="text"
-            placeholder="YOUR NAME *"
-            required
-          >
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-          <input
-            type="email"
-            placeholder="YOUR EMAIL *"
-            required
-          >
+  font-size: clamp(65px, 9vw, 125px);
 
-        </div>
+  font-weight: 400;
 
+  line-height: .82;
 
-        <select required>
+  letter-spacing: 4px;
 
-          <option value="">
-            PROJECT TYPE *
-          </option>
+  text-transform: uppercase;
 
-          <option>Film</option>
-          <option>Television</option>
-          <option>Commercial</option>
-          <option>Editorial</option>
-          <option>Creative Project</option>
-          <option>Other</option>
+  margin: 0 0 42px;
+}
 
-        </select>
 
+/* gold line */
 
-        <textarea
-          placeholder="TELL ME ABOUT YOUR PROJECT *"
-          required
-        ></textarea>
+.contact-divider {
+  width: 105px;
 
+  height: 1px;
 
-        <button type="submit">
+  background: #b48a62;
 
-          SEND INQUIRY
+  margin-bottom: 32px;
+}
 
-          <span>→</span>
 
-        </button>
+/* intro */
 
-      </form>
+.contact-text {
+  max-width: 560px;
 
-    </div>
+  color: #bdb7ae;
 
+  font-family: "Montserrat", sans-serif;
 
-    <div class="contact-footer">
+  font-size: 12px;
 
-      <div>
-        ART · CRAFT · STORYTELLING<br>
-        WITHOUT LIMITS.
-      </div>
+  font-weight: 400;
 
+  line-height: 2;
 
-      <div class="contact-footer-center">
+  letter-spacing: .5px;
 
-        MAHA MHAMDI
+  margin-bottom: 70px;
+}
 
-        <small>
-          SFX MAKEUP ARTIST
-        </small>
 
-      </div>
+/* =========================
+   CONTACT DETAILS
+   ========================= */
 
+.contact-links {
+  width: 100%;
 
-      <div class="contact-footer-right">
+  display: grid;
 
-        Real Characters.<br>
-        Real Worlds.
+  grid-template-columns: repeat(3, 1fr);
 
-      </div>
+  border-top: 1px solid rgba(180,138,98,.38);
 
-    </div>
+  border-bottom: 1px solid rgba(180,138,98,.38);
 
-  </div>
+  margin-bottom: 140px;
+}
 
-</section>
+.contact-link {
+  min-height: 125px;
 
+  padding: 35px 40px;
+
+  border-right: 1px solid rgba(180,138,98,.38);
+}
+
+.contact-link:last-child {
+  border-right: none;
+}
+
+.contact-link-label {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 16px;
+}
+
+.contact-link a {
+  color: #ded5c8;
+
+  text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  transition: color .3s ease;
+}
+
+.contact-link a:hover {
+  color: #b48a62;
+}
+
+
+/* =========================
+   WORK TOGETHER
+   ========================= */
+
+.contact-work {
+  width: 100%;
+
+  padding-bottom: 130px;
+}
+
+.contact-work-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  margin-bottom: 28px;
+}
+
+.contact-work-heading h3 {
+  color: #ded5c8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 35px;
+
+  font-weight: 400;
+
+  letter-spacing: 4px;
+
+  white-space: nowrap;
+
+  text-transform: uppercase;
+}
+
+.contact-work-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(180,138,98,.38);
+}
+
+.project-types {
+  color: #8d8983;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 55px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.contact-form {
+  width: 100%;
+
+  max-width: 1000px;
+}
+
+.contact-form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 45px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+
+  background: transparent;
+
+  border: none;
+
+  border-bottom: 1px solid rgba(180,138,98,.42);
+
+  border-radius: 0;
+
+  outline: none;
+
+  padding: 20px 3px;
+
+  margin-bottom: 28px;
+
+  color: #ded5c8;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #77736e;
+
+  opacity: 1;
+}
+
+.contact-form select {
+  color: #77736e;
+
+  appearance: none;
+
+  cursor: pointer;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-bottom-color: #b48a62;
+}
+
+
+/* SEND BUTTON */
+
+.contact-form button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 45px;
+
+  min-width: 200px;
+
+  padding: 17px 20px;
+
+  margin-top: 15px;
+
+  background: transparent;
+
+  border: 1px solid #b48a62;
+
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+}
+
+.contact-form button span {
+  font-size: 18px;
+}
+
+.contact-form button:hover {
+  background: #b48a62;
+
+  color: #05080c;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.contact-footer {
+  width: 100%;
+
+  min-height: 150px;
+
+  padding: 35px 0;
+
+  border-top: 1px solid rgba(180,138,98,.30);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #77736e;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  line-height: 1.8;
+}
+
+.contact-footer-center {
+  text-align: center;
+
+  color: #ded5c8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 15px;
+
+  letter-spacing: 5px;
+}
+
+.contact-footer-center small {
+  display: block;
+
+  color: #77736e;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 7px;
+
+  letter-spacing: 3px;
+
+  margin-top: 7px;
+}
+
+.contact-footer-right {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+
+  text-align: right;
+}
 
 /* =========================
    MOBILE
@@ -1725,44 +2015,191 @@ nav {
      CONTACT
      ========================= -->
 
+<!-- =========================
+     CONTACT
+     ========================= -->
+
 <section class="contact" id="contact">
 
   <div class="contact-content">
 
-    <p class="contact-label">
-      GET IN TOUCH
-    </p>
+    <!-- HERO -->
 
-    <h2>
-      LET'S CREATE<br>
-      TOGETHER
-    </h2>
+    <div class="contact-hero">
 
-    <p class="contact-text">
-      Available for international productions,
-      collaborations and creative projects across
-      film, television, fashion, events and more.
-    </p>
+      <div class="contact-hero-inner">
+
+        <p class="contact-label">
+          LET'S CREATE SOMETHING
+        </p>
+
+        <h2>
+          UNFORGETTABLE.
+        </h2>
+
+        <div class="contact-divider"></div>
+
+        <p class="contact-text">
+          Have a project in mind?
+          Let's bring your character, story, or creative vision to life.
+          Available for film, television, commercial, editorial and
+          creative productions.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONTACT DETAILS -->
 
     <div class="contact-links">
 
-      <a href="mailto:YOUR-EMAIL-HERE">
-        EMAIL
-      </a>
+      <div class="contact-link">
 
-      <a
-        href="https://www.instagram.com/YOUR-INSTAGRAM"
-        target="_blank">
-        INSTAGRAM
-      </a>
+        <div class="contact-link-label">
+          EMAIL
+        </div>
 
-      <a
-        href="https://www.youtube.com/YOUR-YOUTUBE"
-        target="_blank">
-        YOUTUBE
-      </a>
+        <a href="mailto:YOUR-EMAIL-HERE">
+          YOUR-EMAIL-HERE
+        </a>
+
+      </div>
+
+
+      <div class="contact-link">
+
+        <div class="contact-link-label">
+          INSTAGRAM
+        </div>
+
+        <a href="#" target="_blank">
+          @YOUR-INSTAGRAM
+        </a>
+
+      </div>
+
+
+      <div class="contact-link">
+
+        <div class="contact-link-label">
+          YOUTUBE
+        </div>
+
+        <a href="#" target="_blank">
+          MAHA MHAMDI
+        </a>
+
+      </div>
 
     </div>
+
+
+    <!-- LET'S WORK TOGETHER -->
+
+    <div class="contact-work">
+
+      <div class="contact-work-heading">
+
+        <h3>
+          LET'S WORK TOGETHER
+        </h3>
+
+        <div class="contact-work-line"></div>
+
+      </div>
+
+
+      <p class="project-types">
+        FILM · TELEVISION · COMMERCIAL · EDITORIAL · CREATIVE PROJECTS
+      </p>
+
+
+      <form class="contact-form">
+
+        <div class="contact-form-row">
+
+          <input
+            type="text"
+            placeholder="YOUR NAME *"
+            required
+          >
+
+          <input
+            type="email"
+            placeholder="YOUR EMAIL *"
+            required
+          >
+
+        </div>
+
+
+        <select required>
+
+          <option value="">
+            PROJECT TYPE *
+          </option>
+
+          <option>Film</option>
+          <option>Television</option>
+          <option>Commercial</option>
+          <option>Editorial</option>
+          <option>Creative Project</option>
+          <option>Other</option>
+
+        </select>
+
+
+        <textarea
+          placeholder="TELL ME ABOUT YOUR PROJECT *"
+          required
+        ></textarea>
+
+
+        <button type="submit">
+
+          SEND INQUIRY
+
+          <span>→</span>
+
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="contact-footer">
+
+      <div>
+        ART · CRAFT · STORYTELLING<br>
+        WITHOUT LIMITS.
+      </div>
+
+
+      <div class="contact-footer-center">
+
+        MAHA MHAMDI
+
+        <small>
+          SFX MAKEUP ARTIST
+        </small>
+
+      </div>
+
+
+      <div class="contact-footer-right">
+
+        Real Characters.<br>
+        Real Worlds.
+
+      </div>
+
+    </div>
+
 
   </div>
 
