@@ -1042,21 +1042,25 @@ background-size: 100% auto;
 
 .contact-work-heading {
   display: block;
+
   text-align: center;
+
   margin-bottom: 14px;
 }
 
 .contact-work-heading h3 {
   margin: 0;
 
-  color: #ded5c8;
+  color: #d9a27f;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: 27px;
-  font-weight: 400;
+
+  font-weight: 500;
 
   letter-spacing: 5px;
+
   line-height: 1;
 
   text-transform: uppercase;
@@ -1075,7 +1079,9 @@ background-size: 100% auto;
   font-family: "Montserrat", sans-serif;
 
   font-size: 8px;
+
   letter-spacing: 3px;
+
   line-height: 1.5;
 
   margin: 0 auto 28px;
@@ -1090,6 +1096,7 @@ background-size: 100% auto;
 
 .contact-form {
   width: 100%;
+
   max-width: 450px;
 
   margin: 0 auto;
@@ -1098,7 +1105,7 @@ background-size: 100% auto;
 }
 
 
-/* FORM ROW */
+/* TOP TWO FIELDS */
 
 .contact-form-row {
   display: grid;
@@ -1109,17 +1116,18 @@ background-size: 100% auto;
 }
 
 
-/* INPUTS */
+/* ALL BOXES */
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
   width: 100%;
+
   box-sizing: border-box;
 
   background: rgba(5, 8, 12, 0.55);
 
-  border: 1px solid rgba(180,138,98,.45);
+  border: 2px solid rgba(180,138,98,.60);
 
   border-radius: 0;
 
@@ -1129,30 +1137,46 @@ background-size: 100% auto;
 
   margin-bottom: 10px;
 
-  color: #ded5c8;
+  color: #f0ebe4;
 
   font-family: "Montserrat", sans-serif;
 
-  font-size: 8px;
+  font-size: 9px;
+
+  font-weight: 500;
 
   letter-spacing: 1.5px;
 
   text-transform: uppercase;
 }
 
+
+/* BOX TEXT */
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #77736e;
+  color: #f0ebe4;
+
   opacity: 1;
+
+  font-weight: 500;
 }
 
+
+/* SELECT */
+
 .contact-form select {
-  color: #77736e;
+  color: #f0ebe4;
 
   appearance: none;
 
   cursor: pointer;
+
+  font-weight: 500;
 }
+
+
+/* TEXTAREA */
 
 .contact-form textarea {
   min-height: 75px;
@@ -1160,49 +1184,67 @@ background-size: 100% auto;
   resize: vertical;
 }
 
+
+/* FOCUS */
+
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: #b48a62;
+  border-color: #d9a27f;
 }
 
 
-/* BUTTON */
+/* SEND BUTTON */
 
 .contact-form button {
   display: flex;
 
   align-items: center;
+
   justify-content: center;
 
-  gap: 30px;
+  gap: 28px;
 
-  width: 180px;
+  width: 190px;
 
-  padding: 11px 16px;
+  padding: 12px 16px;
 
   margin: 15px auto 0;
 
   background: transparent;
 
-  border: 1px solid #b48a62;
+  border: 2px solid #b48a62;
 
-  color: #b48a62;
+  color: #d9a27f;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
-  font-size: 11px;
+  font-size: 12px;
+
+  font-weight: 600;
 
   letter-spacing: 3px;
+
+  white-space: nowrap;
 
   cursor: pointer;
 
   transition: .3s ease;
 }
 
+
+/* ARROW */
+
 .contact-form button span {
-  font-size: 16px;
+  font-size: 19px;
+
+  font-weight: 600;
+
+  line-height: 1;
 }
+
+
+/* BUTTON HOVER */
 
 .contact-form button:hover {
   background: #b48a62;
