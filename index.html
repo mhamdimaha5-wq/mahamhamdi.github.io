@@ -1012,7 +1012,6 @@ background-size: 100% auto;
   color: #b48a62;
 }
 
-
 /* =========================
    WORK TOGETHER
    ========================= */
@@ -1021,7 +1020,7 @@ background-size: 100% auto;
   width: 100vw;
   margin-left: calc(50% - 50vw);
 
-  padding: 70px 8% 80px;
+  padding: 55px 8% 55px;
 
   background:
     linear-gradient(
@@ -1034,58 +1033,88 @@ background-size: 100% auto;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
+  text-align: center;
 }
+
+
+/* HEADING */
+
 .contact-work-heading {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-bottom: 18px;
+  display: block;
+  text-align: center;
+  margin-bottom: 14px;
 }
 
 .contact-work-heading h3 {
+  margin: 0;
+
   color: #ded5c8;
+
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 28px;
+
+  font-size: 27px;
   font-weight: 400;
-  letter-spacing: 4px;
-  white-space: nowrap;
+
+  letter-spacing: 5px;
+  line-height: 1;
+
   text-transform: uppercase;
 }
 
 .contact-work-line {
-  flex: 1;
-  height: 1px;
-  background: rgba(180,138,98,.38);
+  display: none;
 }
+
+
+/* PROJECT TYPES */
 
 .project-types {
   color: #8d8983;
+
   font-family: "Montserrat", sans-serif;
-  font-size: 9px;
+
+  font-size: 8px;
   letter-spacing: 3px;
-  margin-bottom: 32px;
+  line-height: 1.5;
+
+  margin: 0 auto 28px;
+
+  text-align: center;
+
   text-transform: uppercase;
 }
-/* =========================
-   FORM
-   ========================= */
+
+
+/* FORM */
 
 .contact-form {
   width: 100%;
   max-width: 450px;
+
   margin: 0 auto;
+
+  text-align: left;
 }
+
+
+/* FORM ROW */
+
 .contact-form-row {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 15px;
 }
+
+
+/* INPUTS */
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-
   box-sizing: border-box;
 
   background: rgba(5, 8, 12, 0.55);
@@ -1119,22 +1148,26 @@ background-size: 100% auto;
 
 .contact-form select {
   color: #77736e;
+
   appearance: none;
+
   cursor: pointer;
 }
 
 .contact-form textarea {
-  min-height:  75px;
+  min-height: 75px;
+
   resize: vertical;
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border-bottom-color: #b48a62;
+  border-color: #b48a62;
 }
 
-/* SEND BUTTON */
+
+/* BUTTON */
 
 .contact-form button {
   display: flex;
@@ -1146,13 +1179,13 @@ background-size: 100% auto;
 
   width: 180px;
 
-  padding: 12px 16px;
+  padding: 11px 16px;
 
-  margin: 20px auto 0;
+  margin: 15px auto 0;
 
   background: transparent;
 
-  border: 2px solid #b48a62;
+  border: 1px solid #b48a62;
 
   color: #b48a62;
 
@@ -1177,6 +1210,7 @@ background-size: 100% auto;
   color: #05080c;
 }
 
+
 /* =========================
    FOOTER
    ========================= */
@@ -1190,6 +1224,7 @@ background-size: 100% auto;
   border-top: 1px solid rgba(180,138,98,.30);
 
   display: grid;
+
   grid-template-columns: 1fr 1.5fr 1fr;
 
   align-items: center;
@@ -1199,6 +1234,7 @@ background-size: 100% auto;
   font-family: "Montserrat", sans-serif;
 
   font-size: 8px;
+
   letter-spacing: 3px;
 
   line-height: 1.8;
@@ -1206,13 +1242,16 @@ background-size: 100% auto;
 
 
 /* LEFT */
+
 .contact-footer-left {
   min-height: 80px;
 
   padding-right: 30px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
 
   color: #b48a62;
@@ -1223,25 +1262,29 @@ background-size: 100% auto;
 
   font-style: italic;
 
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
 
   line-height: 1.05;
 }
+
 
 /* CENTER */
 
 .contact-footer-center {
   min-height: 80px;
 
-  padding: 0 45px;
+  padding: 0 35px;
 
   border-left: 1px solid rgba(180,138,98,.38);
+
   border-right: 1px solid rgba(180,138,98,.38);
 
   display: flex;
+
   flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -1269,7 +1312,7 @@ background-size: 100% auto;
 }
 
 
-/* SMALL GOLD LINE */
+/* GOLD LINE */
 
 .footer-line {
   width: 40px;
@@ -1317,7 +1360,7 @@ background-size: 100% auto;
 /* RIGHT */
 
 .contact-footer-right {
-  padding-left: 45px;
+  padding-left: 30px;
 
   color: #ded5c8;
 
@@ -1331,6 +1374,7 @@ background-size: 100% auto;
 
   text-align: center;
 }
+
 /* =========================
    MOBILE
    ========================= */
