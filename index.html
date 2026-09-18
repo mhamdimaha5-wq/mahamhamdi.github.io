@@ -916,6 +916,23 @@ background:
 
   text-align: center;
 }
+   .contact-icon {
+  color: #b48a62;
+  font-size: 27px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  transition: color .3s ease;
+}
+
+.contact-link:hover .contact-icon {
+  color: #d9a27f;
+}
 .contact-icon {
   color: #b48a62;
 
@@ -1481,6 +1498,7 @@ background:
 }
 
 </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 
@@ -2078,15 +2096,15 @@ background:
       </div>
 
     </div>
-
-
-  <!-- CONTACT DETAILS -->
+<!-- CONTACT DETAILS -->
 
 <div class="contact-links">
 
   <div class="contact-link">
 
-    <div class="contact-icon email-icon">✉</div>
+    <div class="contact-icon">
+      <i class="fa-regular fa-envelope"></i>
+    </div>
 
     <div class="contact-link-label">
       EMAIL
@@ -2101,8 +2119,8 @@ background:
 
   <div class="contact-link">
 
-    <div class="contact-icon instagram-icon">
-      ◎
+    <div class="contact-icon">
+      <i class="fa-brands fa-instagram"></i>
     </div>
 
     <div class="contact-link-label">
@@ -2118,8 +2136,8 @@ background:
 
   <div class="contact-link">
 
-    <div class="contact-icon youtube-icon">
-      ▶
+    <div class="contact-icon">
+      <i class="fa-brands fa-youtube"></i>
     </div>
 
     <div class="contact-link-label">
