@@ -1183,41 +1183,123 @@ background-size: 100% auto;
 
 .contact-footer {
   width: 100%;
-
   min-height: 150px;
 
-  padding: 35px 0;
+  padding: 30px 5%;
 
   border-top: 1px solid rgba(180,138,98,.30);
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
 
   align-items: center;
-
-  justify-content: space-between;
 
   color: #77736e;
 
   font-family: "Montserrat", sans-serif;
 
   font-size: 8px;
-
   letter-spacing: 3px;
 
   line-height: 1.8;
 }
 
+
+/* LEFT */
+
+.contact-footer-left {
+  min-height: 80px;
+
+  padding-right: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  letter-spacing: 1px;
+
+  line-height: 1.05;
+}
+
+
+/* CENTER */
+
 .contact-footer-center {
+  min-height: 80px;
+
+  padding: 0 45px;
+
+  border-left: 1px solid rgba(180,138,98,.38);
+  border-right: 1px solid rgba(180,138,98,.38);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
 
   color: #ded5c8;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
-  font-size: 15px;
-
-  letter-spacing: 5px;
+  letter-spacing: 4px;
 }
+
+
+/* THANK YOU */
+
+.footer-thank-you {
+  color: #ded5c8;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 8px;
+}
+
+
+/* SMALL GOLD LINE */
+
+.footer-line {
+  width: 40px;
+
+  height: 1px;
+
+  background: #b48a62;
+
+  margin-bottom: 12px;
+}
+
+
+/* NAME */
+
+.contact-footer-center strong {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  letter-spacing: 4px;
+}
+
+
+/* JOB TITLE */
 
 .contact-footer-center small {
   display: block;
@@ -1230,25 +1312,27 @@ background-size: 100% auto;
 
   letter-spacing: 3px;
 
-  margin-top: 7px;
+  margin-top: 5px;
 }
+
+
+/* RIGHT */
 
 .contact-footer-right {
-  color: #b48a62;
+  padding-left: 45px;
 
-  font-family: "Cormorant Garamond", Georgia, serif;
+  color: #ded5c8;
 
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
 
-  font-style: italic;
+  font-size: 7px;
 
-  letter-spacing: 1px;
+  letter-spacing: 2.5px;
 
-  line-height: 1.2;
+  line-height: 1.8;
 
-  text-align: right;
+  text-align: center;
 }
-
 /* =========================
    MOBILE
    ========================= */
