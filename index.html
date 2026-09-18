@@ -123,7 +123,9 @@ nav {
 
   z-index: 101;
 }
-
+.home-logo {
+  display: block;
+}
 
 /* =========================
    HOME
@@ -1511,7 +1513,7 @@ background-size: 100% auto;
 <img
   src="logo.png.png"
   alt="Maha Mhamdi"
-  class="logo"
+  class="logo home-logo"
 >
 
 
@@ -2319,7 +2321,20 @@ navLinks.forEach(link => {
 });
 
 </script>
+<script>
+  const logo = document.querySelector(".home-logo");
 
+  function updateLogo() {
+    if (window.location.hash === "#home" || window.location.hash === "") {
+      logo.style.display = "block";
+    } else {
+      logo.style.display = "none";
+    }
+  }
+
+  window.addEventListener("hashchange", updateLogo);
+  updateLogo();
+</script>
 
 </body>
 </html>
