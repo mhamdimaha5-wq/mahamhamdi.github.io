@@ -113,7 +113,7 @@ nav {
    ========================= */
 
 .logo {
-  position: fixed;
+  position: absolute;
 
   top: 3px;
   left: 4px;
@@ -2488,17 +2488,7 @@ navLinks.forEach(link => {
   });
 
 });
-<script>
-const homeLogo = document.querySelector('.home-logo');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY <= 100) {
-    homeLogo.style.display = 'block';
-  } else {
-    homeLogo.style.display = 'none';
-  }
-});
-</script>
 
 </body>
 
