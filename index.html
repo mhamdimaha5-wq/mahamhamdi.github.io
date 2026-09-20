@@ -2488,35 +2488,18 @@ navLinks.forEach(link => {
   });
 
 });
-
-</script>
-<script>
-  const logo = document.querySelector(".home-logo");
-
-  function updateLogo() {
-    if (window.location.hash === "#home" || window.location.hash === "") {
-      logo.style.display = "block";
-    } else {
-      logo.style.display = "none";
-    }
-  }
-
-  window.addEventListener("hashchange", updateLogo);
-  updateLogo();
-</script>
 <script>
 const homeLogo = document.querySelector('.home-logo');
-const homeSection = document.querySelector('#home');
 
 window.addEventListener('scroll', () => {
-  const homeBottom = homeSection.offsetTop + homeSection.offsetHeight;
-
-  if (window.scrollY < homeBottom - 100) {
+  if (window.scrollY <= 100) {
     homeLogo.style.display = 'block';
   } else {
     homeLogo.style.display = 'none';
   }
 });
 </script>
+
 </body>
+
 </html>
