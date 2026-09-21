@@ -2449,24 +2449,23 @@ background-size: 100% auto;
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
+function updateActiveNav() {
 
   let current = "";
 
   sections.forEach(section => {
 
-    const sectionTop = section.offsetTop - 180;
+    const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
 
     if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
+      window.scrollY >= sectionTop - 200 &&
+      window.scrollY < sectionTop + sectionHeight - 200
     ) {
       current = section.getAttribute("id");
     }
 
   });
-
 
   navLinks.forEach(link => {
 
@@ -2478,10 +2477,9 @@ window.addEventListener("scroll", () => {
 
   });
 
-});
+}
 
-
-/* Smooth navigation */
+window.addEventListener("scroll", updateActiveNav);
 
 navLinks.forEach(link => {
 
@@ -2497,6 +2495,9 @@ navLinks.forEach(link => {
 
 });
 
+updateActiveNav();
+
+</script>
 
 </body>
 
