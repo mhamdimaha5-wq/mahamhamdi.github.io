@@ -334,7 +334,6 @@ background-size: 100% 100%;
   font-size: 17px;
 }
 
-
 /* =========================
    ABOUT
    ========================= */
@@ -342,84 +341,99 @@ background-size: 100% 100%;
 .about {
   min-height: 100vh;
 
-  padding: 60px 8% 140px;
-
-  background: #050b12;
+  position: relative;
 
   display: flex;
   align-items: center;
-  gap: 80px;
+
+  padding: 120px 8%;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,11,18,.15) 0%,
+      rgba(5,11,18,.20) 35%,
+      rgba(5,11,18,.72) 58%,
+      rgba(5,11,18,.90) 100%
+    ),
+    url("about-bg.png");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
 }
 
-.about-photo {
-  width: 45%;
-  max-width: 500px;
-}
 
-.about-photo img {
-  width: 100%;
-  height: 600px;
-
-  object-fit: cover;
-
-  display: block;
-}
+/* ABOUT TEXT */
 
 .about-content {
   width: 45%;
-  max-width: 550px;
+  max-width: 560px;
+
+  margin-left: 48%;
+
+  position: relative;
+  z-index: 2;
 }
+
 
 .about-label {
   color: #b48a62;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
-  font-size: 14px;
+  font-size: 16px;
 
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 
   text-transform: uppercase;
 
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
+
 .about-content h2 {
+  color: #ded5c8;
+
   font-family: "Cormorant Garamond", Georgia, serif;
 
   font-size: 58px;
 
   font-weight: 400;
 
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
+
 .about-content .artist-title {
-  color: #ded5c8;
+  color: #b48a62;
 
   font-family: "Cormorant Garamond", Georgia, serif;
 
-  font-size: 21px;
+  font-size: 20px;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
   line-height: 1.6;
 
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
+
 .about-content p {
-  color: #bdb7ae;
+  color: #d0cbc3;
 
-  font-size: 13px;
+  font-family: "Cormorant Garamond", Georgia, serif;
 
-  line-height: 1.9;
+  font-size: 17px;
+
+  line-height: 1.7;
 
   margin-bottom: 18px;
 }
-
 
 /* =========================
    WORK
@@ -1852,16 +1866,7 @@ background-size: 100% auto;
      ABOUT
      ========================= -->
 
-<section class="about" id="about">
 
-  <div class="about-photo">
-
-    <img
-      src="maha.png"
-      alt="Maha Mhamdi"
-    >
-
-  </div>
 
 
   <div class="about-content">
