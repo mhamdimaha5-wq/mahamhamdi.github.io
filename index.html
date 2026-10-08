@@ -316,7 +316,61 @@ nav {
 .button-arrow {
   font-size: 17px;
 }
+/* =========================
+   FEATURED WORK PREVIEW
+   ========================= */
 
+.featured-preview {
+  position: absolute;
+
+  left: 7%;
+  bottom: 25px;
+
+  z-index: 6;
+
+  width: 520px;
+}
+
+.featured-preview-title {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+}
+
+.featured-preview-row {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.featured-preview img {
+  width: 82px;
+  height: 58px;
+
+  object-fit: cover;
+
+  display: block;
+
+  border: 1px solid rgba(180,138,98,.25);
+}
+
+.featured-preview-arrow {
+  color: #b48a62;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 28px;
+
+  margin-left: 5px;
+}
 /* =========================
    ABOUT
    ========================= */
@@ -1864,7 +1918,9 @@ background-size: 100% auto;
     </a>
 
   </div>
-
+<div class="featured-preview">
+  <p class="featured-preview-title">FEATURED WORK</p>
+</div>
 </section>
 
 <!-- =========================
