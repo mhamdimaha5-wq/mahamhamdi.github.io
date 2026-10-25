@@ -221,18 +221,15 @@ nav {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 .bottom-line {
   width: 1px;
   height: 225px;
-
   background: #b48a62;
   opacity: .62;
-
   transform: scaleX(.55);
   transform-origin: top;
+  margin-top: 0;
 }
-
 
 /* =========================
    HOME TEXT
@@ -295,38 +292,42 @@ nav {
 }
 
 .button {
-  width: 160px;
-  height: 40px;
-
-  margin-top: 18px;
-
-  padding: 0 14px;
+  width: 240px;
+  height: 48px;
+  margin-top: 24px;
+  padding: 0 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border: 1px solid #b48a62;
-
+  border: 1px solid rgba(180,138,98,.8);
   color: #b48a62;
+  background: rgba(5,11,18,.18);
 
   text-decoration: none;
-
   font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 11px;
-
-  letter-spacing: 1.7px;
-
+  font-size: 12px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
+
+  transition: background .3s ease, color .3s ease,
+              border-color .3s ease;
 }
 
 .button:hover {
-  background: rgba(180,138,98,.08);
+  background: #b48a62;
+  color: #050b12;
+  border-color: #b48a62;
 }
 
 .button-arrow {
-  font-size: 17px;
+  font-size: 20px;
+  transition: transform .3s ease;
+}
+
+.button:hover .button-arrow {
+  transform: translateX(5px);
 }
 /* =========================
    FEATURED WORK PREVIEW
