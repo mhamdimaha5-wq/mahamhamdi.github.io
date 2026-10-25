@@ -132,12 +132,19 @@ nav {
 /* =========================
    HOME
    ========================= */
-
 .home-showcase {
   position: relative;
   background-color: #050b12;
-  background-image: url("herofn.jpg");
-  background-size: 100% auto;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(5, 11, 18, 0) 55%,
+      rgba(5, 11, 18, 0.25) 100%
+    ),
+    url("herofn.jpg");
+
+  background-size: 100% 100%;
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -148,11 +155,7 @@ nav {
   min-height: 0;
   overflow: hidden;
 
-  background-image: url("herofn.jpg");
-
-  background-size: 100% 130%;
-  background-position: center 0px;
-  background-repeat: no-repeat;
+  background: transparent;
 }
 
 /* =========================
