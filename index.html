@@ -44,6 +44,7 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
+  <div class="world w-studio" data-parallax="-0.05" aria-hidden="true"></div>
   <canvas class="hero-embers" aria-hidden="true"></canvas>
   <div class="hero-glow" aria-hidden="true"></div>
 
@@ -106,17 +107,8 @@
 
 <!-- ================= ABOUT ================= -->
 <section class="about section" id="about">
+  <div class="world w-maha" data-parallax="-0.08" aria-hidden="true"></div>
   <div class="container about-grid">
-    <figure class="about-portrait reveal" data-tilt>
-      <div class="portrait-card">
-        <img src="assets/maha.webp" alt="Portrait of Maha Mhamdi holding makeup brushes" width="900" height="1352" loading="lazy">
-        <div class="portrait-shine" aria-hidden="true"></div>
-      </div>
-      <figcaption class="portrait-badge">
-        <strong data-count="11">0</strong>
-        <span>years bringing<br>characters to life</span>
-      </figcaption>
-    </figure>
 
     <div class="about-copy">
       <p class="section-label reveal">About the artist</p>
@@ -145,6 +137,8 @@
 
 <!-- ================= EDUCATION & EXPERIENCE ================= -->
 <section class="experience section" id="experience">
+  <div class="side side-l s-sculpt" aria-hidden="true"></div>
+  <div class="side side-r s-zombie" aria-hidden="true"></div>
   <div class="container">
     <header class="section-head center">
       <p class="section-label reveal">Foundation · Creation · Real-world experience</p>
@@ -246,6 +240,8 @@
 
 <!-- ================= TRAVEL ================= -->
 <section class="travel section" id="travel">
+  <div class="side side-l s-passport" aria-hidden="true"></div>
+  <div class="side side-r s-globe" aria-hidden="true"></div>
   <div class="container">
     <header class="section-head center">
       <p class="section-label reveal">Different cultures · New perspectives · Endless inspiration</p>
@@ -284,8 +280,47 @@
   </div>
 </section>
 
+<!-- ================= FEATURED WORK ================= -->
+<section class="featured section" id="featured">
+  <div class="world w-atelier-flip" data-parallax="-0.08" aria-hidden="true"></div>
+  <div class="container">
+    <header class="section-head center">
+      <p class="section-label reveal">Featured work</p>
+      <h2 class="section-title reveal" style="--d:.08s">Four <em>favourites</em></h2>
+    </header>
+
+    <div class="featured-grid">
+      <figure class="feat reveal">
+        <button class="feat-open" data-lightbox="assets/hero.webp" aria-label="Open image: The Frozen King, full figure">
+          <img src="assets/hero.webp" alt="Full-body ice creature character in dark armour holding a spear" loading="lazy" width="1100" height="1650">
+        </button>
+        <figcaption><b>01</b><span>Character</span><h3>The Frozen King</h3></figcaption>
+      </figure>
+      <figure class="feat reveal" style="--d:.1s">
+        <button class="feat-open" data-lightbox="assets/hero-face.webp" aria-label="Open image: Ice-crowned face close-up">
+          <img src="assets/feat-skin.webp" alt="Close-up of cracked, icy prosthetic skin and glowing blue eyes" loading="lazy" width="390" height="490">
+        </button>
+        <figcaption><b>02</b><span>SFX Makeup</span><h3>Ice-Crowned</h3></figcaption>
+      </figure>
+      <figure class="feat reveal" style="--d:.2s">
+        <button class="feat-open" data-lightbox="assets/feat-armour.webp" aria-label="Open image: armour and hands detail">
+          <img src="assets/feat-armour.webp" alt="Detail of layered dark armour and a pale creature hand" loading="lazy" width="800" height="1000">
+        </button>
+        <figcaption><b>03</b><span>Costume &amp; Hands</span><h3>Armour of Winter</h3></figcaption>
+      </figure>
+      <figure class="feat reveal" style="--d:.3s">
+        <button class="feat-open" data-lightbox="assets/character-closeup.webp" aria-label="Open image: creature portrait">
+          <img src="assets/character-closeup.webp" alt="Portrait of the horned ice creature with glowing eyes in mist" loading="lazy" width="974" height="809">
+        </button>
+        <figcaption><b>04</b><span>Prosthetics</span><h3>Eyes of the Night</h3></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ================= WORK ================= -->
 <section class="work section" id="work">
+  <div class="world w-studio-flip" data-parallax="-0.08" aria-hidden="true"></div>
   <div class="container">
     <header class="section-head work-head">
       <div>
@@ -351,6 +386,7 @@
 
 <!-- ================= BEHIND THE SCENES ================= -->
 <section class="behind section" id="behind">
+  <div class="world w-maha-flip" data-parallax="-0.08" aria-hidden="true"></div>
   <div class="container">
     <header class="section-head center">
       <p class="section-label reveal">The process</p>
