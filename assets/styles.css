@@ -132,9 +132,15 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   box-shadow: 0 1px 0 var(--line), 0 20px 40px -20px rgba(0, 0, 0, 0.9);
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand img { width: 44px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,.8)); transition: transform 0.6s var(--ease); }
-.brand:hover img { transform: rotate(-8deg) scale(1.08); }
+.brand { display: flex; align-items: center; gap: 12px; align-self: flex-start; }
+.brand img {
+  width: 180px; height: auto; margin-top: 10px;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.85));
+  transform-origin: left top;
+  transition: transform 0.5s var(--ease), margin 0.5s var(--ease), filter .4s;
+}
+.site-header.scrolled .brand img { transform: scale(.6); margin-top: 4px; }
+.brand:hover img { filter: drop-shadow(0 8px 22px rgba(200,48,58,.45)); }
 .brand-text { font-family: var(--serif); font-size: 20px; letter-spacing: 0.22em; font-weight: 500; }
 .brand-text em { font-style: normal; color: var(--gold); }
 
@@ -174,7 +180,8 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
 
 @media (max-width: 960px) {
   .menu-toggle { display: block; }
-  .brand-text { font-size: 17px; }
+  .brand img { width: 140px; margin-top: 8px; }
+  .site-header.scrolled .brand img { transform: scale(.7); }
   .nav {
     position: fixed; inset: 0; z-index: 110;
     flex-direction: column; justify-content: center; gap: 26px;
@@ -799,7 +806,7 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
 .footer-left { font-family: var(--serif); font-size: 22px; font-style: italic; line-height: 1.4; color: var(--muted); }
 .footer-right { text-align: right; font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); line-height: 2; }
 .footer-center { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-.footer-center img { width: 120px; filter: drop-shadow(0 10px 30px rgba(200,48,58,.35)); animation: float 7s ease-in-out infinite; }
+.footer-center img { width: min(320px, 80vw); filter: drop-shadow(0 10px 30px rgba(200,48,58,.35)); animation: float 7s ease-in-out infinite; }
 .thanks { font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
 .copyright { text-align: center; margin-top: 40px; font-size: 11px; letter-spacing: .14em; color: var(--dim); }
 @media (max-width: 720px) {
