@@ -1132,3 +1132,28 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 160px; z-index: 1; pointer-events: none;
   background: linear-gradient(transparent, #05070b);
 }
+
+
+/* =========================================================
+   No handwritten font: elegant italic serif everywhere instead
+   ========================================================= */
+:root { --script: var(--serif); }
+.section-label { font-style: italic; font-size: clamp(20px, 2vw, 26px); font-weight: 500; letter-spacing: .02em; transform: none; }
+.reveal.in.section-label { transform: none; }
+.hero-title .accent { font-style: italic; font-weight: 500; font-size: 1em; line-height: .92; padding: 0 .1em .02em 0; margin-left: 0; }
+.hero-title .line-accent { margin: 0; }
+.hero-inner { padding-top: calc(var(--header-h) + 70px); }
+.statement-text .w.accent { font-style: italic; font-weight: 500; font-size: 1em; }
+.signature { font-style: italic !important; font-size: 26px !important; letter-spacing: .04em; }
+.exp-kicker { font-style: italic; font-size: 19px; letter-spacing: .02em; }
+.exp-card .big { font-style: italic; font-size: 1.6em; line-height: 1; }
+.t-meta { font-style: italic; font-size: 19px; letter-spacing: .02em; }
+.travel-card span { font-style: italic; font-size: 20px; }
+.borders { font-style: italic; font-size: clamp(28px, 3.6vw, 44px); letter-spacing: .04em; }
+.work-item figcaption span { font-style: italic; font-size: 18px; }
+.process-step b { font-style: italic; font-size: 34px; }
+.bts-item figcaption { font-style: italic; font-size: 17px; padding: 6px 16px; }
+.script-title { font-style: italic; font-size: 38px !important; font-weight: 500; }
+.contact-link small { font-style: italic; font-size: 16px; }
+.footer-left { font-style: italic; font-size: 24px; }
+@media (max-width: 860px) { .hero-inner { padding-top: 46vh; } }
