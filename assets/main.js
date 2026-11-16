@@ -80,7 +80,8 @@ const CONTACT = {
       setTimeout(() => el.style.setProperty("--d", "0s"), 1400);
     });
   }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-  $$(".reveal, .reveal-side").forEach(el => revealObserver.observe(el));
+  $$(".hero .reveal").forEach(el => el.classList.add("in"));
+  $$(".reveal, .reveal-side, .side").forEach(el => { if (!el.classList.contains("in")) revealObserver.observe(el); });
 
   /* ---------- Statement words + blood drips ---------- */
   const statement = $(".statement");
