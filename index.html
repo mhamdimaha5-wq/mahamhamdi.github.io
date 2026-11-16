@@ -1,2617 +1,489 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Maha Mhamdi | SFX Makeup Artist</title>
+<meta name="description" content="Maha Mhamdi — SFX makeup artist, prosthetics and character creator for film, TV, cosplay and creative productions.">
+<meta name="theme-color" content="#07080b">
+<link rel="icon" type="image/png" href="assets/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-/* =========================
-   GENERAL
-   ========================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 100%;
-  background: #050b12;
-  color: #ded5c8;
-  font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-}
-
-section {
-  scroll-margin-top: 0;
-  scroll-padding-top: 0;
-}
-
-
-/* =========================
-   NAVIGATION
-   ========================= */
-
-nav {
-  position: fixed;
-  top: 15px;
-  left: 40%;
-  transform: translateX(0);
-  z-index: 100;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 45px;
-
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #ded5c8;
-
-  font-size:  8px;
-  letter-spacing: 1.5px;
-
-  white-space: nowrap;
-
-  border: none;
-  background: none;
-
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #b48a62;
-}
-
-.nav-links a.active {
-  color: #b48a62;
-}
-
-.nav-links a {
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-  bottom: -6px;
-
-  height: 1px;
-
-  background: #b48a62;
-
-  transform: scaleX(0);
-
-  transition: transform 0.3s ease;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  transform: scaleX(1);
-}
-
-/* =========================
-   LOGO
-   ========================= */
-
-.logo {
-  position: absolute;
-
-  top: 3px;
-  left: 4px;
-
-  width: 210px;
-  height: auto;
-
-
-
-  z-index: 101;
-}
-.home-logo {
-  display: block;
-}
-
-/* =========================
-   HOME
-   ========================= */
-.home-showcase {
-  position: relative;
-  background-color: #050b12;
-
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(5, 11, 18, 0) 55%,
-      rgba(5, 11, 18, 0.25) 100%
-    ),
-    url("herofn.jpg");
-
-  background-size: 100% 100%;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-
-.hero {
-  position: relative;
-  height: 100vh;
-  min-height: 0;
-  overflow: hidden;
-
-  background: transparent;
-}
-
-/* =========================
-   LEFT DECORATION
-   ========================= */
-
-.side-decoration {
-  position: absolute;
-
-  left: 4%;
-
-  top: 40%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  z-index: 10;
-}
-
-.top-line {
-  width: 1px;
-  height: 120px;
-
-  background: #b48a62;
-  opacity: .75;
-}
-
-.social-icons {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-
-  gap: 21px;
-
-  margin-top: 35px;
-  margin-bottom: 55px;
-}
-
-.social-icons a {
-  width: 19px;
-  height: 19px;
-
-  color: #b48a62;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-}
-
-.social-icons svg {
-  width: 17px;
-  height: 17px;
-
-  fill: none;
-
-  stroke: currentColor;
-  stroke-width: 1.4;
-
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.bottom-line {
-  width: 1px;
-  height: 225px;
-  background: #b48a62;
-  opacity: .62;
-  transform: scaleX(.55);
-  transform-origin: top;
-  margin-top: 0;
-}
-
-/* =========================
-   HOME TEXT
-   ========================= */
-
-.hero-content {
-  position: absolute;
-
-  left: 7%;
-  top: 38%;
-
-  z-index: 10;
-
-  width: 430px;
-}
-
-.eyebrow {
-  margin-bottom: 15px;
-
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 57px;
-  font-weight: 400;
-
-  line-height: .86;
-
-  letter-spacing: 1px;
-
-  text-transform: uppercase;
-}
-
-.cream {
-  color: #ded5c8;
-}
-
-.red {
-  color: #8c292d;
-}
-
-.intro {
-  width: 220px;
-  margin-top: 2px;
-  color: #c5beb5;
-  font-size: 9px;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.button {
-  width: 240px;
- position: relative;
-z-index: 20;
-  height: 48px;
-  margin-top: 24px;
-  padding: 0 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border: 1px solid rgba(180,138,98,.8);
-  color: #b48a62;
-  background: rgba(5,11,18,.45);
-
-  text-decoration: none;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 12px;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-
-  transition: background .3s ease, color .3s ease,
-              border-color .3s ease;
-}
-
-.button:hover {
-  background: #b48a62;
-  color: #050b12;
-  border-color: #b48a62;
-}
-
-.button-arrow {
-  font-size: 20px;
-  transition: transform .3s ease;
-}
-
-.button:hover .button-arrow {
-  transform: translateX(5px);
-}
-/* =========================
-   FEATURED WORK PREVIEW
-   ========================= */
-.featured-preview {
-  position: relative;
-  left: auto;
-  bottom: auto;
-  z-index: 1;
-  width: 100%;
-  padding: 65px 7% 90px;
-  background: transparent;
-}
-
-.featured-preview-title {
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 9px;
-  letter-spacing: 3px;
-
-  margin-bottom: 20px;
-
-  text-transform: uppercase;
-}
-
-.featured-preview-row {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-}
-.featured-empty {
-  width: 82px;
-  height: 58px;
-
-  border: 1px solid rgba(180,138,98,.25);
-
-  background: transparent;
-}
-.featured-preview img {
-  width: 82px;
-  height: 58px;
-
-  object-fit: cover;
-
-  display: block;
-
-  border: 1px solid rgba(180,138,98,.25);
-}
-
-.featured-preview-arrow {
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 28px;
-
-  margin-left: 5px;
-}
-/* =========================
-   ABOUT
-   ========================= */
-.about {
-   margin-top: 0;
-  height: 100vh;
-  min-height: 0;
-    max-height: 100vh;
-  position: relative;
- 
-  display: flex;
-  align-items: center;
-
-padding: 0 7%;
-
-  background-color: #050b12;
-  background-image: url("aboutnew.png");
-
-background-size: 130% 110%;
-background-position: -270px center;
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-}
-
-/* ABOUT PHOTO */
-
-.about-photo {
-  width: 38%;
-  max-width: 430px;
-}
-
-.about-photo img {
-  width: 100%;
-  height: 560px;
-  object-fit: cover;
-  display: block;
-}
-/* ABOUT TEXT */
-.about-content {
-  width: 38%;
-  max-width: 460px;
-
-  margin-left: 50%;
-
-  position: relative;
-  z-index: 2;
-   transform: translateY(-50px);
-}
-
-
-
-.about-label {
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 16px;
-
-  letter-spacing: 5px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 15px;
-}
-
-.about-content h2 {
-  font-size: 44px;
-  line-height: 1.05;
-  margin-bottom: 12px;
-}
-
-
-
-
-.about-content .artist-title {
-  font-size: 18px;
-  line-height: 1.3;
-  margin-bottom: 16px;
-}
-
-.about-content p {
-  font-size: 15px;
-  line-height: 1.45;
-  margin-bottom: 10px;
-}
-/* =========================
-   EDUCATION & TRAVEL
-   ========================= */
-
-.education-travel {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #050b12;
-  overflow: hidden;
-}
-
-.education-travel img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-   /* =========================
-   MY JOURNEY
-   ========================= */
-
-.journey {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background: #050b12;
-  overflow: hidden;
-}
-
-.journey img {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-/* =========================
-   WORK
-   ========================= */
-
-.work {
-  min-height: 100vh;
-
-  padding: 60px 8% 120px;
-
-  background:
-    linear-gradient(
-      180deg,
-      #050b12 0%,
-      #080808 100%
-    );
-}
-
-.work-header {
-  max-width: 1100px;
-
-  margin: 0 auto 75px;
-}
-
-.section-label {
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 14px;
-
-  letter-spacing: 4px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 18px;
-}
-
-.work-header h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 68px;
-
-  font-weight: 400;
-
-  line-height: .95;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
-.work-header h2 span {
-  color: #8c292d;
-}
-
-.work-intro {
-  max-width: 580px;
-
-  margin-top: 25px;
-
-  color: #bdb7ae;
-
-  font-size: 13px;
-
-  line-height: 1.9;
-}
-
-
-/* WORK CATEGORIES */
-
-.work-category {
-  max-width: 1100px;
-
-  margin: 0 auto 90px;
-}
-
-.category-heading {
-  display: flex;
-
-  align-items: center;
-
-  gap: 25px;
-
-  margin-bottom: 25px;
-}
-
-.category-heading h3 {
-  color: #ded5c8;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 28px;
-
-  font-weight: 400;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-}
-
-.category-line {
-  flex: 1;
-
-  height: 1px;
-
-  background: rgba(180,138,98,.35);
-}
-
-
-/* WORK GRID */
-
-.work-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 14px;
-}
-
-.work-image {
-  position: relative;
-
-  height: 370px;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(180,138,98,.22);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(180,138,98,.08),
-      rgba(3,8,14,.8)
-    );
-}
-
-.work-image.large {
-  grid-column: span 2;
-}
-
-.work-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition: transform .6s ease;
-}
-
-.work-image:hover img {
-  transform: scale(1.04);
-}
-
-.image-placeholder {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  color: rgba(180,138,98,.60);
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 13px;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
-.category-description {
-  max-width: 600px;
-
-  margin-top: 18px;
-
-  color: #918d87;
-
-  font-size: 11px;
-
-  line-height: 1.8;
-}
-
-
-/* =========================
-   BEHIND THE SCENES
-   ========================= */
-
-.behind {
-  min-height: 100vh;
-
-  padding: 60px 8% 120px;
-
-  background: #080808;
-}
-
-.behind-header {
-  max-width: 1100px;
-
-  margin: 0 auto 75px;
-}
-
-.behind-header h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 68px;
-
-  font-weight: 400;
-
-  line-height: .95;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
-.behind-header h2 span {
-  color: #8c292d;
-}
-
-.behind-intro {
-  max-width: 580px;
-
-  margin-top: 25px;
-
-  color: #bdb7ae;
-
-  font-size: 13px;
-
-  line-height: 1.9;
-}
-
-
-/* BTS GRID */
-
-.behind-grid {
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 18px;
-}
-
-.behind-item {
-  position: relative;
-
-  height: 440px;
-
-  overflow: hidden;
-
-  border: 1px solid rgba(180,138,98,.22);
-
-  background: #0b0b0b;
-}
-
-.behind-item.tall {
-  height: 560px;
-}
-
-.behind-item img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition: transform .6s ease;
-}
-
-.behind-item:hover img {
-  transform: scale(1.03);
-}
-
-.behind-placeholder {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(180,138,98,.07),
-      rgba(3,8,14,.85)
-    );
-
-  color: rgba(180,138,98,.60);
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 13px;
-
-  letter-spacing: 3px;
-
-  text-transform: uppercase;
-}
-
-.behind-caption {
-  position: absolute;
-
-  left: 25px;
-  bottom: 22px;
-
-  color: #ded5c8;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 17px;
-
-  letter-spacing: 2px;
-
-  text-transform: uppercase;
-
-  text-shadow: 0 2px 12px #000;
-}
-
-
-/* =========================
-   CONTACT
-   ========================= */
-
-.contact {
-  position: relative;
-  min-height: 180vh;
-  overflow: hidden;
-padding: 0;
-  
-background:
-  linear-gradient(
-    180deg,
-    #050b12 0%,
-    #05080c 45%,
-    #030507 100%
-  );
-}
-
-.contact::before {
-  content: "";
-
-  position: absolute;
-
-  width: 750px;
-  height: 750px;
-
-  right: -280px;
-  top: 100px;
-
-  background: rgba(180,138,98,.045);
-
-  filter: blur(120px);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.contact-content {
-  position: relative;
-
-  width: 100%;
-  max-width: 1200px;
-
-  min-height: 100%;
-
-  margin: 0 auto;
-
-  z-index: 2;
-transform: none;
-}
-.contact-hero-inner {
-  transform: translate(70px, -45px);
-}
-
-/* =========================
-   HERO
-   ========================= */
-
-.contact-hero {
-  position: relative;
-
-  width: 100vw;
-  min-height: 100vh;
-
-  margin-left: calc(50% - 50vw);
-
-  display: flex;
-  align-items: center;
-
-  padding: 100px 8%;
-
-  background-image:
-    linear-gradient(
-      rgba(3, 6, 9, 0.20),
-      rgba(3, 6, 9, 0.40)
-    ),
-    url("contact1.png");
-
-background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-
-
-/* small gold heading */
-
-.contact-label {
-  color: #d9a27f;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.contact-label::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 45px;
-  background: #b48a62;
-  margin: 0 auto 22px;
-}
-/* huge title */
-
-.contact-content h2 {
-  color: #e2a17d;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 52px;
-  font-weight: 400;
-
-  letter-spacing: 5px;
-  line-height: 1.05;
-
-  text-align: center;
-
-  margin: 0 0 25px;
-}
-
-
-/* gold line */
-.contact-divider {
-  width: 105px;
-  height: 1px;
-
-  background: #b48a62;
-
-  margin: 0 auto 32px;
-}
-
-/* intro */
-
-.contact-text {
-  max-width: 620px;
-
-  margin: 0 auto 45px;
-
-  color: #d6cfc5;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 16px;
-  font-weight: 400;
-
-  line-height: 1.7;
-
-  letter-spacing: 0.3px;
-
-  text-align: center;
-}
-
-/* =========================
-   CONTACT DETAILS
-   ========================= */
-
-.contact-links {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  background: rgba(2, 5, 8, 0.94);
-
-  border-top: 1px solid rgba(180,138,98,.38);
-
-  border-bottom: 1px solid rgba(180,138,98,.38);
-
-  margin-bottom: 0;
-}
-.contact-link {
-  min-height: 150px;
-
-  padding: 42px 45px;
-
-  background: rgba(0, 2, 4, 0.85);
-
-  border-right: 1px solid rgba(180,138,98,.38);
-
-  text-align: center;
-}
-   .contact-icon {
-  color: #b48a62;
-  font-size: 27px;
-  height: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 18px;
-
-  transition: color .3s ease;
-}
-
-.contact-link:hover .contact-icon {
-  color: #d9a27f;
-}
-.contact-icon {
-  color: #b48a62;
-
-  height: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: Georgia, serif;
-
-  font-size: 27px;
-
-  line-height: 1;
-
-  margin-bottom: 18px;
-}
-
-.email-icon {
-  font-size: 25px;
-}
-
-.instagram-icon {
-  font-size: 34px;
-}
-
-.youtube-icon {
-  font-size: 23px;
-}
-.contact-link:last-child {
-  border-right: none;
-}
-
-.contact-link-label {
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 11px;
-
-  letter-spacing: 4px;
-
-  margin-bottom: 18px;
-}
-
-.contact-link a {
-  color: #ded5c8;
-
-  text-decoration: none;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 11px;
-
-  letter-spacing: 1.8px;
-
-  transition: color .3s ease;
-}
-
-.contact-link a:hover {
-  color: #b48a62;
-}
-
-/* =========================
-   WORK TOGETHER
-   ========================= */
-
-.contact-work {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-
-  padding: 55px 8% 55px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(3,8,14,.20),
-      rgba(3,8,14,.30)
-    ),
-    url("contact2.png");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  text-align: center;
-}
-
-
-/* HEADING */
-
-.contact-work-heading {
-  display: block;
-
-  text-align: center;
-
-  margin-bottom: 14px;
-}
-
-.contact-work-heading h3 {
-  margin: 0;
-
-  color: #d9a27f;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 27px;
-
-  font-weight: 500;
-
-  letter-spacing: 5px;
-
-  line-height: 1;
-
-  text-transform: uppercase;
-}
-
-.contact-work-line {
-  display: none;
-}
-
-
-/* PROJECT TYPES */
-
-.project-types {
-  color: #8d8983;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 8px;
-
-  letter-spacing: 3px;
-
-  line-height: 1.5;
-
-  margin: 0 auto 28px;
-
-  text-align: center;
-
-  text-transform: uppercase;
-}
-
-
-/* FORM */
-
-.contact-form {
-  width: 100%;
-
-  max-width: 450px;
-
-  margin: 0 auto;
-
-  text-align: left;
-}
-
-
-/* TOP TWO FIELDS */
-
-.contact-form-row {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 15px;
-}
-
-
-/* ALL BOXES */
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-
-  box-sizing: border-box;
-
-  background: rgba(5, 8, 12, 0.55);
-
-  border: 2px solid rgba(180,138,98,.60);
-
-  border-radius: 0;
-
-  outline: none;
-
-  padding: 8px 10px;
-
-  margin-bottom: 10px;
-
-  color: #f0ebe4;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 9px;
-
-  font-weight: 500;
-
-  letter-spacing: 1.5px;
-
-  text-transform: uppercase;
-}
-
-
-/* BOX TEXT */
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #f0ebe4;
-
-  opacity: 1;
-
-  font-weight: 500;
-}
-
-
-/* SELECT */
-
-.contact-form select {
-  color: #f0ebe4;
-
-  appearance: none;
-
-  cursor: pointer;
-
-  font-weight: 500;
-}
-
-
-/* TEXTAREA */
-
-.contact-form textarea {
-  min-height: 75px;
-
-  resize: vertical;
-}
-
-
-/* FOCUS */
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  border-color: #d9a27f;
-}
-
-
-/* SEND BUTTON */
-
-.contact-form button {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 28px;
-
-  width: 190px;
-
-  padding: 12px 16px;
-
-  margin: 15px auto 0;
-
-  background: transparent;
-
-  border: 2px solid #b48a62;
-
-  color: #d9a27f;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 12px;
-
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
-  white-space: nowrap;
-
-  cursor: pointer;
-
-  transition: .3s ease;
-}
-
-
-/* ARROW */
-
-.contact-form button span {
-  font-size: 19px;
-
-  font-weight: 600;
-
-  line-height: 1;
-}
-
-
-/* BUTTON HOVER */
-
-.contact-form button:hover {
-  background: #b48a62;
-
-  color: #05080c;
-}
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-.contact-footer {
-  width: 100%;
-  min-height: 150px;
-
-  padding: 30px 5%;
-
-  border-top: 1px solid rgba(180,138,98,.30);
-
-  display: grid;
-
-  grid-template-columns: 1fr 1.5fr 1fr;
-
-  align-items: center;
-
-  color: #77736e;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 8px;
-
-  letter-spacing: 3px;
-
-  line-height: 1.8;
-}
-
-
-/* LEFT */
-
-.contact-footer-left {
-  min-height: 80px;
-
-  padding-right: 30px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 16px;
-
-  font-style: italic;
-
-  letter-spacing: .5px;
-
-  line-height: 1.05;
-}
-
-
-/* CENTER */
-
-.contact-footer-center {
-  min-height: 80px;
-
-  padding: 0 35px;
-
-  border-left: 1px solid rgba(180,138,98,.38);
-
-  border-right: 1px solid rgba(180,138,98,.38);
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  color: #ded5c8;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  letter-spacing: 4px;
-}
-
-
-/* THANK YOU */
-
-.footer-thank-you {
-  color: #ded5c8;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 11px;
-
-  letter-spacing: 4px;
-
-  margin-bottom: 8px;
-}
-
-
-/* GOLD LINE */
-
-.footer-line {
-  width: 40px;
-
-  height: 1px;
-
-  background: #b48a62;
-
-  margin-bottom: 12px;
-}
-
-
-/* NAME */
-
-.contact-footer-center strong {
-  color: #b48a62;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 12px;
-
-  font-weight: 400;
-
-  letter-spacing: 4px;
-}
-
-
-/* JOB TITLE */
-
-.contact-footer-center small {
-  display: block;
-
-  color: #77736e;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 7px;
-
-  letter-spacing: 3px;
-
-  margin-top: 5px;
-}
-
-
-/* RIGHT */
-
-.contact-footer-right {
-  padding-left: 30px;
-
-  color: #ded5c8;
-
-  font-family: "Montserrat", sans-serif;
-
-  font-size: 7px;
-
-  letter-spacing: 2.5px;
-
-  line-height: 1.8;
-
-  text-align: center;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 900px) {
-
-  nav {
-    right: 5%;
-  }
-
-  .nav-links {
-    gap: 22px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
-  }
-
-  .logo {
-    width: 210px;
-  }
-
-  .about {
-    padding-left: 7%;
-    padding-right: 7%;
-    gap: 45px;
-  }
-
-  .about-photo {
-    width: 45%;
-  }
-
-  .about-content {
-    width: 50%;
-  }
-
-  .about-content h2 {
-    font-size: 45px;
-  }
-
-  .work,
-  .behind {
-    padding-left: 7%;
-    padding-right: 7%;
-  }
-
-  .work-header h2,
-  .behind-header h2 {
-    font-size: 55px;
-  }
-
-  .work-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .work-image.large {
-    grid-column: span 2;
-  }
-}
-
-
-@media (max-width: 700px) {
-
-  /* MOBILE LOGO */
-
-  .logo {
-    top: 25px;
-    left: 25px;
-
-    width: 175px;
-  }
-
-
-  /* MOBILE NAV */
-
-  nav {
-    top: 28px;
-    right: 25px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  nav::after {
-    content: "☰";
-
-    color: #b48a62;
-
-    font-size: 24px;
-  }
-
-
-  /* HOME */
-
-  .hero {
-    min-height: 100svh;
-
-    background-position: 62% center;
-  }
-
-  .side-decoration {
-    display: none;
-  }
-
-  .hero-content {
-    left: 25px;
-    top: auto;
-    bottom: 24%;
-
-    width: calc(100% - 50px);
-  }
-
-  .eyebrow {
-    font-size: 10px;
-    letter-spacing: 2.5px;
-  }
-
-  .hero h1 {
-    font-size: 44px;
-  }
-
-  .intro {
-    width: 90%;
-
-    font-size: 10px;
-  }
-
-
-  /* ABOUT */
-
-  .about {
-    min-height: auto;
-
-    padding: 110px 25px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    gap: 40px;
-  }
-
-  .about-photo {
-    width: 100%;
-
-    max-width: none;
-  }
-
-  .about-photo img {
-    height: 500px;
-  }
-
-  .about-content {
-    width: 100%;
-
-    max-width: none;
-  }
-
-  .about-content h2 {
-    font-size: 46px;
-  }
-
-
-  /* WORK */
-
-  .work {
-    padding: 110px 25px 90px;
-  }
-
-  .work-header {
-    margin-bottom: 60px;
-  }
-
-  .work-header h2 {
-    font-size: 46px;
-  }
-
-  .work-intro {
-    font-size: 11px;
-  }
-
-  .work-grid {
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-  }
-
-  .work-image,
-  .work-image.large {
-    grid-column: span 1;
-
-    height: 360px;
-  }
-
-  .category-heading h3 {
-    font-size: 21px;
-  }
-
-
-  /* BEHIND */
-
-  .behind {
-    padding: 110px 25px 90px;
-  }
-
-  .behind-header {
-    margin-bottom: 60px;
-  }
-
-  .behind-header h2 {
-    font-size: 46px;
-  }
-
-  .behind-intro {
-    font-size: 11px;
-  }
-
-  .behind-grid {
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-  }
-
-  .behind-item,
-  .behind-item.tall {
-    height: 420px;
-  }
-
-
-  /* CONTACT */
-
-  .contact {
-    min-height: 100svh;
-
-    padding: 110px 25px;
-  }
-
-  .contact-content h2 {
-    font-size: 45px;
-  }
-
-  .contact-text {
-    font-size: 11px;
-  }
-
-}
-
-</style>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.webp">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
-
 
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
 
+<!-- ================= NAVIGATION ================= -->
+<header class="site-header">
+  <a href="#home" class="brand" aria-label="Maha Mhamdi — home">
+    <img src="assets/logo.webp" alt="" width="44" height="45">
+    <span class="brand-text">MAHA <em>MHAMDI</em></span>
+  </a>
 
+  <nav class="nav" aria-label="Main">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#behind">Behind the Scenes</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </nav>
 
-<!-- =========================
-     NAVIGATION
-     ========================= -->
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
 
-<nav>
+<main id="main">
 
-  <div class="nav-links">
-
-    <a href="#home" class="active">HOME</a>
-
-    <a href="#about">ABOUT</a>
-
-    <a href="#work">WORK</a>
-
-    <a href="#behind">BEHIND THE SCENES</a>
-
-    <a href="#contact">CONTACT</a>
-
-  </div>
-
-</nav>
-
-
-<!-- =========================
-     HOME
-     ========================= -->
-<div class="home-showcase">
+<!-- ================= HERO ================= -->
 <section class="hero" id="home">
-  <img
-    src="logo.png.png"
-    alt="Maha Mhamdi"
-    class="logo home-logo"
-  >
+  <canvas class="hero-embers" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
 
-
-  <!-- LEFT DECORATION -->
-
-  <div class="side-decoration">
-
-    <div class="top-line"></div>
-
-    <div class="social-icons">
-
-      <!-- Instagram -->
-
-      <a href="#" aria-label="Instagram">
-
-        <svg viewBox="0 0 24 24">
-
-          <rect
-            x="3"
-            y="3"
-            width="18"
-            height="18"
-            rx="5">
-          </rect>
-
-          <circle
-            cx="12"
-            cy="12"
-            r="4">
-          </circle>
-
-          <circle
-            cx="17.5"
-            cy="6.5"
-            r=".8"
-            fill="currentColor"
-            stroke="none">
-          </circle>
-
-        </svg>
-
-      </a>
-
-
-      <!-- YouTube -->
-
-      <a href="#" aria-label="YouTube">
-
-        <svg viewBox="0 0 24 24">
-
-          <path
-            d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z">
-          </path>
-
-          <path
-            d="M10 9l5 3-5 3z">
-          </path>
-
-        </svg>
-
-      </a>
-
-
-      <!-- Email -->
-
-      <a href="mailto:" aria-label="Email">
-
-        <svg viewBox="0 0 24 24">
-
-          <rect
-            x="3"
-            y="5"
-            width="18"
-            height="14"
-            rx="1">
-          </rect>
-
-          <path
-            d="M3 7l9 7 9-7">
-          </path>
-
-        </svg>
-
-      </a>
-
+  <div class="hero-media" data-parallax="0.18">
+    <div class="hero-frame">
+      <img src="assets/hero.webp" alt="Full-body character transformation by Maha Mhamdi: an icy, horned creature in dark armour" width="1100" height="1650">
     </div>
-
-    <div class="bottom-line"></div>
-
   </div>
 
+  <div class="hero-inner">
+    <p class="eyebrow reveal" style="--d:.1s"><span class="dot"></span>SFX Makeup Artist · Prosthetics · Characters</p>
 
-  <!-- HERO TEXT -->
-
-  <div class="hero-content">
-
-    <p class="eyebrow">
-      SFX MAKEUP ARTIST
-    </p>
-
-    <h1>
-
-      <span class="cream">BRINGING</span>
-
-      <br>
-
-      <span class="red">CHARACTERS</span>
-
-      <br>
-
-      <span class="cream">TO LIFE</span>
-
+    <h1 class="hero-title" aria-label="Bringing characters to life">
+      <span class="line"><span class="split">Bringing</span></span>
+      <span class="line line-accent"><span class="accent">Characters</span></span>
+      <span class="line"><span class="split">to Life</span></span>
     </h1>
 
-    <p class="intro">
-      Specializing in SFX Makeup, Prosthetics<br>
-      and Character Creation for Film, TV,<br>
-      Cosplay and more.
-    </p>
-
-    <a href="#work" class="button">
-
-      <span>VIEW MY WORK</span>
-
-      <span class="button-arrow">→</span>
-
-    </a>
-
-  </div>
-
- </section>
-<!-- =========================
-     ABOUT
-     ========================= -->
-<div class="featured-preview">
-  <p class="featured-preview-title">FEATURED WORK</p>
-
-  <div class="featured-preview-row">
-
-    <div class="featured-empty"></div>
-    <div class="featured-empty"></div>
-    <div class="featured-empty"></div>
-    <div class="featured-empty"></div>
-
-  </div>
-</div>
-
-</div>
-
-<section class="about" id="about">
-
-
-  <div class="about-content">
-
-    <p class="about-label">
-      ABOUT THE ARTIST
-    </p>
-
-    <h2>
-      MAHA MHAMDI
-    </h2>
-
-    <p class="artist-title">
-      SFX Makeup Artist, Prosthetics<br>
-      & Character Creator.
-    </p>
-
-    <p>
-      I transform faces, bodies and ideas into characters
-      through special effects makeup, prosthetics and
-      sculptural artistry.
-    </p>
-
-    <p>
-      My work combines fine art, sculpting and practical
-      effects to create detailed transformations for
+    <p class="hero-intro reveal" style="--d:.9s">
+      Special effects makeup, prosthetics and character creation for
       film, television, cosplay and creative productions.
     </p>
 
+    <div class="hero-actions reveal" style="--d:1.05s">
+      <a href="#work" class="btn btn-primary magnetic"><span>View my work</span><i class="arrow" aria-hidden="true">→</i></a>
+      <a href="#contact" class="btn btn-ghost magnetic"><span>Start a project</span></a>
+    </div>
+
+    <ul class="hero-stats reveal" style="--d:1.2s">
+      <li><strong data-count="11">0</strong><span>Years<br>experience</span></li>
+      <li><strong data-count="5" data-suffix="+">0</strong><span>Regions<br>travelled</span></li>
+      <li><strong>LA</strong><span>Cinema Makeup<br>School</span></li>
+    </ul>
   </div>
 
-</section>
-<!-- =========================
-     EDUCATION & TRAVEL
-     ========================= -->
-
-<section class="education-travel">
-
-  <img 
-    src="education-travel.png" 
-    alt="Education, experience and places I have traveled"
-  >
-
-</section>
-<!-- =========================
-     MY JOURNEY
-     ========================= -->
-
-<section class="journey">
-
-  <img 
-    src="journey-bg.png" 
-    alt="My Journey"
-  >
-
-</section>
-<!-- =========================
-     WORK
-     ========================= -->
-
-<section class="work" id="work">
-
-
-  <header class="work-header">
-
-    <p class="section-label">
-      SELECTED WORK
-    </p>
-
-    <h2>
-      THE ART OF<br>
-      <span>TRANSFORMATION</span>
-    </h2>
-
-    <p class="work-intro">
-      A selection of special effects makeup, prosthetics
-      and character creations developed through
-      sculpting, makeup and practical effects.
-    </p>
-
-  </header>
-
-
-  <!-- SFX MAKEUP -->
-
-  <section class="work-category">
-
-    <div class="category-heading">
-
-      <h3>
-        SFX Makeup
-      </h3>
-
-      <div class="category-line"></div>
-
-    </div>
-
-
-    <div class="work-grid">
-
-      <div class="work-image large">
-
-        <div class="image-placeholder">
-          SFX IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image">
-
-        <div class="image-placeholder">
-          SFX IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image">
-
-        <div class="image-placeholder">
-          SFX IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image large">
-
-        <div class="image-placeholder">
-          SFX IMAGE
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <p class="category-description">
-      Character transformations, injuries, aging,
-      creature work and practical special effects makeup.
-    </p>
-
-  </section>
-
-
-  <!-- PROSTHETICS -->
-
-  <section class="work-category">
-
-    <div class="category-heading">
-
-      <h3>
-        Prosthetics
-      </h3>
-
-      <div class="category-line"></div>
-
-    </div>
-
-
-    <div class="work-grid">
-
-      <div class="work-image">
-
-        <div class="image-placeholder">
-          PROSTHETIC IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image large">
-
-        <div class="image-placeholder">
-          PROSTHETIC IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image large">
-
-        <div class="image-placeholder">
-          PROSTHETIC IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image">
-
-        <div class="image-placeholder">
-          PROSTHETIC IMAGE
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <p class="category-description">
-      Sculpting, molding, casting, application and
-      painting of prosthetic pieces and practical effects.
-    </p>
-
-  </section>
-
-
-  <!-- CHARACTER CREATION -->
-
-  <section class="work-category">
-
-    <div class="category-heading">
-
-      <h3>
-        Character Creation
-      </h3>
-
-      <div class="category-line"></div>
-
-    </div>
-
-
-    <div class="work-grid">
-
-      <div class="work-image large">
-
-        <div class="image-placeholder">
-          CHARACTER IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image">
-
-        <div class="image-placeholder">
-          CHARACTER IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image">
-
-        <div class="image-placeholder">
-          CHARACTER IMAGE
-        </div>
-
-      </div>
-
-      <div class="work-image large">
-
-        <div class="image-placeholder">
-          CHARACTER IMAGE
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <p class="category-description">
-      Complete character creation through makeup,
-      prosthetics, sculptural elements and transformation.
-    </p>
-
-  </section>
-
-</section>
-
-
-<!-- =========================
-     BEHIND THE SCENES
-     ========================= -->
-
-<section class="behind" id="behind">
-
-
-  <header class="behind-header">
-
-    <p class="section-label">
-      THE PROCESS
-    </p>
-
-    <h2>
-      BEHIND THE<br>
-      <span>SCENES</span>
-    </h2>
-
-    <p class="behind-intro">
-      The work doesn't begin when the final makeup is
-      revealed. From sculpting and preparation to
-      application and finishing, this is where the
-      transformation takes shape.
-    </p>
-
-  </header>
-
-
-  <div class="behind-grid">
-
-
-    <!-- SCULPTING -->
-
-    <div class="behind-item tall">
-
-      <div class="behind-placeholder">
-        BTS IMAGE
-      </div>
-
-      <div class="behind-caption">
-        Sculpting
-      </div>
-
-    </div>
-
-
-    <!-- PROSTHETIC PROCESS -->
-
-    <div class="behind-item">
-
-      <div class="behind-placeholder">
-        BTS IMAGE
-      </div>
-
-      <div class="behind-caption">
-        Prosthetic Process
-      </div>
-
-    </div>
-
-
-    <!-- MAKEUP APPLICATION -->
-
-    <div class="behind-item">
-
-      <div class="behind-placeholder">
-        BTS IMAGE
-      </div>
-
-      <div class="behind-caption">
-        Makeup Application
-      </div>
-
-    </div>
-
-
-    <!-- ON SET -->
-
-    <div class="behind-item tall">
-
-      <div class="behind-placeholder">
-        BTS IMAGE
-      </div>
-
-      <div class="behind-caption">
-        On Set
-      </div>
-
-    </div>
-
-
-    <!-- DETAILS -->
-
-    <div class="behind-item">
-
-      <div class="behind-placeholder">
-        BTS IMAGE
-      </div>
-
-      <div class="behind-caption">
-        Details
-      </div>
-
-    </div>
-
-
-    <!-- CREATION -->
-
-    <div class="behind-item">
-
-      <div class="behind-placeholder">
-        BTS IMAGE
-      </div>
-
-      <div class="behind-caption">
-        The Creation
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-     ========================= -->
-
-<!-- =========================
-     CONTACT
-     ========================= -->
-
-<section class="contact" id="contact">
-
-  <div class="contact-content">
-
-    <!-- HERO -->
-
-    <div class="contact-hero">
-
-      <div class="contact-hero-inner">
-
-        <p class="contact-label">
-          LET'S CREATE SOMETHING
-        </p>
-
-        <h2>
-          UNFORGETTABLE.
-        </h2>
-
-        <div class="contact-divider"></div>
-
-        <p class="contact-text">
-          Have a project in mind?
-          Let's bring your character, story, or creative vision to life.
-          Available for film, television, commercial, editorial and
-          creative productions.
-        </p>
-
-      </div>
-
-    </div>
-<!-- CONTACT DETAILS -->
-
-<div class="contact-links">
-
-  <div class="contact-link">
-
-    <div class="contact-icon">
-      <i class="fa-regular fa-envelope"></i>
-    </div>
-
-    <div class="contact-link-label">
-      EMAIL
-    </div>
-
-    <a href="mailto:YOUR-EMAIL-HERE">
-      YOUR-EMAIL-HERE
+  <div class="hero-social" aria-label="Social links">
+    <span class="rule"></span>
+    <a href="#" aria-label="Instagram" data-social="instagram">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg>
     </a>
-
-  </div>
-
-
-  <div class="contact-link">
-
-    <div class="contact-icon">
-      <i class="fa-brands fa-instagram"></i>
-    </div>
-
-    <div class="contact-link-label">
-      INSTAGRAM
-    </div>
-
-    <a href="#" target="_blank">
-      @YOUR-INSTAGRAM
+    <a href="#" aria-label="YouTube" data-social="youtube">
+      <svg viewBox="0 0 24 24"><path d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z"/><path d="M10 9l5 3-5 3z"/></svg>
     </a>
-
-  </div>
-
-
-  <div class="contact-link">
-
-    <div class="contact-icon">
-      <i class="fa-brands fa-youtube"></i>
-    </div>
-
-    <div class="contact-link-label">
-      YOUTUBE
-    </div>
-
-    <a href="#" target="_blank">
-      MAHA MHAMDI
+    <a href="#contact" aria-label="Email">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 7 9-7"/></svg>
     </a>
-
+    <span class="rule"></span>
   </div>
 
-</div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+    <span>Scroll</span><i></i>
+  </a>
+</section>
 
-    <!-- LET'S WORK TOGETHER -->
+<!-- ================= MARQUEE ================= -->
+<div class="marquee-wrap" aria-hidden="true"><div class="marquee">
+  <div class="marquee-track">
+    <span>SFX Makeup</span><b>✦</b><span>Prosthetics</span><b>✦</b><span>Character Creation</span><b>✦</b><span>Sculpting</span><b>✦</b><span>Film &amp; TV</span><b>✦</b><span>Cosplay</span><b>✦</b>
+    <span>SFX Makeup</span><b>✦</b><span>Prosthetics</span><b>✦</b><span>Character Creation</span><b>✦</b><span>Sculpting</span><b>✦</b><span>Film &amp; TV</span><b>✦</b><span>Cosplay</span><b>✦</b>
+  </div>
+</div></div>
 
-    <div class="contact-work">
-
-      <div class="contact-work-heading">
-
-        <h3>
-          LET'S WORK TOGETHER
-        </h3>
-
-        <div class="contact-work-line"></div>
-
+<!-- ================= ABOUT ================= -->
+<section class="about section" id="about">
+  <div class="container about-grid">
+    <figure class="about-portrait reveal" data-tilt>
+      <div class="portrait-card">
+        <img src="assets/maha.webp" alt="Portrait of Maha Mhamdi holding makeup brushes" width="900" height="1352" loading="lazy">
+        <div class="portrait-shine" aria-hidden="true"></div>
       </div>
+      <figcaption class="portrait-badge">
+        <strong data-count="11">0</strong>
+        <span>years bringing<br>characters to life</span>
+      </figcaption>
+    </figure>
 
-
-      <p class="project-types">
-        FILM · TELEVISION · COMMERCIAL · EDITORIAL · CREATIVE PROJECTS
+    <div class="about-copy">
+      <p class="section-label reveal">About the artist</p>
+      <h2 class="section-title reveal" style="--d:.08s">Maha <em>Mhamdi</em></h2>
+      <p class="lead reveal" style="--d:.16s">SFX Makeup Artist, Prosthetics &amp; Character Creator.</p>
+      <p class="reveal" style="--d:.24s">
+        I transform faces, bodies and ideas into characters through special
+        effects makeup, prosthetics and sculptural artistry.
+      </p>
+      <p class="reveal" style="--d:.32s">
+        My work combines fine art, sculpting and practical effects to create
+        detailed transformations for film, television, cosplay and creative productions.
       </p>
 
+      <ul class="skill-list reveal" style="--d:.4s">
+        <li>Special Effects Makeup</li>
+        <li>Prosthetic Sculpting &amp; Casting</li>
+        <li>Character Design</li>
+        <li>Film · TV · Fashion · Beauty</li>
+      </ul>
 
-      <form class="contact-form">
+      <p class="signature reveal" style="--d:.48s">Create · Imagine · Transform</p>
+    </div>
+  </div>
+</section>
 
-        <div class="contact-form-row">
+<!-- ================= EDUCATION & EXPERIENCE ================= -->
+<section class="experience section" id="experience">
+  <div class="container">
+    <header class="section-head center">
+      <p class="section-label reveal">Foundation · Creation · Real-world experience</p>
+      <h2 class="section-title reveal" style="--d:.08s">Education &amp; <em>Experience</em></h2>
+    </header>
 
-          <input
-            type="text"
-            placeholder="YOUR NAME *"
-            required
-          >
-
-          <input
-            type="email"
-            placeholder="YOUR EMAIL *"
-            required
-          >
-
+    <div class="exp-grid">
+      <article class="exp-card spotlight reveal" style="--d:.0s">
+        <div class="exp-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M36 6c3 3-9 17-14 21l-3-3C23 19 33 3 36 6z"/><path d="M19 24c-4 0-7 3-7 7 0 3-2 5-5 6 6 3 15 1 15-7"/></svg>
         </div>
+        <p class="exp-kicker">Professional</p>
+        <h3><span class="big" data-count="11">0</span> Years Experience</h3>
+        <p>On set · Studio · Events</p>
+        <p class="muted">Film · TV · Fashion · Beauty</p>
+      </article>
 
+      <article class="exp-card spotlight reveal" style="--d:.08s">
+        <div class="exp-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 6C13 6 5 13 5 22c0 7 5 9 9 8 4-1 5 2 4 5-1 4 2 7 7 7 10 0 18-8 18-19S35 6 24 6z"/><circle cx="15" cy="19" r="2.5"/><circle cx="23" cy="13" r="2.5"/><circle cx="32" cy="16" r="2.5"/><circle cx="34" cy="25" r="2.5"/></svg>
+        </div>
+        <p class="exp-kicker">Artistic foundation</p>
+        <h3>Pioneer School of Arts</h3>
+        <p class="muted">El Omrane, Tunisia</p>
+      </article>
 
-        <select required>
+      <article class="exp-card spotlight reveal" style="--d:.16s">
+        <div class="exp-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M6 18L24 7l18 11z"/><path d="M9 18v2h30v-2M11 21v16M18 21v16M30 21v16M37 21v16M7 38h34M5 42h38"/></svg>
+        </div>
+        <p class="exp-kicker">Fine Arts Degree</p>
+        <h3>Higher Institute of Fine Arts</h3>
+        <p>Specializing in sculpting</p>
+        <p class="muted">Tunis, Tunisia</p>
+      </article>
 
-          <option value="">
-            PROJECT TYPE *
-          </option>
+      <article class="exp-card spotlight reveal" style="--d:.24s">
+        <div class="exp-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><rect x="6" y="18" width="36" height="22" rx="2"/><path d="M6 18l4-9 34-3-2 9M14 8l3 8M24 7l3 8M34 6l3 8"/><path d="M21 25l8 4-8 4z"/></svg>
+        </div>
+        <p class="exp-kicker">CMS · Cinema Makeup School</p>
+        <h3>SFX &amp; Prosthetics Program</h3>
+        <p class="muted">Los Angeles</p>
+      </article>
 
+      <article class="exp-card exp-card--award spotlight reveal" style="--d:.32s">
+        <div class="exp-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M24 15l2.6 5.4 5.9.8-4.3 4.1 1 5.8L24 28.4l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z"/><path d="M12 10c-5 7-5 17 1 24M36 10c5 7 5 17-1 24M13 34c3 3 7 5 11 5s8-2 11-5"/></svg>
+        </div>
+        <p class="exp-kicker">2025 · Los Angeles</p>
+        <h3>CMS Cosplay Scholarship Winner</h3>
+        <span class="award-ribbon">Award</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="journey section" id="journey">
+  <div class="journey-bg" data-parallax="-0.12" aria-hidden="true"></div>
+  <div class="container journey-grid">
+    <header class="journey-head">
+      <p class="section-label reveal">My journey</p>
+      <h2 class="section-title reveal" style="--d:.08s">From sculpture <em>to screen</em></h2>
+      <p class="reveal" style="--d:.16s">
+        A path shaped by fine art, sculpting and practical effects —
+        from art school in Tunisia to the SFX studios of Los Angeles.
+      </p>
+    </header>
+
+    <ol class="timeline">
+      <li class="reveal-side">
+        <span class="t-dot"></span>
+        <p class="t-meta">Tunisia</p>
+        <h3>Artistic foundation</h3>
+        <p>Pioneer School of Arts, El Omrane — where drawing, colour and form first became a language.</p>
+      </li>
+      <li class="reveal-side">
+        <span class="t-dot"></span>
+        <p class="t-meta">Tunis</p>
+        <h3>Fine Arts &amp; sculpting</h3>
+        <p>A Fine Arts degree at the Higher Institute of Fine Arts, specializing in sculpture.</p>
+      </li>
+      <li class="reveal-side">
+        <span class="t-dot"></span>
+        <p class="t-meta">11 years</p>
+        <h3>On set, in studio, at events</h3>
+        <p>Professional work across film, television, fashion and beauty.</p>
+      </li>
+      <li class="reveal-side">
+        <span class="t-dot"></span>
+        <p class="t-meta">Los Angeles</p>
+        <h3>Cinema Makeup School</h3>
+        <p>SFX &amp; Prosthetics Program — and the CMS Cosplay Scholarship in 2025.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= TRAVEL ================= -->
+<section class="travel section" id="travel">
+  <div class="container">
+    <header class="section-head center">
+      <p class="section-label reveal">Different cultures · New perspectives · Endless inspiration</p>
+      <h2 class="section-title reveal" style="--d:.08s">Places I've <em>Travelled</em></h2>
+      <p class="section-sub reveal" style="--d:.16s">Exploring the world, meeting inspiring people, and discovering new cultures that fuel my creativity.</p>
+    </header>
+
+    <ul class="travel-grid">
+      <li class="travel-card reveal" style="--d:0s">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c-6 6-6 28 0 34M24 7c6 6 6 28 0 34M10 15h28M10 33h28"/></svg>
+        <span>Europe</span>
+      </li>
+      <li class="travel-card reveal" style="--d:.06s">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 16h32l-4-5H12zM12 16v6h24v-6M6 22h36l-3 4H9zM12 26v14M36 26v14M20 26v14M28 26v14M8 40h32"/></svg>
+        <span>Asia</span>
+      </li>
+      <li class="travel-card reveal" style="--d:.12s">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 38L19 12l15 26zM26 25l5-8 13 21M19 12l3 14"/></svg>
+        <span>Africa</span>
+      </li>
+      <li class="travel-card reveal" style="--d:.18s">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 40V26c0-6 10-6 10-13 0 7 10 7 10 13v14M24 6v7M8 40V22l3-4 3 4M34 40V22l3-4 3 4v18M6 40h36M21 40v-7a3 3 0 016 0v7"/></svg>
+        <span>Middle East</span>
+      </li>
+      <li class="travel-card reveal" style="--d:.24s">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 10v28M36 10v28M4 32h40M12 12c4 10 8 14 12 15 4-1 8-5 12-15M17 22v10M24 27v5M31 22v10"/></svg>
+        <span>North America</span>
+      </li>
+      <li class="travel-card reveal" style="--d:.3s">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42V20M24 20c-3-6-10-8-16-6 5 0 10 3 12 7M24 20c3-6 10-8 16-6-5 0-10 3-12 7M24 20c-6-3-12-1-14 4M24 20c6-3 12-1 14 4M24 20c0-5-3-9-7-11M14 42h20"/></svg>
+        <span>And Beyond</span>
+      </li>
+    </ul>
+
+    <p class="borders reveal"><span></span>Art knows no borders<span></span></p>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="work section" id="work">
+  <div class="container">
+    <header class="section-head work-head">
+      <div>
+        <p class="section-label reveal">Selected work</p>
+        <h2 class="section-title reveal" style="--d:.08s">The art of <em>transformation</em></h2>
+      </div>
+      <p class="section-sub reveal" style="--d:.16s">
+        Special effects makeup, prosthetics and character creations developed
+        through sculpting, makeup and practical effects.
+      </p>
+    </header>
+
+    <div class="filters reveal" role="tablist" aria-label="Filter work">
+      <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter" data-filter="sfx" role="tab" aria-selected="false">SFX Makeup</button>
+      <button class="filter" data-filter="prosthetics" role="tab" aria-selected="false">Prosthetics</button>
+      <button class="filter" data-filter="character" role="tab" aria-selected="false">Character Creation</button>
+      <span class="filter-indicator" aria-hidden="true"></span>
+    </div>
+
+    <!--
+      To add a project: copy a <figure class="work-item">, set data-cat to
+      sfx / prosthetics / character, and replace the .placeholder div with
+      <img src="assets/your-image.webp" alt="Describe the look" loading="lazy">
+    -->
+    <div class="work-grid">
+      <figure class="work-item tall reveal" data-cat="character">
+        <button class="work-open" data-lightbox="assets/hero.webp" aria-label="Open image: ice creature character">
+          <img src="assets/hero.webp" alt="Full-body ice creature character with armour and weapon" loading="lazy" width="1100" height="1650">
+        </button>
+        <figcaption><span>Character Creation</span><h3>The Frozen King</h3></figcaption>
+      </figure>
+
+      <figure class="work-item reveal" data-cat="sfx" style="--d:.08s">
+        <button class="work-open" data-lightbox="assets/character-closeup.webp" aria-label="Open image: close-up of prosthetic face">
+          <img src="assets/character-closeup.webp" alt="Close-up of a textured, horned prosthetic face with glowing blue eyes" loading="lazy" width="974" height="809">
+        </button>
+        <figcaption><span>SFX Makeup</span><h3>Ice-Crowned Close-up</h3></figcaption>
+      </figure>
+
+      <figure class="work-item reveal" data-cat="prosthetics" style="--d:.16s">
+        <div class="placeholder"><span>Prosthetics</span><small>Image coming soon</small></div>
+        <figcaption><span>Prosthetics</span><h3>Sculpt, mould &amp; cast</h3></figcaption>
+      </figure>
+
+      <figure class="work-item wide reveal" data-cat="sfx">
+        <div class="placeholder"><span>SFX Makeup</span><small>Image coming soon</small></div>
+        <figcaption><span>SFX Makeup</span><h3>Injuries, aging &amp; creatures</h3></figcaption>
+      </figure>
+
+      <figure class="work-item reveal" data-cat="prosthetics" style="--d:.08s">
+        <div class="placeholder"><span>Prosthetics</span><small>Image coming soon</small></div>
+        <figcaption><span>Prosthetics</span><h3>Application &amp; paint</h3></figcaption>
+      </figure>
+
+      <figure class="work-item wide reveal" data-cat="character" style="--d:.16s">
+        <div class="placeholder"><span>Character</span><small>Image coming soon</small></div>
+        <figcaption><span>Character Creation</span><h3>Full transformation</h3></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BEHIND THE SCENES ================= -->
+<section class="behind section" id="behind">
+  <div class="container">
+    <header class="section-head center">
+      <p class="section-label reveal">The process</p>
+      <h2 class="section-title reveal" style="--d:.08s">Behind the <em>scenes</em></h2>
+      <p class="section-sub reveal" style="--d:.16s">
+        The work doesn't begin when the final makeup is revealed. From sculpting
+        and preparation to application and finishing, this is where the
+        transformation takes shape.
+      </p>
+    </header>
+
+    <ol class="process">
+      <li class="process-step reveal"><b>01</b><span>Sculpting</span></li>
+      <li class="process-step reveal" style="--d:.08s"><b>02</b><span>Prosthetic process</span></li>
+      <li class="process-step reveal" style="--d:.16s"><b>03</b><span>Makeup application</span></li>
+      <li class="process-step reveal" style="--d:.24s"><b>04</b><span>On set</span></li>
+    </ol>
+
+    <div class="bts-grid">
+      <figure class="bts-item bts-wide reveal">
+        <img src="assets/studio-wide.webp" alt="Maha Mhamdi in her studio surrounded by sculpted heads and brushes" loading="lazy" width="1800" height="720">
+        <figcaption>The Studio</figcaption>
+      </figure>
+      <figure class="bts-item reveal" style="--d:.08s">
+        <img src="assets/workshop.webp" alt="Sculpting tools and brushes beside a clay sculpture on a workbench" loading="lazy" width="1800" height="806">
+        <figcaption>Sculpting tools</figcaption>
+      </figure>
+      <figure class="bts-item reveal" style="--d:.16s">
+        <div class="placeholder"><span>Details</span><small>Image coming soon</small></div>
+        <figcaption>Details</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact section" id="contact">
+  <div class="contact-bg" data-parallax="-0.1" aria-hidden="true"></div>
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <p class="section-label reveal">Let's create something</p>
+      <h2 class="contact-title reveal" style="--d:.08s">Unforgettable<span>.</span></h2>
+      <p class="reveal" style="--d:.16s">
+        Have a project in mind? Let's bring your character, story or creative
+        vision to life. Available for film, television, commercial, editorial
+        and creative productions.
+      </p>
+
+      <ul class="contact-links">
+        <li class="reveal" style="--d:.2s">
+          <a href="#" class="contact-link spotlight" data-contact="email">
+            <span class="c-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3 7l9 7 9-7"/></svg></span>
+            <span><small>Email</small><b data-contact-text="email">your-email@example.com</b></span>
+          </a>
+        </li>
+        <li class="reveal" style="--d:.28s">
+          <a href="#" class="contact-link spotlight" data-social="instagram" target="_blank" rel="noopener">
+            <span class="c-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".9" fill="currentColor" stroke="none"/></svg></span>
+            <span><small>Instagram</small><b data-contact-text="instagram">@your-instagram</b></span>
+          </a>
+        </li>
+        <li class="reveal" style="--d:.36s">
+          <a href="#" class="contact-link spotlight" data-social="youtube" target="_blank" rel="noopener">
+            <span class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 12s0-4-1-5-4-1-8-1-7 0-8 1-1 5-1 5 0 4 1 5 4 1 8 1 7 0 8-1 1-5 1-5z"/><path d="M10 9l5 3-5 3z"/></svg></span>
+            <span><small>YouTube</small><b>Maha Mhamdi</b></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact-form reveal" style="--d:.2s" novalidate>
+      <h3>Let's work together</h3>
+      <p class="form-sub">Film · Television · Commercial · Editorial · Creative projects</p>
+
+      <div class="field-row">
+        <label class="field">
+          <input type="text" name="name" placeholder=" " required autocomplete="name">
+          <span>Your name *</span>
+        </label>
+        <label class="field">
+          <input type="email" name="email" placeholder=" " required autocomplete="email">
+          <span>Your email *</span>
+        </label>
+      </div>
+
+      <label class="field">
+        <select name="type" required>
+          <option value="" selected disabled hidden></option>
           <option>Film</option>
           <option>Television</option>
           <option>Commercial</option>
           <option>Editorial</option>
           <option>Creative Project</option>
           <option>Other</option>
-
         </select>
+        <span>Project type *</span>
+      </label>
 
+      <label class="field">
+        <textarea name="message" rows="5" placeholder=" " required></textarea>
+        <span>Tell me about your project *</span>
+      </label>
 
-        <textarea
-          placeholder="TELL ME ABOUT YOUR PROJECT *"
-          required
-        ></textarea>
+      <button type="submit" class="btn btn-primary magnetic btn-block"><span>Send inquiry</span><i class="arrow" aria-hidden="true">→</i></button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 
+</main>
 
-        <button type="submit">
-
-          SEND INQUIRY
-
-          <span>→</span>
-
-        </button>
-
-      </form>
-
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p class="footer-left">Characters.<br>Real worlds.<br>Lasting stories.</p>
+    <div class="footer-center">
+      <img src="assets/logo.webp" alt="Maha Mhamdi logo" width="120" height="123" loading="lazy">
+      <p class="thanks">Thank you for being here.</p>
     </div>
-
-
-<!-- FOOTER -->
-
-<div class="contact-footer">
-
-  <div class="contact-footer-left">
-    <span>Characters.</span><br>
-    <span>Real Worlds.</span><br>
-    <span>Lasting Stories.</span>
+    <p class="footer-right">Art · Craft · Storytelling<br>without limits.</p>
   </div>
+  <p class="copyright">© <span data-year></span> Maha Mhamdi · SFX Makeup Artist</p>
+</footer>
 
-
-  <div class="contact-footer-center">
-
-    <div class="footer-thank-you">
-      THANK YOU FOR BEING HERE.
-    </div>
-
-    <div class="footer-line"></div>
-
-    <strong>MAHA MHAMDI</strong>
-
-    <small>
-      SFX MAKEUP ARTIST
-    </small>
-
-  </div>
-
-
-  <div class="contact-footer-right">
-
-    ART · CRAFT · STORYTELLING<br>
-    WITHOUT LIMITS.
-
-  </div>
-
+<!-- Lightbox -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img alt="">
 </div>
 
-<!-- =========================
-     NAVIGATION SCRIPT
-     ========================= -->
-
-<script>
-
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-function updateActiveNav() {
-
-  let current = "";
-
-  sections.forEach(section => {
-
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-
-    if (
-      window.scrollY >= sectionTop - 200 &&
-      window.scrollY < sectionTop + sectionHeight - 200
-    ) {
-      current = section.getAttribute("id");
-    }
-
-  });
-
-  navLinks.forEach(link => {
-
-    link.classList.remove("active");
-
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-
-  });
-
-}
-
-window.addEventListener("scroll", updateActiveNav);
-
-navLinks.forEach(link => {
-
-  link.addEventListener("click", function() {
-
-    navLinks.forEach(item => {
-      item.classList.remove("active");
-    });
-
-    this.classList.add("active");
-
-  });
-
-});
-
-updateActiveNav();
-
-</script>
-
+<script src="assets/main.js" defer></script>
 </body>
-
 </html>
