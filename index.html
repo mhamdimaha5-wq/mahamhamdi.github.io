@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero.webp">
+<link rel="preload" as="image" href="assets/hero-face.webp">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 
@@ -23,8 +23,7 @@
 <!-- ================= NAVIGATION ================= -->
 <header class="site-header">
   <a href="#home" class="brand" aria-label="Maha Mhamdi — home">
-    <img src="assets/logo.webp" alt="" width="44" height="45">
-    <span class="brand-text">MAHA <em>MHAMDI</em></span>
+    <img src="assets/logo-sm.webp" alt="Maha Mhamdi — SFX Makeup Artist" width="420" height="253">
   </a>
 
   <nav class="nav" aria-label="Main">
@@ -48,15 +47,15 @@
   <canvas class="hero-embers" aria-hidden="true"></canvas>
   <div class="hero-glow" aria-hidden="true"></div>
 
-  <div class="hero-media" data-parallax="0.18">
-    <div class="hero-frame">
-      <img src="assets/hero.webp" alt="Full-body character transformation by Maha Mhamdi: an icy, horned creature in dark armour" width="1100" height="1650">
+  <div class="hero-media" data-parallax="0.15">
+    <div class="hero-face">
+      <img src="assets/hero-face.webp" alt="Close-up of a horned, ice-cracked creature face with glowing blue eyes, created by Maha Mhamdi" width="966" height="801">
+      <span class="eye eye-l" aria-hidden="true"></span>
+      <span class="eye eye-r" aria-hidden="true"></span>
     </div>
   </div>
 
   <div class="hero-inner">
-    <p class="eyebrow reveal" style="--d:.1s"><span class="dot"></span>SFX Makeup Artist · Prosthetics · Characters</p>
-
     <h1 class="hero-title" aria-label="Bringing characters to life">
       <span class="line"><span class="split">Bringing</span></span>
       <span class="line line-accent"><span class="accent">Characters</span></span>
@@ -64,21 +63,16 @@
     </h1>
 
     <p class="hero-intro reveal" style="--d:.9s">
-      Special effects makeup, prosthetics and character creation for
-      film, television, cosplay and creative productions.
+      SFX makeup artist, sculptor &amp; character creator —
+      shaping faces, flesh and creatures for film, television and cosplay.
     </p>
 
     <div class="hero-actions reveal" style="--d:1.05s">
-      <a href="#work" class="btn btn-primary magnetic"><span>View my work</span><i class="arrow" aria-hidden="true">→</i></a>
-      <a href="#contact" class="btn btn-ghost magnetic"><span>Start a project</span></a>
+      <a href="#work" class="ink-link"><span>Enter the gallery</span><i aria-hidden="true">↓</i></a>
     </div>
-
-    <ul class="hero-stats reveal" style="--d:1.2s">
-      <li><strong data-count="11">0</strong><span>Years<br>experience</span></li>
-      <li><strong data-count="5" data-suffix="+">0</strong><span>Regions<br>travelled</span></li>
-      <li><strong>LA</strong><span>Cinema Makeup<br>School</span></li>
-    </ul>
   </div>
+
+  <p class="hero-vertical" aria-hidden="true">SFX · Prosthetics · Sculpture · Characters</p>
 
   <div class="hero-social" aria-label="Social links">
     <span class="rule"></span>
@@ -99,13 +93,16 @@
   </a>
 </section>
 
-<!-- ================= MARQUEE ================= -->
-<div class="marquee-wrap" aria-hidden="true"><div class="marquee">
-  <div class="marquee-track">
-    <span>SFX Makeup</span><b>✦</b><span>Prosthetics</span><b>✦</b><span>Character Creation</span><b>✦</b><span>Sculpting</span><b>✦</b><span>Film &amp; TV</span><b>✦</b><span>Cosplay</span><b>✦</b>
-    <span>SFX Makeup</span><b>✦</b><span>Prosthetics</span><b>✦</b><span>Character Creation</span><b>✦</b><span>Sculpting</span><b>✦</b><span>Film &amp; TV</span><b>✦</b><span>Cosplay</span><b>✦</b>
-  </div>
-</div></div>
+<!-- ================= STATEMENT ================= -->
+<section class="statement" aria-label="Artist statement">
+  <p class="statement-text">
+    <span class="w">Characters.</span>
+    <span class="w">Real</span> <span class="w">worlds.</span>
+    <span class="w accent">Lasting</span> <span class="w accent">stories.</span>
+  </p>
+  <p class="statement-sign reveal">— art · craft · storytelling without limits</p>
+</section>
+
 
 <!-- ================= ABOUT ================= -->
 <section class="about section" id="about">
@@ -425,7 +422,7 @@
     </div>
 
     <form class="contact-form reveal" style="--d:.2s" novalidate>
-      <h3>Let's work together</h3>
+      <h3 class="script-title">Tell me your story</h3>
       <p class="form-sub">Film · Television · Commercial · Editorial · Creative projects</p>
 
       <div class="field-row">
@@ -470,7 +467,7 @@
   <div class="container footer-grid">
     <p class="footer-left">Characters.<br>Real worlds.<br>Lasting stories.</p>
     <div class="footer-center">
-      <img src="assets/logo.webp" alt="Maha Mhamdi logo" width="120" height="123" loading="lazy">
+      <img src="assets/logo.webp" alt="Maha Mhamdi — SFX Makeup Artist" width="900" height="542" loading="lazy">
       <p class="thanks">Thank you for being here.</p>
     </div>
     <p class="footer-right">Art · Craft · Storytelling<br>without limits.</p>
@@ -479,6 +476,8 @@
 </footer>
 
 <!-- Lightbox -->
+<div class="cursor" aria-hidden="true"></div>
+
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
   <button class="lightbox-close" aria-label="Close">×</button>
   <img alt="">
