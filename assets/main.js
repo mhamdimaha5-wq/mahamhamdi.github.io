@@ -82,6 +82,14 @@ const CONTACT = {
   }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
   $$(".reveal, .reveal-side").forEach(el => revealObserver.observe(el));
 
+  /* ---------- Statement words + blood drips ---------- */
+  const statement = $(".statement");
+  if (statement) {
+    new IntersectionObserver(([e], obs) => {
+      if (e.isIntersecting) { statement.classList.add("in"); obs.disconnect(); }
+    }, { threshold: 0.35 }).observe(statement);
+  }
+
   /* ---------- Counters ---------- */
   const countObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -165,6 +173,22 @@ const CONTACT = {
       });
     });
 
+    // brush cursor
+    const cursor = $(".cursor");
+    let cx = -100, cy = -100, tx = -100, ty = -100;
+    window.addEventListener("pointermove", e => { tx = e.clientX; ty = e.clientY; cursor.classList.add("on"); });
+    document.addEventListener("pointerleave", () => cursor.classList.remove("on"));
+    const follow = () => {
+      cx += (tx - cx) * 0.2; cy += (ty - cy) * 0.2;
+      cursor.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
+      requestAnimationFrame(follow);
+    };
+    follow();
+    $$("a, button, .work-item, .exp-card").forEach(el => {
+      el.addEventListener("pointerenter", () => cursor.classList.add("hover"));
+      el.addEventListener("pointerleave", () => cursor.classList.remove("hover"));
+    });
+
     // magnetic buttons
     $$(".magnetic").forEach(btn => {
       btn.addEventListener("pointermove", e => {
@@ -177,11 +201,11 @@ const CONTACT = {
     });
 
     // hero image follows the mouse slightly
-    const heroFrame = $(".hero-frame");
+    const heroFrame = $(".hero-face");
     $(".hero").addEventListener("pointermove", e => {
       const x = e.clientX / window.innerWidth - 0.5;
       const y = e.clientY / window.innerHeight - 0.5;
-      heroFrame.style.transform = `translate3d(${x * -18}px, ${y * -12}px, 0)`;
+      heroFrame.style.transform = `translate3d(${x * -26}px, ${y * -18}px, 0) rotate(${x * -1.5}deg)`;
     });
   }
 
